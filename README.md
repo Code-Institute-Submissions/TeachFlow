@@ -27,8 +27,8 @@ Important information and features to the company include:
     * [Overview](#overview "goto overview")
     * [User Stories](#user-stories "goto user stories")
     * [Project Scope](#project-scope "goto project scope")
-    * [Wireframes](#wireframes "goto wireframes")
     * [Design](#design "goto design")
+    * [Wireframes](#wireframes "goto wireframes")
 
 2. [Features](#features "goto features")
     * [Existing Features](#existing-features "goto existing features")
@@ -61,24 +61,54 @@ By highlights both the personal and financial benefit to ESL teaching, the websi
 
 ### User Stories
 
-#### First Time Visitor Goals
-* As a prospective client. 
+#### Potential ESL Teacher Goals
+As a potential ESL teacher:
+* I am looking for information on ESL countries so that I can find out what appeals to me.
+* I usually do all my reseach on my phone so I would like the website to be mobile responsiveness
+* I am looking for information about a typical class lesson so I can learn about a typical day on the job. 
+* I would like to be able to contact the website owners if I have any questions about the content.
+* I would like to see the requirements for becoming an ESL teacher, the salary and benefits.
 
-#### Returning Visitor Goals
-
-* As a team member, I want to see my skills and strengths clearly defined in an 'About' section so that our clients will know I'm qualified.
-
-#### Frequent User Goals
-* 
+#### Current ESL Teacher Goals
+As a current ESL Teacher:
+* I would like to see information on regions in countries as I am familiar the countries do not give me indepth information. 
+* I would like to see some interactive information about the countries, such as the current weather or statistics so that I am receiving live, updated information. 
+* I would like any class material featured to be focused on learning English words and improving students speaking skills. 
+* I would like to be able to sign up to a newsletter. 
 
 ### Project Scope
 Based on the above user stories, the following are features that will be included:
 
-* 
+* a newsletter signup
+* a simple memory game focused on speaking english words
+* a contact us page
+* Interactive Information on ESL countries which incorporates an API.
 
 The following is a list of features that will not be included: 
 
+* #
+
+### Design
+
+#### Typography
+All fonts used are from [Google Fonts](https://fonts.google.com/). 
+
+Fonts used include:
 * 
+* 
+
+#### Colour Scheme
+A two-tone color palette was used, Sky Blue (#89ABE3FF) dark blue (2F3180) (1D1E4E) and White (#FCF6F5FF). Yellow(#FCCF14) and teal (#108690).
+
+#### Imagery
+* The hero image on each page was designed to take up 70% of the full-screen height. In doing so, a hint of the following content is given. 
+
+
+#### Design justifications
+A consistent layout was used throughout the pages. Sections were reused throughout pages as needed to both decrease the amount of new code needed and improve the familiarity of content. 
+
+To improve the user experience, the use of the ```<a href = "" target = "_blank"> </a>``` was limited, applying the ```target = "_blank">``` attribute only for external links, such as social links and mailto. 
+
 
 ### Wireframes
 All wireframes were created using the software [Balsamiq](https://balsamiq.com/). 
@@ -106,28 +136,6 @@ Please note, the final website layout contains slight variations to the original
 * [About](#)
 * [Portfolio](#)
 * [Contact Us](#)
-
-
-### Design
-
-#### Typography
-All fonts used are from [Google Fonts](https://fonts.google.com/). 
-
-Fonts used include:
-* 
-* 
-
-#### Colour Scheme
-
-
-#### Imagery
-* The hero image on each page was designed to take up 70% of the full-screen height. In doing so, a hint of the following content is given. 
-
-
-#### Design justifications
-A consistent layout was used throughout the pages. Sections were reused throughout pages as needed to both decrease the amount of new code needed and improve the familiarity of content. 
-
-To improve the user experience, the use of the ```<a href = "" target = "_blank"> </a>``` was limited, applying the ```target = "_blank">``` attribute only for external links, such as social links and mailto. 
 
 ----------------------------
 
