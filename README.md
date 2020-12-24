@@ -98,7 +98,11 @@ Fonts used include:
 * 
 
 #### Colour Scheme
-A two-tone color palette was used, Sky Blue (#89ABE3FF) dark blue (2F3180) (1D1E4E) and White (#FCF6F5FF). Yellow(#FCCF14) and teal (#108690).
+A blue/yellow color palette was used which creates a bright undertone and compliments the striking imagery well. 
+
+![color palette](assets/readme_files/color-pal.png).
+
+Colours include: Blue (2F3180) dark blue (1D1E4E) teal (108690) and Yellow(#FCCF14).
 
 #### Imagery
 * The hero image on each page was designed to take up 70% of the full-screen height. In doing so, a hint of the following content is given. 

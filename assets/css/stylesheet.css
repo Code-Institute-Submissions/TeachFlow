@@ -1,0 +1,77 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@400;500&display=swap');
+
+/* index.html*/
+/* nav bar */
+body{
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, 
+.navbar .nav-link{
+    font-family:'Lato', sans-serif;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+h3.heading{
+    color:white;
+}
+
+/*navbar */
+.nav-container{
+    padding:0;
+    background-color:white;
+}
+
+.navbar li{
+    margin: 0px 15px;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+    color:#1D1E4E;
+    font-size:19px;
+    padding: 10px 15px;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link:hover{
+    color:#2F3180;
+    padding: 10px 15px;
+} /*incorportate brand purple colour for hover nav elements*/
+
+
+.navbar-light .navbar-nav .active>.nav-link{
+    color: #1D1E4E;
+}
+
+
+@media(min-width:1300px){
+    .navbar{
+        position: relative;
+    }
+    .navbar-brand{
+        position:absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    } /*switch brand logo position in nav bar from left to middle on larger screen sizes*/
+}
+
+/* hero image */
+.home-hero-image-container{
+    height:100vh;
+    background:url("../images/hero-images/home-hero.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    display:flex;
+    align-items:center;
+    justify-content: center;
+
+    position: relative;
+}
