@@ -1,37 +1,100 @@
-function initMap() {
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 3,
-    center: { lat: 34.0479, lng: 100.6197 },
-  });
-  // Create an array of alphabetical characters used to label the markers.
-  const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  // Add some markers to the map.
-  // Note: The code uses the JavaScript Array.prototype.map() method to
-  // create an array of markers based on a given "locations" array.
-  // The map() method here has nothing to do with the Google Maps API.
-  const markers = locations.map((location, i) => {
-    return new google.maps.Marker({
-      position: location,
-      label: labels[i % labels.length],
-    });
-  });
-  // Add a marker clusterer to manage the markers.
-  new MarkerClusterer(map, markers, {
-    imagePath:
-      "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
-  });
+function openPage(pageName, element) {
+    // first hide all the elements with class = "tabcontent"
+    let i, tabcontent, tfbutton;
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // take away the bk color
+
+    tfbutton = document.getElementsByClassName("tfbutton");
+    for (i=0; i < tfbutton.length; i++) {
+        tfbutton[i].style.backgroundColor = "";
+    }
+
+    // show the tabs content
+    document.getElementsById(pagename).style.display = "block";
+
+    // add the color to button ussed to open tab content
+    element.style.backgroundColor = "#fffffff";
+    setTimeout(function(){
+        mapjapan.invalidateSize();
+        mapchina.invalidateSize();
+        mapthailand.invalidateSize();
+    }, 0);
 }
-const locations = [
-  { lat: 35.1796, lng: 129.0756 }, //busan
-  { lat: 37.5665, lng: 126.9780 }, //seoul
-  { lat: 35.8714, lng: 128.6014 }, //deagu
-  { lat: 39.9042, lng: 116.4074 }, // beijing
-  { lat: 31.2304, lng: 121.4737 }, //shanghai
-  { lat: 22.5431, lng: 114.0579 }, //shenzhen
-  { lat: 18.7883, lng: 98.9853 }, //chiang mai
-  { lat: 7.8804, lng: 98.3923 }, //phuket
-  { lat: 13.7563, lng: 100.5018 }, //bangkok
-  { lat: 34.6937, lng: 135.5023 }, //Osaka
-  { lat: 35.6762, lng: 139.6503 }, //Tokyo
-  { lat: 35.0116, lng: 135.7681 }, //Kyoto
-];
+    // korea
+    // get element with id = "defaultOpen" and click on it
+    document.getElementsById("defaultOpen").click();
+
+    // create maps
+    let latsk = 35.9078;
+    let langsk = 127.7669;
+    let zoomsk= 4;
+
+    let mapsk = L.map("mapsk", {
+        center: [latsk, langsk],
+        zoom: zoomsk
+    });
+
+    // set one map tiles source
+    googlestreetssk = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+                attribution: '<a href="https://www.google.com/maps">Google Maps</a>',
+                maxZoom: 20,
+                subdomains:['mt0','mt1','mt2','mt3']
+            });
+             googlestreetssk.addTo(mapsk);
+
+    // japan
+    let latjapan = 36.2048;
+    let langjapan = 138.2529;
+    let zoomjapan = 3;
+
+    let mapjapan = L.map("mapjapan", {
+        center: [latjapan, langjapan],
+        zoom: zoomjapan
+    });
+
+    //set one map tiles source
+    googlestreetsjapan = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+                attribution: '<a href="https://www.google.com/maps">Google Maps</a>',
+                maxZoom: 20,
+                subdomains:['mt0','mt1','mt2','mt3']
+            });
+            googlestreetsjapan.addTo(mapjapan);
+
+    // china
+    let latchina = 35.8617;
+    let langchina = 104.1954;
+    let zoomchina = 1;
+
+    let mapchina = L.map("mapchina", {
+        center: [latchina, langchina],
+        zoom: zoomchina
+    });
+
+    googlestreetschina = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+                attribution: '<a href="https://www.google.com/maps">Google Maps</a>',
+                maxZoom: 20,
+                subdomains:['mt0','mt1','mt2','mt3']
+            });
+            googlestreetschina.addTo(mapchina);
+
+    // thailand
+    let latthai = 15.8700;
+    let langthai = 100.9925;
+    let zoomthai = 2;
+
+    let mapthailand = L.map("mapthailand", {
+        center: [latthai, langthai],
+        zoom: zoomthai
+    });
+
+        googlestreetsthai = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+                attribution: '<a href="https://www.google.com/maps">Google Maps</a>',
+                maxZoom: 20,
+                subdomains:['mt0','mt1','mt2','mt3']
+            });
+            googlestreetsthai.addTo(mapthailand);

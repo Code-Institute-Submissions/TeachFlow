@@ -1,78 +1,160 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Add Map</title>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXP6YPzm2kqpdmH3bU-C0WusEWtkX2uR8&callback=initMap&libraries=&v=weekly"
-      defer
-    ></script>
-    <style type="text/css">
-      /* Set the size of the div element that contains the map */
-      #map {
-        height: 400px;
-        /* The height is 400 pixels */
-        width: 100%;
-        /* The width is the width of the web page */
-      }
-    </style>
-    <script>
-      // Initialize and add the map
-      function initMap() {
-        // The location of Uluru
-        const uluru = { lat: -25.344, lng: 131.036 };
-        // The map, centered at Uluru
-        const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 4,
-          center: uluru,
-        });
-        // The marker, positioned at Uluru
-        const marker = new google.maps.Marker({
-          position: uluru,
-          map: map,
-        });
-      }
-    </script>
-  </head>
-  <body>
-    <header class = "container-fluid nav-container">
-            <nav class="navbar navbar-light navbar-expand-sm">
-                <a class="navbar-brand" href=".">
-                    <img src="assets/logo/logo2.png"  alt="TeachFlow Logo" loading="lazy">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#livinglandscapesnav" aria-controls="livinglandscapesnav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="livinglandscapesnav">
-                    <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">
-                            Home 
-                            <span class="sr-only">
-                                Home(current)
-                            </span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="game.html">
-                            game
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="portfolio.html">
-                            Portfolio
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">
-                            Contact us
-                        </a>
-                    </li>
-                    </ul>
-                </div>
-            </nav>
-    </header>
-    <h3>My Google Maps Demo</h3>
-    <!--The div element for the map -->
-    <div id="map"></div>
-  </body>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+        <style>
+            /* Set height of body and the document to 100% to enable "full page tabs" */
+            body, html {
+                height: 100%;
+                margin: 0;
+                font-family: sans-serif;
+            }
+
+            /* Style tab links */
+            .tablink {
+                background-color: #9f9f9f;
+                color: black;
+                float: left;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 5px;
+                font-size: 16px;
+                width: 25%;
+            }
+
+            .tablink:hover {
+                background-color: #7f7f7f;
+            }
+
+            /* Style the tab content (and add height:100% for full page content) */
+            .tabcontent {
+                color: black;
+                background-color: white;
+                display: none;
+                padding: 15px 5px;
+                height: 95%;
+            }
+
+            .map {
+                width: 100%;
+                height: 100%;
+                border-radius: 5px 5px 0px 0px;
+                border-width: 1px;
+                border-style: dotted;
+                border-color: #000000;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <button class="tablink" onclick="openPage('Europe', this)" id="defaultOpen">Europe</button>
+        <button class="tablink" onclick="openPage('Asia', this)">Asia</button>
+        <button class="tablink" onclick="openPage('Africa', this)">Africa</button>
+        <button class="tablink" onclick="openPage('thailand', this)">Thailand</button>
+        <div id="Europe" class="tabcontent">
+            <div id="mapEurope" class="map"></div>
+        </div>
+
+        <div id="Asia" class="tabcontent">
+            <div id="mapAsia" class="map"></div>
+        </div>
+
+        <div id="Africa" class="tabcontent">
+            <div id="mapAfrica" class="map"></div>
+        </div>
+        <div id="thailand" class="tabcontent">
+            <div id= "mapthailand" class="map"></div>
+        </div>
+
+        <script>
+            function openPage(pageName, elmnt) {
+                // Hide all elements with class="tabcontent" by default */
+                var i, tabcontent, tablinks;
+
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+
+                // Remove the background color of all tablinks/buttons
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].style.backgroundColor = "";
+                }
+
+                // Show the specific tab content
+                document.getElementById(pageName).style.display = "block";
+
+                // Add the specific color to the button used to open the tab content
+                elmnt.style.backgroundColor = "#ffffff";
+                setTimeout(function(){
+                    mapAsia.invalidateSize();
+                    mapAfrica.invalidateSize();
+                }, 0);
+            }
+
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+
+            //Create maps
+            var centerLatEurope = 35.9078;
+            var centerLngEurope = 127.7669;
+            var initialZoomEurope = 6;
+
+            var mapEurope = L.map('mapEurope', {
+                center: [centerLatEurope, centerLngEurope],
+                zoom: initialZoomEurope
+            });
+
+            //set one map tiles source
+            googleStreetsEurope = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+                attribution: '<a href="https://www.google.com/maps">Google Maps</a>',
+                maxZoom: 20,
+                subdomains:['mt0','mt1','mt2','mt3']
+            });
+            googleStreetsEurope.addTo(mapEurope);
+
+
+
+            var centerLatAsia = 49.0;
+            var centerLngAsia = 88.0;
+            var initialZoomAsia = 2;
+
+            var mapAsia = L.map('mapAsia', {
+                center: [centerLatAsia, centerLngAsia],
+                zoom: initialZoomAsia
+            });
+
+            //set one map tiles source
+            googleStreetsAsia = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+                attribution: '<a href="https://www.google.com/maps">Google Maps</a>',
+                maxZoom: 20,
+                subdomains:['mt0','mt1','mt2','mt3']
+            });
+            googleStreetsAsia.addTo(mapAsia);
+
+
+
+            var centerLatAfrica = 0.0;
+            var centerLngAfrica = 18.0;
+            var initialZoomAfrica = 4;
+
+            var mapAfrica = L.map('mapAfrica', {
+                center: [centerLatAfrica, centerLngAfrica],
+                zoom: initialZoomAfrica
+            });
+
+            //set one map tiles source
+            googleStreetsAfrica = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+                attribution: '<a href="https://www.google.com/maps">Google Maps</a>',
+                maxZoom: 20,
+                subdomains:['mt0','mt1','mt2','mt3']
+            });
+            googleStreetsAfrica.addTo(mapAfrica);
+        </script>
+    </body>
 </html>

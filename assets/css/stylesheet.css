@@ -88,7 +88,7 @@ h1, h2, h3, h4, h5, h6,
     background-color: #fdf4ce;
 }
 
-.tf-button{
+.tfbutton{
     margin:5px;
     width: 150px;
 }
@@ -98,7 +98,21 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* map */
-#map{
-    height: 400px;
-    width: 100%;
+            .map {
+                float: left;
+                width: 34.8%;
+                height: 100%;
+                border-radius: 5px 5px 0px 0px;
+                border-width: 1px;
+                border-style: dotted;
+                border-color: #000000;
+            }
+
+.tabcontent {
+    color: black;
+    background-color: white;
+    display: none;
+    padding: 15px 5px;
+    height: 95%;
 }
+
