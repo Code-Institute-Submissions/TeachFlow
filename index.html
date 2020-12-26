@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title> 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/stylesheet.css" type="text/css">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    
+    <!--hover-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
+    
+    <!-- css files-->
+        <link rel="stylesheet" href="assets/css/stylesheet.css">
 </head>
 <body>
     <!-- Home -->
@@ -30,8 +35,8 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">
-                            About
+                        <a class="nav-link" href="game.html">
+                            game
                         </a>
                     </li>
                     <li class="nav-item">
@@ -133,13 +138,13 @@
                     <button type="button" class="btn btn-outline-primary tf-button">South Korea</button>
                 </div>
                 <div class = "col-6 col-md-3">
-                    <button type="button" class="btn btn-outline-primary tf-button">South Korea</button>
+                    <button type="button" class="btn btn-outline-primary tf-button">Japan</button>
                 </div>
                 <div class = "col-6 col-md-3">
-                    <button type="button" class="btn btn-outline-primary tf-button">South Korea</button>
+                    <button type="button" class="btn btn-outline-primary tf-button">China</button>
                 </div>
                 <div class = "col-6 col-md-3">
-                    <button type="button" class="btn btn-outline-primary tf-button">South Korea</button>
+                    <button type="button" class="btn btn-outline-primary tf-button">Thailand</button>
                 </div>
             </div>
             <div class = "row country-info-container">
@@ -150,25 +155,28 @@
             <div class = "country-facts">
                 <div class = "row">
                     <div class ="col">
-
                     </div>
                 </div>
             </div>
             <div class = "maps-api">
                 <div class = "row">
-                    <div class ="col">
-
-                    </div>
+                        <div class = "col">
+                        <h3>My Google Maps Demo</h3>
+                        <!--The div element for the map -->
+                        <div id="map"></div>
+                        </div>
                 </div>
             </div>
-
         </section>
 
         <footer class = "container-fluid footer">
         </footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXP6YPzm2kqpdmH3bU-C0WusEWtkX2uR8&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <script src="assets/js/maps.js" type="text/javascript"></script>
 </body>
 </html>

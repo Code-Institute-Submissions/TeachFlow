@@ -3,6 +3,8 @@
 
 /* index.html*/
 /* nav bar */
+
+
 body{
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
@@ -88,8 +90,15 @@ h1, h2, h3, h4, h5, h6,
 
 .tf-button{
     margin:5px;
+    width: 150px;
 }
 
 .dest-button-row{
     text-align:center;
+}
+
+/* map */
+#map{
+    height: 400px;
+    width: 100%;
 }
