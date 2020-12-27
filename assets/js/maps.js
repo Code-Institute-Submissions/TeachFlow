@@ -1,13 +1,14 @@
 function openPage(pageName, elmnt) {
-                // Hide all elements with class="tabcontent" by default */
-                var i, countrymap, tfbutton;
+                // Hide all elements with class="countrymap" by default */
+                let i, countrymap, tfbutton;
 
+                // define the country map
                 countrymap = document.getElementsByClassName("countrymap");
                 for (i = 0; i < countrymap.length; i++) {
                     countrymap[i].style.display = "none";
                 }
 
-                // Remove the background color of all tfbutton/buttons
+                // Remove the active color on buttons after clicked
                 tfbutton = document.getElementsByClassName("tfbutton");
                 for (i = 0; i < tfbutton.length; i++) {
                     tfbutton[i].style.backgroundColor = "";
@@ -23,12 +24,13 @@ function openPage(pageName, elmnt) {
                     mapChina.invalidateSize();
                     mapThailand.invalidateSize();
                 }, 0);
-            }
+            } // end of function
 
             // Get the element with id="defaultOpen" and click on it
             document.getElementById("defaultOpen").click();
 
-            //Create maps
+            //Create maps 
+
             //sk
 
             var LatSouthKorea = 35.9078;
@@ -103,3 +105,54 @@ function openPage(pageName, elmnt) {
                 subdomains:['mt0','mt1','mt2','mt3']
             });
             googleStreetsThailand.addTo(mapThailand);
+
+            // set info
+
+            // sk info
+
+            document.getElementById("infoSouthKorea").innerHTML = 
+            `<h5>Info:</h5>
+             <p>South Korea is an extraordinary country filled with beautiful beaches, thriving cities, ancient temples, remarkable natural scenery and most importantly, friendly people with ancient history. </p>
+             <span>Capital City:</span> Seoul
+             <br> <br>
+             <span>Average Salary:</span> $1,600 to $2,675
+             <br> <br>
+             <span>Requirements:</span> Bachelor's degree & E-2 visa
+             <br> <br>
+             <span>Benefits:</span> Paid airfare, housing & end of contract bonus`;
+
+            // Japan info
+            document.getElementById("infoJapan").innerHTML = 
+            `<h5>Info:</h5>
+             <p>Japan is an archipelago, or string of islands, on the eastern edge of Asia. There are four main islands: Hokkaido, Honshu, Shikoku, and Kyushu. There are also nearly 4,000 smaller islands! </p>
+             <span>Capital City:</span> Tokyo
+             <br> <br>
+             <span>Average Salary:</span> $1,700 to $3,000
+             <br> <br>
+             <span>Requirements:</span> Bachelor's degree & completed visa form
+             <br> <br>
+             <span>Benefits:</span> Paid airfare, housing/housing allowance`;
+
+            // china info
+            document.getElementById("infoChina").innerHTML = 
+            `<h5>Info:</h5>
+             <p>China is the largest of all Asian countries and has the largest population of any country in the world. Occupying nearly the entire East Asian landmass, it covers approximately one-fourteenth of the land area of Earth.</p>
+             <span>Capital City:</span> Beijing
+             <br> <br>
+             <span>Average Salary:</span> $1,700 - $4,300
+             <br> <br>
+             <span>Requirements:</span> Bachelor's degree & Z visa
+             <br> <br>
+             <span>Benefits:</span> Low cost of Living`;
+
+            // Thailand info
+            document.getElementById("infoThailand").innerHTML = 
+            `<h5>Info:</h5>
+             <p>China is the largest of all Asian countries and has the largest population of any country in the world. Occupying nearly the entire East Asian landmass, it covers approximately one-fourteenth of the land area of Earth.</p>
+             <span>Capital City:</span> Bangkok
+             <br> <br>
+             <span>Average Salary:</span> $800-$1,000 
+             <br> <br>
+             <span>Requirements:</span> Bachelor's degree & B visa
+             <br> <br>
+             <span>Benefits:</span> Low cost of Living`;
