@@ -1,100 +1,105 @@
-function openPage(pageName, element) {
-    // first hide all the elements with class = "tabcontent"
-    let i, tabcontent, tfbutton;
+function openPage(pageName, elmnt) {
+                // Hide all elements with class="tabcontent" by default */
+                var i, countrymap, tfbutton;
 
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
+                countrymap = document.getElementsByClassName("countrymap");
+                for (i = 0; i < countrymap.length; i++) {
+                    countrymap[i].style.display = "none";
+                }
 
-    // take away the bk color
+                // Remove the background color of all tfbutton/buttons
+                tfbutton = document.getElementsByClassName("tfbutton");
+                for (i = 0; i < tfbutton.length; i++) {
+                    tfbutton[i].style.backgroundColor = "";
+                }
 
-    tfbutton = document.getElementsByClassName("tfbutton");
-    for (i=0; i < tfbutton.length; i++) {
-        tfbutton[i].style.backgroundColor = "";
-    }
+                // Show the specific tab content
+                document.getElementById(pageName).style.display = "block";
 
-    // show the tabs content
-    document.getElementsById(pagename).style.display = "block";
+                // Add the specific color to the button used to open the tab content
+                elmnt.style.backgroundColor = "#ffffff";
+                setTimeout(function(){
+                    mapJapan.invalidateSize();
+                    mapChina.invalidateSize();
+                    mapThailand.invalidateSize();
+                }, 0);
+            }
 
-    // add the color to button ussed to open tab content
-    element.style.backgroundColor = "#fffffff";
-    setTimeout(function(){
-        mapjapan.invalidateSize();
-        mapchina.invalidateSize();
-        mapthailand.invalidateSize();
-    }, 0);
-}
-    // korea
-    // get element with id = "defaultOpen" and click on it
-    document.getElementsById("defaultOpen").click();
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
 
-    // create maps
-    let latsk = 35.9078;
-    let langsk = 127.7669;
-    let zoomsk= 4;
+            //Create maps
+            //sk
 
-    let mapsk = L.map("mapsk", {
-        center: [latsk, langsk],
-        zoom: zoomsk
-    });
+            var LatSouthKorea = 35.9078;
+            var LngSouthKorea = 127.7669;
+            var ZoomSouthKorea = 6;
 
-    // set one map tiles source
-    googlestreetssk = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+            var mapSouthKorea = L.map('mapSouthKorea', {
+                center: [LatSouthKorea, LngSouthKorea],
+                zoom: ZoomSouthKorea
+            });
+
+            //set one map tiles source
+            googleStreetsSouthKorea = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
                 attribution: '<a href="https://www.google.com/maps">Google Maps</a>',
                 maxZoom: 20,
                 subdomains:['mt0','mt1','mt2','mt3']
             });
-             googlestreetssk.addTo(mapsk);
+            googleStreetsSouthKorea.addTo(mapSouthKorea);
 
-    // japan
-    let latjapan = 36.2048;
-    let langjapan = 138.2529;
-    let zoomjapan = 3;
 
-    let mapjapan = L.map("mapjapan", {
-        center: [latjapan, langjapan],
-        zoom: zoomjapan
-    });
+            // japan
+            var LatJapan = 36.20;
+            var LngJapan = 138.25;
+            var ZoomJapan = 5;
 
-    //set one map tiles source
-    googlestreetsjapan = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+            var mapJapan = L.map('mapJapan', {
+                center: [LatJapan, LngJapan],
+                zoom: ZoomJapan
+            });
+
+            //set one map tiles source
+            googleStreetsJapan = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
                 attribution: '<a href="https://www.google.com/maps">Google Maps</a>',
                 maxZoom: 20,
                 subdomains:['mt0','mt1','mt2','mt3']
             });
-            googlestreetsjapan.addTo(mapjapan);
+            googleStreetsJapan.addTo(mapJapan);
 
-    // china
-    let latchina = 35.8617;
-    let langchina = 104.1954;
-    let zoomchina = 1;
 
-    let mapchina = L.map("mapchina", {
-        center: [latchina, langchina],
-        zoom: zoomchina
-    });
+            // china
+            var LatChina = 35.8617;
+            var LngChina = 104.1954;
+            var ZoomChina = 3;
 
-    googlestreetschina = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+            var mapChina = L.map('mapChina', {
+                center: [LatChina, LngChina],
+                zoom: ZoomChina
+            });
+
+            //set one map tiles source
+            googleStreetsChina = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
                 attribution: '<a href="https://www.google.com/maps">Google Maps</a>',
                 maxZoom: 20,
                 subdomains:['mt0','mt1','mt2','mt3']
             });
-            googlestreetschina.addTo(mapchina);
+            googleStreetsChina.addTo(mapChina);
 
-    // thailand
-    let latthai = 15.8700;
-    let langthai = 100.9925;
-    let zoomthai = 2;
+            // Thailand
+            var LatThailand = 11.973342;
+            var LngThailand = 99.723545;
+            var ZoomThailand = 4;
 
-    let mapthailand = L.map("mapthailand", {
-        center: [latthai, langthai],
-        zoom: zoomthai
-    });
+            var mapThailand = L.map('mapThailand', {
+                center: [LatThailand, LngThailand],
+                zoom: ZoomThailand
+            });
 
-        googlestreetsthai = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+            //set one map tiles source
+            googleStreetsThailand = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
                 attribution: '<a href="https://www.google.com/maps">Google Maps</a>',
                 maxZoom: 20,
                 subdomains:['mt0','mt1','mt2','mt3']
             });
-            googlestreetsthai.addTo(mapthailand);
+            googleStreetsThailand.addTo(mapThailand);

@@ -88,31 +88,45 @@ h1, h2, h3, h4, h5, h6,
     background-color: #fdf4ce;
 }
 
-.tfbutton{
-    margin:5px;
-    width: 150px;
-}
 
-.dest-button-row{
-    text-align:center;
-}
 
 /* map */
-            .map {
-                float: left;
-                width: 34.8%;
+
+
+            /* Set height of body and the document to 100% to enable "full page tabs" */
+            body, html {
                 height: 100%;
+                margin: 0;
+                font-family: sans-serif;
+            }
+
+            /* Style tab links */
+            .tfbutton {
+
+                cursor: pointer;
+                padding: 5px;
+                font-size: 16px;
+                width: 150px;
+                margin:5px;
+            }
+
+            .dest-button-row{
+                text-align:center;
+            }
+            /* Style the map */
+            .countrymap {
+                color: black;
+                background-color: white;
+                display: none;
+                padding: 15px 5px;
+                height: 95%;
+            }
+
+            .map {
+                width: 50%;
+                height: 60%;
                 border-radius: 5px 5px 0px 0px;
                 border-width: 1px;
                 border-style: dotted;
                 border-color: #000000;
             }
-
-.tabcontent {
-    color: black;
-    background-color: white;
-    display: none;
-    padding: 15px 5px;
-    height: 95%;
-}
-
