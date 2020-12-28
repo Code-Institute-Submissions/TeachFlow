@@ -86,7 +86,6 @@ h1, h2, h3, h4, h5, h6,
 
 .about-page{
     background-color: #fdf4ce;
-    padding:50px;
 }
 
 
@@ -167,7 +166,7 @@ h1, h2, h3, h4, h5, h6,
 /* class-lesson-section */
 .class-lesson-section {
     text-align: center;
-    padding-top: 50px;
+    padding: 50px;
 }
 
 .genbutton{
@@ -196,4 +195,119 @@ h1, h2, h3, h4, h5, h6,
     font-size:1.7rem;
     color: #fdf4ce;
     padding-right: 10px;
+}
+
+/* game */
+.game-contents{
+    display:flex;
+    justify-content: center;
+}
+
+.game {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.hidden {
+    display: none!important;
+}
+
+.tile-container {
+    display: grid;
+    grid-template-rows: 300px 300px;
+    grid-template-columns:300px 300px;
+    grid-gap: 25px;
+    position: relative;
+    margin-top:30px;
+    margin-bottom:40px;
+}
+
+.unclickable {
+    pointer-events: none;
+}
+
+.tile-red {
+    background-image: url(/assets/gameimg/chicken.png);
+   transition: 0.15s;
+}
+
+.tile-red:hover,
+.tile-red:focus,
+.tile-red:active{
+background-image: url(/assets/gameimg/chicken2.png);
+transform: translate(10px);
+}
+
+.tile-green {
+    background-image: url(/assets/gameimg/duck.png);
+    transition: 0.15s;
+}
+
+.tile-green:hover,
+.tile-green:focus,
+.tile-green:active{
+    background-image: url(/assets/gameimg/duck2.png);
+    transition: 0.15s;
+}
+
+.tile-blue {
+    background-image: url(/assets/gameimg/pig.png);
+    transition: 0.15s;
+}
+
+.tile-blue:hover,
+.tile-blue:focus,
+.tile-blue:active {
+    background-image: url(/assets/gameimg/pig2.png);
+    transition: 0.15s;
+}
+
+.tile-yellow {
+    background-image: url(/assets/gameimg/cow.png);
+    transition: 0.15s;
+}
+
+.tile-yellow:hover,
+.tile-yellow:focus,
+.tile-yellow:active {
+    background-image: url(/assets/gameimg/cow2.png);
+    transition: 0.15s;
+}
+
+/* style button */
+.info-section {
+    text-align: center;
+}
+
+.start-button {
+    display: inline-block;
+    height:38px;
+    padding: 0 30px;
+    color: #555;
+    text-align: center;
+    font-size:14px;
+    font-weight:bold;
+    cursor: pointer;
+}
+
+.start-button:hover{
+    color: #333;
+    border-color:#888;
+}
+
+@media screen and (max-width: 550px) {
+  .game {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .tile-container {
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 150px 150px;
+    grid-template-columns: 150px 150px;
+  }
 }
