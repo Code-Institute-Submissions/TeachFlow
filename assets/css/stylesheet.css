@@ -156,9 +156,14 @@ h1, h2, h3, h4, h5, h6,
                 .countrymap{
                     height:800px;
                 }
-            
+                .copyright span{
+                    font-size:1.4rem !important;
             }
 
+                .ticon{
+                    font-size: 1.4rem !important;
+                }
+            }
 /* class-lesson-section */
 .class-lesson-section {
     text-align: center;
