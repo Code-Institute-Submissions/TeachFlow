@@ -197,87 +197,86 @@ h1, h2, h3, h4, h5, h6,
     padding-right: 10px;
 }
 
-/* game */
-.game-contents{
-    display:flex;
-    justify-content: center;
-}
 
-.game {
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-}
+/*game*/
 
+.game{
+    padding-bottom:70px;
+}
 .hidden {
     display: none!important;
 }
 
-.tile-container {
-    display: grid;
-    grid-template-rows: 300px 300px;
-    grid-template-columns:300px 300px;
-    grid-gap: 25px;
-    position: relative;
-    margin-top:30px;
-    margin-bottom:40px;
-}
 
+.tile{
+    width: 300px;
+    height: 300px;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+}
 .unclickable {
     pointer-events: none;
 }
 
-.tile-red {
+.tile-chicken {
     background-image: url(/assets/gameimg/chicken.png);
    transition: 0.15s;
 }
 
-.tile-red:hover,
-.tile-red:focus,
-.tile-red:active{
+.tile-chicken:hover,
+.tile-chicken:focus,
+.tile-chicken:active,
+.tile-chicken.activated{
 background-image: url(/assets/gameimg/chicken2.png);
 transform: translate(10px);
 }
 
-.tile-green {
+.tile-duck {
     background-image: url(/assets/gameimg/duck.png);
     transition: 0.15s;
 }
 
-.tile-green:hover,
-.tile-green:focus,
-.tile-green:active{
+.tile-duck:hover,
+.tile-duck:focus,
+.tile-duck:active,
+.tile-duck.activated{
     background-image: url(/assets/gameimg/duck2.png);
-    transition: 0.15s;
+    transform: translate(10px);
 }
 
-.tile-blue {
+.tile-pig {
     background-image: url(/assets/gameimg/pig.png);
     transition: 0.15s;
 }
 
-.tile-blue:hover,
-.tile-blue:focus,
-.tile-blue:active {
+.tile-pig:hover,
+.tile-pig:focus,
+.tile-pig:active,
+.tile-pig.activated{
     background-image: url(/assets/gameimg/pig2.png);
-    transition: 0.15s;
+    transform: translate(10px);
 }
 
-.tile-yellow {
+.tile-cow {
     background-image: url(/assets/gameimg/cow.png);
     transition: 0.15s;
 }
 
-.tile-yellow:hover,
-.tile-yellow:focus,
-.tile-yellow:active {
+.tile-cow:hover,
+.tile-cow:focus,
+.tile-cow:active,
+.tile-cow.activated {
     background-image: url(/assets/gameimg/cow2.png);
-    transition: 0.15s;
+    transform: translate(10px);
 }
 
 /* style button */
 .info-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.info-text{
     text-align: center;
 }
 
@@ -307,7 +306,8 @@ transform: translate(10px);
   .tile-container {
     width: 100%;
     height: 100%;
-    grid-template-rows: 150px 150px;
-    grid-template-columns: 150px 150px;
   }
 }
+ .img-responsive {
+     margin: 0 auto;
+ }
