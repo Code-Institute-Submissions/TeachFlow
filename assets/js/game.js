@@ -143,10 +143,16 @@ tileContainer.addEventListener('click', event => {
 });
 
 
-
-
-
-
+// instructions button
+let instructbtn = document.querySelector('.instruct-btn').addEventListener("click", toggleDisplay); // get the instruct-btn and add an event listener, toggler on click
+    function toggleDisplay() {
+        let desc = document.querySelector(".showDesc"); //desc is the showDesc class
+        if (desc.style.display === "none") {//if display === none
+            desc.style.display = "block"; // set it to block
+        } else {
+            desc.style.display = "none"; // else set it to none
+        }
+    }
 
 
 
