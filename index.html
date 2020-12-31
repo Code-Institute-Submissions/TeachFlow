@@ -23,7 +23,7 @@
     <header class = "container-fluid nav-container">
             <nav class="navbar navbar-light navbar-expand-sm">
                 <a class="navbar-brand" href=".">
-                    <img src="assets/logo/logo2.png"  alt="TeachFlow Logo" loading="lazy">
+                    <img src="assets/logo/TeachFlow.png"  alt="TeachFlow Logo" loading="lazy">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#livinglandscapesnav" aria-controls="livinglandscapesnav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -60,7 +60,7 @@
     <!-- add about page styling-->
     <div class = "about-page">
         <!-- hero image carousel-->
-        <section class = "hero-image">
+        <section class = "hero-image-home">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -101,9 +101,10 @@
             </div>
             <div class = "row">
                 <div class = "col-12">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio quaerat cum, nisi 
-                    architecto iure est fugit nihil suscipit delectus dolorem officia voluptas, ducimus
-                    corrupti quos non asperiores iste autem voluptatibus!
+                    We're Teachflow, an active group of ESL teachers based in Asia. 
+                    Like many, we left our 9 - 5 jobs in search of an adventure oversees and a more meaningful way of life. 
+                    And we didn't look back! 
+                    Our aim is to inspire and support you on your teaching journey. 
                 </div>
             </div>
         </section>
@@ -111,50 +112,60 @@
         <section class = "container-fluid about-key-points">
             <div class = "row about-block">
                 <div class = "col-12 col-md-6">
-                    <h3 class = "heading">The Experience of a Lifetime</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste eum aperiam architecto optio quis, 
-                        dolorem dicta sapiente id! Ipsam at repellendus molestias nisi id ipsum quidem fugiat sint eum similique!
+                    <h3 class = "heading">Enjoy the Experience of a Lifetime</h3>
+                    <p class = "about-para"> 
+                        Making the decision to become an ESL teacher in Asia is just the start of your journey. 
+                        With many destinations to choose from, a lifetime of memories awaits you.
+                        You will experience a new culture, cuisine and embark on many adventures.
                     </p>
                 </div>
-                <div class = "col-12 col-md-6">
+                <div class = "col-12 col-md-6 img-wrapper">
                     <img src = "assets/about/pic2.png" class = "about-image" alt = "The experience of a Lifetime">
                 </div>
             </div>
             <div class = "row about-block">
                 <div class = "col-12 col-md-6">
-                    <img src = "assets/about/pic1.png" class = "about-image" alt = "Make a Difference">
+                    <img src = "assets/about/pic1.png" class = "about-image"  alt = "Make a Difference">
                 </div>
                 <div class = "col-12 col-md-6">
                     <h3 class = "heading">Make a Difference</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste eum aperiam architecto optio quis, 
-                        dolorem dicta sapiente id! Ipsam at repellendus molestias nisi id ipsum quidem fugiat sint eum similique!
+                    <p class = "about-para">
+                        Teaching English as a second language is a rewarding career.
+                        You'll have the opportunity to teach English to students of all abilities and ages,
+                        and you will directly impact on the skills of your students.  
+                        Explore your next destination below. 
                     </p>
                 </div>
             </div>
         </section>
 
-        <section class = "container-fluid destinations">
+        <section class = "container-fluid destinations-container">
             <div class = "row">
                 <div class = "col-12">
-                    <h3 class="heading">Explore a Destination</h3>
+                    <h3 class="heading">
+                        Explore a Destination
+                    </h3>
+                    <p class = "about-para">
+                        Click on a country below, to discover more.
+                    </p>
                 </div>
             </div>
-        </section>
         <!-- map-->
         <div class = "row dest-button-row">
             <div class = "col-6 col-md-3">
-                <button class="btn btn-outline-primary tfbutton" onclick="openPage('SouthKorea', this)" id="defaultOpen">South Korea</button>
+                <button class="btn btn-outline-primary tfbutton button-color" onclick="openPage('SouthKorea', this)" id="defaultOpen">South Korea</button>
             </div>
             <div class = "col-6 col-md-3">
-                <button class="btn btn-outline-primary tfbutton" onclick="openPage('Japan', this)">Japan</button>
+                <button class="btn btn-outline-primary tfbutton button-color" onclick="openPage('Japan', this)">Japan</button>
             </div>
             <div class = "col-6 col-md-3">
-                <button class="btn btn-outline-primary tfbutton" onclick="openPage('China', this)">China</button>
+                <button class="btn btn-outline-primary tfbutton button-color" onclick="openPage('China', this)">China</button>
             </div>
             <div class = "col-6 col-md-3">
-                <button class="btn btn-outline-primary tfbutton" onclick="openPage('Thailand', this)">Thailand</button>
+                <button class="btn btn-outline-primary tfbutton button-color" onclick="openPage('Thailand', this)">Thailand</button>
             </div>
         </div>
+    </section>
     </div> <!-- break off 'about-page' class before map-->
         <div id="SouthKorea" class="countrymap">
             <div id="mapSouthKorea" class="map"></div>
@@ -177,8 +188,11 @@
         <section class = "container-fluid class-lesson-section">
             <div class = "row">
                     <div class = "col-12">
-                        <h5>Want to see what a class lesson looks like?</h5>
-                        <button class="btn btn-outline-primary instruct-button">Check it out</button>
+                        <p class = "special-text">Want to see what a class lesson looks like?</p>
+                        <button class="btn btn-outline-primary instruct-button button-color">
+                            <a href="game.html"  rel="noopener">
+                            Check it out </a>
+                        </button>
                     </div> 
             </div>
         </section>

@@ -1,6 +1,7 @@
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@400;500&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
 /* index.html*/
 /* nav bar */
 
@@ -8,8 +9,8 @@
 body{
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
-    line-height: 160%;
-    font-size:1.5rem;
+    line-height: 170%;
+    font-size:1.3rem;
 }
 
 .text-center{
@@ -35,9 +36,10 @@ h1, h2, h3, h4, h5, h6,
 
 .navbar-light .navbar-brand,
 .navbar-light .navbar-nav .nav-link {
-    color:#1D1E4E;
     font-size:19px;
     padding: 10px 15px;
+    color: #034cae;
+    font-weight: bold;
 }
 
 .navbar-light .navbar-brand,
@@ -47,8 +49,15 @@ h1, h2, h3, h4, h5, h6,
 } /*incorportate brand purple colour for hover nav elements*/
 
 
-.navbar-light .navbar-nav .active>.nav-link{
-    color: #1D1E4E;
+.navbar-light .navbar-nav .active>.nav-link {
+    color: #1d1e4e;
+}
+
+.special-text {
+    font-family: 'Caveat Brush', cursive;
+    font-size: 160%;
+    color: #246e74;
+    margin-bottom: 50px;
 }
 
 
@@ -70,7 +79,7 @@ h1, h2, h3, h4, h5, h6,
 .heading{
     margin: 0 auto 1.75rem;
     text-align: center;
-    color:#1e1e57;
+    color:#034cae;
     font-weight: 700;
 }
 
@@ -82,13 +91,13 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .about-image{
-    border-radius: 10px;
+    border-radius: 7rem;
     width:100%;
-    margin: 0 auto 2rem;
+    padding:10%;
 }
 
 .about-block{
-    margin: 3rem auto 4rem;
+    margin: 3rem auto 0;
     align-items: center;
 }
 
@@ -96,7 +105,10 @@ h1, h2, h3, h4, h5, h6,
     background-color: #fdf4ce;
 }
 
-
+/*destinations container */
+.destinations-container {
+    padding-bottom:20px;
+}
 
 /* map */
 
@@ -108,15 +120,33 @@ h1, h2, h3, h4, h5, h6,
                 font-family: sans-serif;
             }
 
+            .button-color{
+                background-color: #246e74;
+                color: white;
+                font-weight: bold;
+                border: none;
+            }
+
+            
+            .button-color:hover{
+                background-color: #034cae;
+            }
+            
             /* Style tab links */
             .tfbutton {
-
                 cursor: pointer;
                 padding: 5px;
                 font-size: 16px;
                 width: 150px;
                 margin:5px;
             }
+
+                a,
+                a:hover {
+                color: white;
+                text-decoration: none;
+            }
+
 
             .dest-button-row{
                 text-align:center;
@@ -147,6 +177,11 @@ h1, h2, h3, h4, h5, h6,
             .countrymap .info h5,
             .countrymap span{
                 font-weight:bold;
+            }
+
+            .countrymap .info {
+                font-size: 80%;
+                line-height:110%;
             }
 /* set maps size for mobile and sections under*/ 
             @media only screen and (max-width:600px){
@@ -186,8 +221,8 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .footer{
-    background-color: rgb(126, 128, 240);
-    padding: 40px 20px;
+    background-color: #034cae;
+    padding: 40px 4%;
 }
 
 /*social links styling */
@@ -198,21 +233,21 @@ h1, h2, h3, h4, h5, h6,
 
 .ticon{
     font-size: 2rem;
-    color: #fdf4ce;
+    color: #fccf14;
     margin:5px;
 }
 
 /* copyright styling */
 .copyright span{
     font-size:1.7rem;
-    color: #fdf4ce;
+    color: #fccf14;
     padding-right: 10px;
 }
 
 .about-para{
     width:90%;
     text-align: center;
-    padding:20px;
+    padding:30px;
     margin: 0 auto;
 }
 /*hero image - classtime*/
@@ -236,17 +271,21 @@ img {
 }
 
 .image2,
+.image3,
 .video2 {
     display:none;
 }
 
-
+iframe {
+    margin: 0 auto;
+    display: block;
+}
 
 
 /*game*/
 
-.game{
-    padding-bottom:70px;
+.game-button{
+    margin-bottom: 50px;
 }
 
 .hidden {
@@ -332,22 +371,19 @@ transform: translate(10px);
     display: inline-block;
     height:38px;
     padding: 0 30px;
-    color: #555;
     text-align: center;
     font-size:14px;
     font-weight:bold;
     cursor: pointer;
 }
 
-.start-button:hover{
-    color: #333;
-    border-color:#888;
-}
 
 .instruct-btn{
     display:block;
     margin: 0 auto;
+    margin-bottom: 10px;
 }
+
 @media screen and (max-width: 550px) {
   .game {
     width: 100%;
@@ -362,13 +398,14 @@ transform: translate(10px);
 }
 
 /* resizing page to mobile*/
-@media only screen and (max-width: 500px){ 
+@media only screen and (max-width: 800px){ 
    .image1,
-   .video1{
+   .video1,
+   .image2{
      display: none;
    }
 
-   .image2,
+   .image3,
    .video2{
      display: block;
    }
@@ -380,10 +417,28 @@ transform: translate(10px);
     height: 190px;
 }
 }
+/* tile image resize for ipad*/
+@media only screen and (min-width: 550px) and (max-width: 800px){ 
+       .tile {
+    background-size: 200px 200px;
+    background-position:50px !important;
+    width: 310px;
+    height: 190px;
+}
+    .image2{
+        display:block;
+    }
+
+    .image1,
+    .image3 {
+        display:none;
+    }
+}
+
 
 /* switch the two divsfor mobile */
 
-@media (max-width: 30em) {
+@media (max-width: 1200px) {
   .game {
     display: -webkit-box;
     display: -moz-box;
@@ -419,6 +474,8 @@ transform: translate(10px);
     order: 1;
   }
 }
+
+
 
 .showDesc{
     width:90%;

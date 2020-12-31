@@ -18,7 +18,7 @@ function openPage(pageName, elmnt) {
                 document.getElementById(pageName).style.display = "block";
 
                 // Add the specific color to the button used to open the tab content
-                elmnt.style.backgroundColor = "#ffffff";
+                elmnt.style.backgroundColor = "#034cae";
                 setTimeout(function(){
                     mapJapan.invalidateSize();
                     mapChina.invalidateSize();
@@ -111,8 +111,9 @@ function openPage(pageName, elmnt) {
             // sk info
 
             document.getElementById("infoSouthKorea").innerHTML = 
-            `<h5>Info:</h5>
-             <p>South Korea is an extraordinary country filled with beautiful beaches, thriving cities, ancient temples, remarkable natural scenery and most importantly, friendly people with ancient history. </p>
+            `<h4 class = "heading">Information:</h4>
+             <p>South Korea is filled with beautiful beaches, thriving cities, ancient temples, remarkable natural scenery and most importantly, friendly people with ancient history. </p>
+             <br>
              <span>Capital City:</span> Seoul
              <br> <br>
              <span>Average Salary:</span> $1,600 to $2,675
@@ -123,8 +124,9 @@ function openPage(pageName, elmnt) {
 
             // Japan info
             document.getElementById("infoJapan").innerHTML = 
-            `<h5>Info:</h5>
-             <p>Japan is an archipelago, or string of islands, on the eastern edge of Asia. There are four main islands: Hokkaido, Honshu, Shikoku, and Kyushu. There are also nearly 4,000 smaller islands! </p>
+            `<h4 class = "heading">Information:</h4>
+             <p>Japan is a string of islands, on the eastern edge of Asia. There are four main islands: Hokkaido, Honshu, Shikoku, and Kyushu. There are also nearly 4,000 smaller islands! </p>
+             <br>
              <span>Capital City:</span> Tokyo
              <br> <br>
              <span>Average Salary:</span> $1,700 to $3,000
@@ -135,11 +137,12 @@ function openPage(pageName, elmnt) {
 
             // china info
             document.getElementById("infoChina").innerHTML = 
-            `<h5>Info:</h5>
+            `<h4 class = "heading">Information:</h4>
              <p>China is the largest of all Asian countries and has the largest population of any country in the world. Occupying nearly the entire East Asian landmass, it covers approximately one-fourteenth of the land area of Earth.</p>
+             <br>
              <span>Capital City:</span> Beijing
              <br> <br>
-             <span>Average Salary:</span> $1,700 - $4,300
+             <span>Average Salary:</span> $1,700 to $4,300
              <br> <br>
              <span>Requirements:</span> Bachelor's degree & Z visa
              <br> <br>
@@ -147,11 +150,12 @@ function openPage(pageName, elmnt) {
 
             // Thailand info
             document.getElementById("infoThailand").innerHTML = 
-            `<h5>Info:</h5>
-             <p>China is the largest of all Asian countries and has the largest population of any country in the world. Occupying nearly the entire East Asian landmass, it covers approximately one-fourteenth of the land area of Earth.</p>
+            `<h4 class = "heading">Information:</h4>
+             <p>Thailand islocated in the center of mainland Southeast Asia. It is wholly within the tropics and encompasses diverse ecosystems.</p>
+             <br>
              <span>Capital City:</span> Bangkok
              <br> <br>
-             <span>Average Salary:</span> $800-$1,000 
+             <span>Average Salary:</span> $800 to $1,000 
              <br> <br>
              <span>Requirements:</span> Bachelor's degree & B visa
              <br> <br>
