@@ -1,6 +1,5 @@
-/* fonts */
+/* fonts and general styling*/
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@400;500&family=Caveat+Brush&display=swap');
-
 
 body{
     font-family: 'Roboto', sans-serif;
@@ -9,11 +8,34 @@ body{
     font-size:1.3rem;
     background-image:url("/assets/hero-images/bk.png");
     background-size: contain;
-    background-size: contain;
 }
+
+/*
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.info-text{
+    text-align: center;
+}
+
+ media queries forgame section on mobile
+@media screen and (max-width: 600px) {
+  .game-container {
+    width: 100%;
+  }
+
+  .tile-container {
+    width: 100%;
+    height: 100%;
+  }
+}
+*/
 
 .text-center{
     text-align: center;
+    padding:20px;
 }
 
 .heading{
@@ -21,6 +43,9 @@ body{
     text-align: center;
     color:#034cae;
     font-weight: 700;
+    font-family:'Lato', sans-serif;
+    text-transform: uppercase;
+    background-color: transparent;
 }
 
 h1, h2, h3, h4, h5, h6, 
@@ -30,209 +55,69 @@ h1, h2, h3, h4, h5, h6,
     text-align: center;
 }
 
-/*navbar */
-.nav-container{
-    padding:0;
-    background-color:white;
+/* General rules */
+.hidden {
+    display: none!important;
 }
 
-.navbar li{
-    margin: 0px 15px;
+.unclickable {
+    pointer-events: none;
 }
 
-.navbar-light .navbar-brand,
-.navbar-light .navbar-nav .nav-link {
-    font-size:24px;
-    padding: 10px 15px;
-    color: #034cae;
+/* general button styling */
+.button-color{
+    background-color: #246e74;
+    color: white;
     font-weight: bold;
+    border: none;
+    box-shadow: none;
 }
 
-.navbar-light .navbar-brand,
-.navbar-light .navbar-nav .nav-link:hover,
-.navbar-light .navbar-nav .active>.nav-link {
-    color:#2F3180;
-} 
-
-.special-text {
-    font-family: 'Caveat Brush', cursive;
-    font-size: 200%;
-    line-height: 120%;
-    color: #246e74;
-    margin-bottom: 50px;
+.button-color:hover,
+.button-color:focus,
+.button-color:active{
+    background-color: #034cae;
+    color:white;
 }
 
-/*about us page*/
-
-.about-us{
-    padding: 50px;
-    background-color: white;
-    margin-top:50px;
-    width:60%;
-
-}
-
-.about-key-points{
-    margin:50px 0px;
-    box-shadow: 5px 5px 10px;
-    padding:0;
-}
-
-.about-image{ /*2 images in about page */
-    border-radius: 7rem;
-    width:100%;
-    padding:10%;
-}
-
-.about-block{ 
-    margin: auto 0;
-    align-items: center;
-    background-color: rgba(253,244,206,0.7);
-}
-
-.first-block{
-    padding-top:30px;
-}
-
-
-/*destinations container */
-.destinations-container {
-    padding:30px;
-    background-color: white;
-    margin-bottom: 30px;
-}
-
-/* map */
-
-
-            /* Set height of body and the document to 100% to enable "full page tabs" */
-            body, html {
-                height: 100%;
-                margin: 0;
-                font-family: sans-serif;
-            }
-
-            .button-color{
-                background-color: #246e74;
-                color: white;
-                font-weight: bold;
-                border: none;
-            }
-
-            .button-color:hover,
-            .button-color:focus,
-            .button-color:active{
-                background-color: #034cae;
-                border:none;
-                box-shadow: none;
-            }
-            
-            /* Style tab links */
-            .tfbutton {
-                cursor: pointer;
-                padding: 5px;
-                font-size: 16px;
-                width: 150px;
-                margin:5px;
-            }
-
-                a,
-                a:hover {
-                color: white;
-                text-decoration: none;
-            }
-
-
-            .dest-button-row{
-                text-align:center;
-            }
-            /* Style the map */
-            .countrymap {
-                color: black;
-                background-color: white;
-                display: none;
-                padding: 15px 5px;
-                height: 500px;
-                width: 100%;
-            }
-
-            .map {
-                width: 50%;
-                height: 95%;
-                border-radius: 5px 5px 0px 0px;
-                float:left;
-            }
-
-            .info {
-                width:50%;
-                float: right;
-                padding:20px;
-            }
-
-            .countrymap .info h5,
-            .countrymap span{
-                font-weight:bold;
-            }
-
-            .countrymap .info {
-                font-size: 80%;
-                line-height:110%;
-            }
-/* set maps size for mobile and sections under*/ 
-            @media only screen and (max-width:600px){
-                .map {
-                    width: 100%;
-                    height: 50%;
-            }
-                .info {
-                    width:100%;
-                    height:50%;
-                  
-                    padding-left:20px;
-            }
-                .countrymap{
-                    height:800px;
-                }
-                .copyright span{
-                    font-size:1.4rem !important;
-            }
-
-                .ticon{
-                    font-size: 1.4rem !important;
-                }
-            }
-/* class-lesson-section */
-.song-container{
-    padding:50px 0px;
-}
-.class-lesson-section {
-    text-align: center;
-    padding: 50px;
-}
-
-.genbutton{
+/* instructions button*/
+.instruct-btn{
     margin: 10px;
     display:block;
+    margin: 0 auto;
 }
 
-.footer-container{
+/* game button (colours reversed) */
+.game-button-color {
     background-color: #034cae;
-    padding: 40px 4%;
+    color:white;
 }
 
-/*social links styling */
-.social-links{
-    text-align: right;
-
+.game-button-color:hover,
+.game-button-color:focus,
+.game-button-color:active {
+    background-color: #246e74;
 }
 
+
+.start-button {
+    display: inline-block;
+    height:38px;
+    padding: 0 30px;
+    text-align: center;
+    font-size:14px;
+    font-weight:bold;
+    cursor: pointer;
+}
+
+/*icons*/
 .ticon{
     font-size: 2rem;
     color: #fccf14;
     margin:5px;
 }
 
-/* Grow */
+/* Grow hover effect */
 /* https://ianlunn.github.io/Hover/ */
 .hvr-grow {
     display: inline-block;
@@ -250,6 +135,181 @@ h1, h2, h3, h4, h5, h6,
 .hvr-grow:active {
     transform: scale(1.1);
 }
+
+/* image styling*/
+img {
+    border-style: none;
+    margin: 0 auto;
+    display: block;
+}
+
+/*navbar */
+.nav-container{
+    padding:0;
+    background-color:white;
+}
+
+.navbar li{
+    margin: 0px 15px;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+    font-size:24px;
+    padding: 10px 15px;
+    text-transform: capitalize;
+    color: #034cae;
+    font-weight: bold;
+}
+
+/* active & hover link */
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .active>.nav-link {
+    color:#2F3180;
+} 
+
+/* special text at end of page */
+.special-text {
+    font-family: 'Caveat Brush', cursive;
+    font-size: 200%;
+    line-height: 120%;
+    color: #246e74;
+    margin-bottom: 50px;
+}
+
+.class-lesson-section {
+    text-align: center;
+    padding: 50px;
+}
+
+/*----------------------------------- about us page -----------------------------------*/
+
+/* first section */
+.about-us{
+    padding: 50px;
+    background-color: white;
+    margin-top:50px;
+    width:60%;
+
+}
+
+/* second section block */
+.about-key-points{
+    margin:50px 0px;
+    box-shadow: 5px 5px 10px;
+    padding:0;
+}
+
+.about-image{ /*2 images in the second section */
+    border-radius: 7rem;
+    width:100%;
+    padding:10%;
+}
+
+/* image and content wrapper */
+.about-block{ 
+    margin: auto 0;
+    align-items: center;
+    background-color: rgba(253,244,206,0.7);
+}
+
+/* image and content of first block */
+.first-block{
+    padding-top:30px;
+}
+
+
+/*destinations container */
+.destinations-container {
+    padding:30px;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+/* map */
+            
+/* Style tab links */
+.tfbutton {
+    padding: 5px;
+    font-size: 18px;
+    width: 150px;
+    margin:5px;
+}
+
+
+.dest-button-row{
+    text-align:center;
+}
+
+/* Style the map */
+
+/* map and info block*/
+.countrymap {
+    background-color: white;
+    padding: 15px 5px;
+    height: 500px;
+}
+
+/* map */
+.map {
+    width: 50%;
+    height: 95%;
+    float:left;
+}
+
+/* info */
+.info {
+    width:50%;
+    float: right;
+    padding:20px;
+}
+
+/* info styling */
+.countrymap .info h5,
+.countrymap span{
+    font-weight:bold;
+}
+
+.countrymap .info {
+    font-size: 80%;
+    line-height:110%;
+}
+
+/* set maps size for mobile */ 
+@media only screen and (max-width:600px){
+    .map { /* make map full screen */
+        width: 100%;
+        height: 50%;
+    }
+    .info { /* make info full screen */
+        width:100%;
+        height:50%;
+        padding-left:20px;
+    }
+    .countrymap{ /* size entire map block */
+        height:800px;
+    }
+    .copyright span{ /* change span font-size */
+        font-size:1.4rem !important;
+    }
+    .ticon{ /* resize icons */
+        font-size: 1.4rem !important;
+    }
+}
+
+/* Special text section */
+a, 
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/*footer & social links styling */
+.footer-container{
+    background-color: #034cae;
+    padding: 40px 4%;
+}
+
 /* copyright styling */
 .copyright span{
     font-size:1.7rem;
@@ -257,12 +317,12 @@ h1, h2, h3, h4, h5, h6,
     padding-right: 10px;
 }
 
-.about-para{
-    width:90%;
-    text-align: left;
-    padding-bottom:30px;
-    margin: 0 auto;
+.social-links{
+    text-align: right;
 }
+
+
+/*------------------------------- classtime ------------------------- */
 /*hero image - classtime*/
 .hero-image-game{
     height:70vh;
@@ -273,56 +333,71 @@ h1, h2, h3, h4, h5, h6,
     background-size: cover;
 }
 
-/*ceter all images */
-img {
-    border-style: none;
-    margin: 0 auto;
-    display: block;
-}
+/* Flashcards container*/
+
 .flashcards-container{
     padding:50px 0px;
     background-color:rgba(253,244,206,0.7);
     margin: 50px 0px
 }
 
+/* swap imaages & videos depending on screen size*/
 .image2,
 .image3,
 .video2 {
     display:none;
 }
 
-iframe {
-    margin: 0 auto;
-    display: block;
+.image1{ /* only display image 1*/
+    margin-bottom:15px;
 }
 
-.song-block {
+
+/* song-section */
+
+.song-container{
+    padding:50px 0px;
+}
+
+.song-block { /* video and content */
     margin: auto 0;
     align-items: center;
     background-color: rgba(253,244,206,0.7);
     padding: 50px;
 }
-/*game*/
-.game-block {
+
+.about-para { /* gen styling used in all pages */
+    width:90%;
+    text-align: left;
+    padding-bottom:30px;
+    margin: 0 auto;
+}
+
+iframe { /* video */
+    margin: 0 auto;
+    margin-top: 20px;
+    display: block;
+}
+
+/*game container*/
+/*general */
+.game-container { /* over-ride default settings */
+    margin:0;
+    padding:0;
+}
+
+.game-block { /* game and instructions */
     margin: auto 0;
     padding-top: 30px;
     align-items: center;
     background-color: rgba(253,244,206,0.7);
 }
-.game-container {
-    margin:0;
-    padding:0;
-}
 
-.game-button{
+.game-button-col{
     margin-bottom: 50px;
 }
 
-.hidden {
-    display: none!important;
-}
-
-
+/*memory game styling*/
 .tile{
     width: 300px;
     height: 300px;
@@ -330,9 +405,6 @@ iframe {
     background-origin: content-box;
     background-position: 50px !important;
     background-size: contain;
-}
-.unclickable {
-    pointer-events: none;
 }
 
 .tile-chicken {
@@ -343,9 +415,9 @@ iframe {
 .tile-chicken:hover,
 .tile-chicken:focus,
 .tile-chicken:active,
-.tile-chicken.activated{
-background-image: url(/assets/gameimg/chicken2.png);
-transform: translate(10px);
+.tile-chicken.activated{ /* swap images for focused */
+    background-image: url(/assets/gameimg/chicken2.png);
+    transform: translate(10px);
 }
 
 .tile-duck {
@@ -387,76 +459,49 @@ transform: translate(10px);
     transform: translate(10px);
 }
 
-/* style button */
+/* style text replaced by button */
 .info-section {
     text-align: center;
     margin-top: 50px;
+    font-weight:700;
 }
 
-.info-text{
-    text-align: center;
-}
-
-.start-button {
-    display: inline-block;
-    height:38px;
-    padding: 0 30px;
-    text-align: center;
-    font-size:14px;
-    font-weight:bold;
-    cursor: pointer;
-}
-
-.play-game-wrapper {
+.play-game-wrapper { /*apply bk color to button row*/
     background-color: rgba(253,244,206,0.7);
 }
-.instruct-btn{
-    display:block;
-    margin: 0 auto;
-    margin-bottom: 10px;
-}
 
-@media screen and (max-width: 550px) {
-  .game-container {
-    width: 100%;
-  }
-
-  .tile-container {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-/* resizing page to mobile*/
-@media only screen and (max-width: 800px){ 
+/* resizing the classtime page to mobile*/
+@media only screen and (max-width: 550px){ 
    .image1,
    .video1,
    .image2{
      display: none;
    }
 
-   .image3,
+   .image3, /* display smaller images/videos*/
    .video2{
      display: block;
+     margin-bottom:15px;
    }
 
-   .tile {
+   .tile { /* style rules for game images */
     background-size: 150px 150px;
     background-position:0px !important;
     width: 310px;
     height: 190px;
-}
+    }
 }
 /* tile image resize for ipad*/
 @media only screen and (min-width: 550px) and (max-width: 800px){ 
-       .tile {
-    background-size: 200px 200px;
-    background-position:50px !important;
-    width: 310px;
-    height: 190px;
-}
-    .image2{
+    .tile { /* game images */
+        background-size: 200px 200px;
+        background-position:50px !important;
+        width: 310px;
+        height: 190px;
+    }
+    .image2{ /* flashcards, show only image 2*/
         display:block;
+        margin-bottom:15px;
     }
 
     .image1,
@@ -466,7 +511,8 @@ transform: translate(10px);
 }
 
 
-/* switch the two divsfor mobile */
+/* switch the three game divs for mobile */
+/* credit https://stackoverflow.com/questions/17115995/what-is-the-best-way-to-move-an-element-thats-on-the-top-to-the-bottom-in-respo */
 
 @media (max-width: 1200px) {
   .game-container {
@@ -480,31 +526,27 @@ transform: translate(10px);
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    /* optional */
     -webkit-box-align: start;
     -moz-box-align: start;
     -ms-flex-align: start;
     -webkit-align-items: flex-start;
     align-items: flex-start;
   }
-
-  .game-container .tile-container {
+  .game-container .tile-container { /* game tiles (animals) @ position 2*/
     -webkit-box-ordinal-group: 2;
     -moz-box-ordinal-group: 2;
     -ms-flex-order: 2;
     -webkit-order: 2;
     order: 2;
   }
-
   .game-container .game-desc-container {
-    -webkit-box-ordinal-group: 1;
+    -webkit-box-ordinal-group: 1; /* game description @ position 1*/
     -moz-box-ordinal-group: 1;
     -ms-flex-order: 1;
     -webkit-order: 1;
     order: 1;
   }
-
-    .game-container .play-game-wrapper {
+    .game-container .play-game-wrapper { /* game button @ position 3*/
     -webkit-box-ordinal-group: 3;
     -moz-box-ordinal-group: 3;
     -ms-flex-order: 3;
@@ -514,8 +556,7 @@ transform: translate(10px);
 }
 
 
-
-.showDesc{
+.showDesc{ /* game instructions */
     width:90%;
     padding: 30px;
     text-align: left;
