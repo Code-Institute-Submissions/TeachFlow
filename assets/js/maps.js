@@ -1,43 +1,46 @@
+/* inspiration taken from https://www.w3schools.com/howto/howto_js_full_page_tabs.asp*/
 function openPage(pageName, elmnt) {
-                // Hide all elements with class="countrymap" by default */
-                let i, countrymap, tfbutton;
+                // once page loads, hide all elements with class="countrymap" */
+                let i; 
+                let countrymap;
+                let tfbutton; 
 
                 // define the country map
                 countrymap = document.getElementsByClassName("countrymap");
                 for (i = 0; i < countrymap.length; i++) {
-                    countrymap[i].style.display = "none";
+                    countrymap[i].style.display = "none"; 
                 }
 
-                // Remove the active color on buttons after clicked
+                // Remove the active color class on buttons after clicked
                 tfbutton = document.getElementsByClassName("tfbutton");
                 for (i = 0; i < tfbutton.length; i++) {
-                    tfbutton[i].style.backgroundColor = "";
+                    tfbutton[i].style.backgroundColor = ""; 
                 }
 
-                // Show the specific tab content
+                // Set the content to block, page name given as arg to func
                 document.getElementById(pageName).style.display = "block";
 
-                // Add the specific color to the button used to open the tab content
+                // Add the specific color to the active button 
                 elmnt.style.backgroundColor = "#034cae";
                 setTimeout(function(){
-                    mapJapan.invalidateSize();
+                    mapJapan.invalidateSize(); //Checks if the map container size changed and updates the map if so
                     mapChina.invalidateSize();
                     mapThailand.invalidateSize();
                 }, 0);
-            } // end of function
+            } 
 
             // Get the element with id="defaultOpen" and click on it
             document.getElementById("defaultOpen").click();
 
+
             //Create maps 
 
             //sk
+            let LatSouthKorea = 35.9078;
+            let LngSouthKorea = 127.7669;
+            let ZoomSouthKorea = 6;
 
-            var LatSouthKorea = 35.9078;
-            var LngSouthKorea = 127.7669;
-            var ZoomSouthKorea = 6;
-
-            var mapSouthKorea = L.map('mapSouthKorea', {
+            let mapSouthKorea = L.map('mapSouthKorea', {
                 center: [LatSouthKorea, LngSouthKorea],
                 zoom: ZoomSouthKorea
             });
@@ -52,11 +55,11 @@ function openPage(pageName, elmnt) {
 
 
             // japan
-            var LatJapan = 36.20;
-            var LngJapan = 138.25;
-            var ZoomJapan = 5;
+            let LatJapan = 36.20;
+            let LngJapan = 138.25;
+            let ZoomJapan = 5;
 
-            var mapJapan = L.map('mapJapan', {
+            let mapJapan = L.map('mapJapan', {
                 center: [LatJapan, LngJapan],
                 zoom: ZoomJapan
             });
@@ -71,11 +74,11 @@ function openPage(pageName, elmnt) {
 
 
             // china
-            var LatChina = 35.8617;
-            var LngChina = 104.1954;
-            var ZoomChina = 3;
+            let LatChina = 35.8617;
+            let LngChina = 104.1954;
+            let ZoomChina = 3;
 
-            var mapChina = L.map('mapChina', {
+            let mapChina = L.map('mapChina', {
                 center: [LatChina, LngChina],
                 zoom: ZoomChina
             });
@@ -89,11 +92,11 @@ function openPage(pageName, elmnt) {
             googleStreetsChina.addTo(mapChina);
 
             // Thailand
-            var LatThailand = 11.973342;
-            var LngThailand = 99.723545;
-            var ZoomThailand = 4;
+            let LatThailand = 11.973342;
+            let LngThailand = 99.723545;
+            let ZoomThailand = 4;
 
-            var mapThailand = L.map('mapThailand', {
+            let mapThailand = L.map('mapThailand', {
                 center: [LatThailand, LngThailand],
                 zoom: ZoomThailand
             });
