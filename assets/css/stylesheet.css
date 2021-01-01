@@ -1,9 +1,5 @@
 /* fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@400;500&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
-/* index.html*/
-/* nav bar */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@400;500&family=Caveat+Brush&display=swap');
 
 
 body{
@@ -11,10 +7,20 @@ body{
     overflow-x: hidden;
     line-height: 170%;
     font-size:1.3rem;
+    background-image:url("/assets/hero-images/bk.png");
+    background-size: contain;
+    background-size: contain;
 }
 
 .text-center{
     text-align: center;
+}
+
+.heading{
+    margin: 0 auto 1.75rem;
+    text-align: center;
+    color:#034cae;
+    font-weight: 700;
 }
 
 h1, h2, h3, h4, h5, h6, 
@@ -36,78 +42,64 @@ h1, h2, h3, h4, h5, h6,
 
 .navbar-light .navbar-brand,
 .navbar-light .navbar-nav .nav-link {
-    font-size:19px;
+    font-size:24px;
     padding: 10px 15px;
     color: #034cae;
     font-weight: bold;
 }
 
 .navbar-light .navbar-brand,
-.navbar-light .navbar-nav .nav-link:hover{
-    color:#2F3180;
-    padding: 10px 15px;
-} /*incorportate brand purple colour for hover nav elements*/
-
-
+.navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .active>.nav-link {
-    color: #1d1e4e;
-}
+    color:#2F3180;
+} 
 
 .special-text {
     font-family: 'Caveat Brush', cursive;
-    font-size: 160%;
+    font-size: 200%;
+    line-height: 120%;
     color: #246e74;
     margin-bottom: 50px;
 }
 
-
-@media(min-width:1300px){
-    .navbar{
-        position: relative;
-    }
-    .navbar-brand{
-        position:absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    } /*switch brand logo position in nav bar from left to middle on larger screen sizes*/
-}
-
-/* hero image */
-
-/*about us */
-.heading{
-    margin: 0 auto 1.75rem;
-    text-align: center;
-    color:#034cae;
-    font-weight: 700;
-}
+/*about us page*/
 
 .about-us{
-    width:90%;
-    max-width:50rem;
-    padding: 50px 0px;
-    margin-bottom:70px;
+    padding: 50px;
+    background-color: white;
+    margin-top:50px;
+    width:60%;
+
 }
 
-.about-image{
+.about-key-points{
+    margin:50px 0px;
+    box-shadow: 5px 5px 10px;
+    padding:0;
+}
+
+.about-image{ /*2 images in about page */
     border-radius: 7rem;
     width:100%;
     padding:10%;
 }
 
-.about-block{
-    margin: 3rem auto 0;
+.about-block{ 
+    margin: auto 0;
     align-items: center;
+    background-color: rgba(253,244,206,0.7);
 }
 
-.about-page{
-    background-color: #fdf4ce;
+.first-block{
+    padding-top:30px;
 }
+
 
 /*destinations container */
 .destinations-container {
-    padding-bottom:20px;
+    padding:30px;
+    background-color: white;
+    margin-bottom: 30px;
 }
 
 /* map */
@@ -127,9 +119,12 @@ h1, h2, h3, h4, h5, h6,
                 border: none;
             }
 
-            
-            .button-color:hover{
+            .button-color:hover,
+            .button-color:focus,
+            .button-color:active{
                 background-color: #034cae;
+                border:none;
+                box-shadow: none;
             }
             
             /* Style tab links */
@@ -207,7 +202,7 @@ h1, h2, h3, h4, h5, h6,
                 }
             }
 /* class-lesson-section */
-.lesson-song-section{
+.song-container{
     padding:50px 0px;
 }
 .class-lesson-section {
@@ -220,7 +215,7 @@ h1, h2, h3, h4, h5, h6,
     display:block;
 }
 
-.footer{
+.footer-container{
     background-color: #034cae;
     padding: 40px 4%;
 }
@@ -237,6 +232,24 @@ h1, h2, h3, h4, h5, h6,
     margin:5px;
 }
 
+/* Grow */
+/* https://ianlunn.github.io/Hover/ */
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+}
 /* copyright styling */
 .copyright span{
     font-size:1.7rem;
@@ -246,12 +259,12 @@ h1, h2, h3, h4, h5, h6,
 
 .about-para{
     width:90%;
-    text-align: center;
-    padding:30px;
+    text-align: left;
+    padding-bottom:30px;
     margin: 0 auto;
 }
 /*hero image - classtime*/
-.hero-image{
+.hero-image-game{
     height:70vh;
     background:url("/assets/hero-images/a4.png") no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -266,8 +279,10 @@ img {
     margin: 0 auto;
     display: block;
 }
-.flashcards{
+.flashcards-container{
     padding:50px 0px;
+    background-color:rgba(253,244,206,0.7);
+    margin: 50px 0px
 }
 
 .image2,
@@ -281,8 +296,23 @@ iframe {
     display: block;
 }
 
-
+.song-block {
+    margin: auto 0;
+    align-items: center;
+    background-color: rgba(253,244,206,0.7);
+    padding: 50px;
+}
 /*game*/
+.game-block {
+    margin: auto 0;
+    padding-top: 30px;
+    align-items: center;
+    background-color: rgba(253,244,206,0.7);
+}
+.game-container {
+    margin:0;
+    padding:0;
+}
 
 .game-button{
     margin-bottom: 50px;
@@ -377,7 +407,9 @@ transform: translate(10px);
     cursor: pointer;
 }
 
-
+.play-game-wrapper {
+    background-color: rgba(253,244,206,0.7);
+}
 .instruct-btn{
     display:block;
     margin: 0 auto;
@@ -385,10 +417,8 @@ transform: translate(10px);
 }
 
 @media screen and (max-width: 550px) {
-  .game {
+  .game-container {
     width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
   }
 
   .tile-container {
@@ -439,7 +469,7 @@ transform: translate(10px);
 /* switch the two divsfor mobile */
 
 @media (max-width: 1200px) {
-  .game {
+  .game-container {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -458,7 +488,7 @@ transform: translate(10px);
     align-items: flex-start;
   }
 
-  .game .tile-container {
+  .game-container .tile-container {
     -webkit-box-ordinal-group: 2;
     -moz-box-ordinal-group: 2;
     -ms-flex-order: 2;
@@ -466,13 +496,21 @@ transform: translate(10px);
     order: 2;
   }
 
-  .game .game-desc-container {
+  .game-container .game-desc-container {
     -webkit-box-ordinal-group: 1;
     -moz-box-ordinal-group: 1;
     -ms-flex-order: 1;
     -webkit-order: 1;
     order: 1;
   }
+
+    .game-container .play-game-wrapper {
+    -webkit-box-ordinal-group: 3;
+    -moz-box-ordinal-group: 3;
+    -ms-flex-order: 3;
+    -webkit-order: 3;
+    order: 3;
+    }
 }
 
 
