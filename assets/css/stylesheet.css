@@ -80,6 +80,11 @@ h1, h2, h3, h4, h5, h6,
     color:white;
 }
 
+/* flashcard button*/
+.flashcard-button {
+    margin: 0 auto; 
+    display:block;
+}
 /* instructions button*/
 .instruct-btn{
     margin: 10px;
@@ -88,19 +93,9 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* game button (colours reversed) */
-.game-button-color {
+.game-button{
     background-color: #034cae;
     color:white;
-}
-
-.game-button-color:hover,
-.game-button-color:focus,
-.game-button-color:active {
-    background-color: #246e74;
-}
-
-
-.start-button {
     display: inline-block;
     height:38px;
     padding: 0 30px;
@@ -108,6 +103,12 @@ h1, h2, h3, h4, h5, h6,
     font-size:14px;
     font-weight:bold;
     cursor: pointer;
+}
+
+.game-button:hover,
+.game-button:focus,
+.game-button:active {
+    background-color: #246e74;
 }
 
 /*icons*/
@@ -168,13 +169,20 @@ img {
     color:#2F3180;
 } 
 
-/* special text at end of page */
+/* special text */
 .special-text {
     font-family: 'Caveat Brush', cursive;
     font-size: 200%;
     line-height: 120%;
     color: #246e74;
     margin-bottom: 50px;
+}
+
+.special-text-main{
+    font-family: 'Caveat Brush', cursive;
+    color: #246e74;
+    font-size: 130%;
+    line-height: 170%;
 }
 
 .class-lesson-section {
@@ -186,7 +194,7 @@ img {
 
 /* first section */
 .about-us{
-    padding: 50px;
+    padding: 5%;
     background-color: white;
     margin-top:50px;
     width:60%;
@@ -236,7 +244,10 @@ img {
     margin:5px;
 }
 
-
+.flashbutton {
+    display:block;
+    margin:0 auto;
+}
 .dest-button-row{
     text-align:center;
 }
@@ -271,12 +282,18 @@ img {
 }
 
 .countrymap .info {
-    font-size: 80%;
+    font-size: 16px;
     line-height:110%;
 }
 
 /* set maps size for mobile */ 
 @media only screen and (max-width:600px){
+    body{
+        font-size:16px;
+    }
+    .about-us{
+        width:80%;
+    }
     .map { /* make map full screen */
         width: 100%;
         height: 50%;
@@ -290,10 +307,10 @@ img {
         height:800px;
     }
     .copyright span{ /* change span font-size */
-        font-size:1.4rem !important;
+        font-size:1.2rem !important;
     }
     .ticon{ /* resize icons */
-        font-size: 1.4rem !important;
+        font-size: 1.2rem !important;
     }
 }
 
@@ -341,15 +358,18 @@ a:hover {
     margin: 50px 0px
 }
 
+.flashcard-image {
+    margin: 0 auto;
+    display:block;
+    border-bottom: 10px solid transparent;
+    border-top: 15px solid transparent
+}
 /* swap imaages & videos depending on screen size*/
 .image2,
 .image3,
-.video2 {
+.video2,
+.video3  {
     display:none;
-}
-
-.image1{ /* only display image 1*/
-    margin-bottom:15px;
 }
 
 
@@ -474,14 +494,14 @@ iframe { /* video */
 @media only screen and (max-width: 550px){ 
    .image1,
    .video1,
-   .image2{
+   .image2,
+   .video2 {
      display: none;
    }
 
    .image3, /* display smaller images/videos*/
-   .video2{
+   .video3{
      display: block;
-     margin-bottom:15px;
    }
 
    .tile { /* style rules for game images */
@@ -499,13 +519,16 @@ iframe { /* video */
         width: 310px;
         height: 190px;
     }
+    
+    .video2,
     .image2{ /* flashcards, show only image 2*/
         display:block;
-        margin-bottom:15px;
     }
 
     .image1,
-    .image3 {
+    .image3,
+    .video1,
+    .video3{
         display:none;
     }
 }

@@ -1,61 +1,61 @@
-// create an array to keep track of the original sequence of tiles 
-let sequence = [];
+// function to add sound to flashcards //
 
-// create an array to keep track of the human sequence
-let humanSequence = [];
+function playSound(animal) {
+    let sound = document.querySelector(`[data-sound='${animal}']`);
+    sound.play();
+}
 
-//create a level which will increment at each new round
-let level = 0;
 
-// create the startGame function which will run when button is clicked
-// create startbutton & info 
-let startButton = document.querySelector('.js-start');
-let info = document.querySelector('.js-info');
 
-// define the heading and tile container
-let heading = document.querySelector('.js-heading');
-let tileContainer = document.querySelector('.js-container');
+ //------------------------------------ declare variables & arrrays ----------------------- //
+
+let orderOfTiles = []; // An array to store the actual order of tiles
+let orderByPlayer = []; // Stores the order of tiles played by player
+let round = 0; //create a level which will increment at each new round
+
+let beginGameButton = document.querySelector('.js-begin-game'); // game button
+let gameText = document.querySelector('.js-text'); // info replaced by button
+
+let heading = document.querySelector('.js-title');// define the heading and tile container
+let gameTiles = document.querySelector('.js-gameTiles');
 
 //compare the sequences
 function resetGame(text) {
-    alert(text);
-    sequence = [];
-    humanSequence = [];
-    level = 0;
-    startButton.classList.remove('hidden');
+    swal(text); /*credit https://sweetalert.js.org/*/
+    orderOfTiles = [];
+    orderByPlayer = [];
+    round = 0;
+    beginGameButton.classList.remove('hidden');
     heading.textContent= "Memory Game";
-    info.classList.add('hidden');
-    tileContainer.classList.add('unclickable');
+    gameText.classList.add('hidden');
+    gameTiles.classList.add('unclickable');
 }
-
 
 // players turn
+function playersTurn(round) {
+    gameTiles.classList.remove('unclickable'); // allows the tiles to be clicked
+    gameText.innerHTML = `Your Go! <br> ${round} Tap${round > 1 ? 's' : ''}`;
+} 
 
-// create the human turn
-// indicates that the computer is finished with round, time for player to repeat
-function humanTurn(level) {
-    tileContainer.classList.remove('unclickable'); // allows the tiles to be clickable
-    info.textContent = `Your turn: ${level} Tap${level > 1 ? 's' : ''}`;
-}
-
-function activateTile(color) {
-    let tile = document.querySelector(`[data-tile='${color}']`);
-    let sound = document.querySelector(`[data-sound='${color}']`);
+// play sound and change pic when tile is pressed 
+function tilePressed(animal) {
+    let tile = document.querySelector(`[data-tile='${animal}']`);
+    let sound = document.querySelector(`[data-sound='${animal}']`);
 
     tile.classList.add('activated');
     sound.play();
 
     setTimeout(() => {
         tile.classList.remove('activated');
-    }, 300);
+    }, 600);
 }
 
 
 function playRound(nextSequence) {
-    nextSequence.forEach((color, index) => {
+    nextSequence.forEach((animal, index) => {
         setTimeout(() => {
-            activateTile(color);
-        }, (index + 1) * 600);
+            tilePressed(animal);
+        }, (index + 1) * 700);
     });
 }
 
@@ -70,73 +70,73 @@ function nextStep() {
 
 // start the next round
 function nextRound() {
-    level +=1;
+    round +=1;
  
     // add the unclickable class to the tile container when round starts
     // add the contents of info and heading elements are updated
-    tileContainer.classList.add('unclickable');
-    info.textContent = "Listen and Watch";
-    heading.textContent = `Level ${level} of 20`;
+    gameTiles.classList.add('unclickable');
+    gameText.textContent = "Listen and Watch";
+    heading.textContent = `Level ${round} of 20`;
 
-    let nextSequence = [...sequence]; // store the array of sequence
+    let nextSequence = [...orderOfTiles]; // store the array of sequence
     nextSequence.push(nextStep()); // adds the value of nextStep to the end of nextSequence{} with all other values from other rounds.
     playRound(nextSequence);
 
     // the humanturn{} needs to be executed after the computers sequence is over so it can't be called immediately.
     // add a delay and calc when the computer is done with the button tap sequence
-    sequence = [... nextSequence];
+    orderOfTiles = [... nextSequence];
     setTimeout(() => {
-        humanTurn(level);
-    }, level * 600 + 1000);
+        playersTurn(round);
+    }, round * 600 + 1000);
 }
 
 
 function handleClick(tile) {
-    let index = humanSequence.push(tile) -1; // pushes the tile value to the humanSequence array
+    let index = orderByPlayer.push(tile) -1; // pushes the tile value to the humanSequence array
     let sound = document.querySelector(`[data-sound='${tile}']`); //plays the corresponding sound
     sound.play();
 
-    let remainingTaps = sequence.length - humanSequence.length; //calc remaining steps
+    let remainingTaps = orderOfTiles.length - orderByPlayer.length; //calc remaining steps
 
-    if(humanSequence[index] !== sequence[index]) {
+    if(orderByPlayer[index] !== orderOfTiles[index]) {
         resetGame('Incorrect, start again');
         return; //if the value retrieved by index does not match in index and sequence
     }
 
-    if(humanSequence.length === sequence.length) {
+    if(orderByPlayer.length === orderOfTiles.length) {
         
-        if (humanSequence.length === 20) {
+        if (orderByPlayer.length === 20) {
             resetGame('Well done, you completed all levels!');
             return //if 20 levels complete then finish game
         }
         
-        humanSequence = []; //if equal, round is over
-        info.textContent = "Correct! Keep going!";
+        orderByPlayer = []; //if equal, round is over
+        gameText.textContent = "Correct! Keep going!";
         setTimeout(() => {
             nextRound();
         }, 1000); //delay to allow users to see the success message
         return;
     }
 
-    info.textContent = `Your turn: ${remainingTaps} Tap${remainingTaps > 1 ? 's' : ''}`;
+    gameText.textContent = `Your turn: ${remainingTaps} Tap${remainingTaps > 1 ? 's' : ''}`;
 }
 
 // make the button dissappear
 function startGame() {
-    startButton.classList.add('hidden');
-    info.classList.remove('hidden');
-    info.textContent = 'Listen and Watch'; //add the text
+    beginGameButton.classList.add('hidden');
+    gameText.classList.remove('hidden');
+    gameText.textContent = 'Listen and Watch'; //add the text
     nextRound();
 }
 
 // event listeners
 
 // add an event listener to activate the start game function when the button is clicked
-startButton.addEventListener('click', startGame);
+beginGameButton.addEventListener('click', startGame);
 
 // add an event listener to decide if the players round is a success & they can move on or not
 // if the value of data-tile is clicked
-tileContainer.addEventListener('click', event => {
+gameTiles.addEventListener('click', event => {
     let {tile} = event.target.dataset; //stores the data-tile value
 
     if(tile) handleClick(tile); //if value is not an empty string execute handleClick

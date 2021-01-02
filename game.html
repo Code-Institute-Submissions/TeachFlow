@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
      
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <!-- css files-->
     <link rel="stylesheet" href="assets/css/stylesheet.css">
 </head>
@@ -88,24 +90,28 @@
             </div>
             <div class = "row">
                 <div class = "col-6 col-xl-3">
-                    <img src = "assets/flashcards/chicken4.png" alt="chicken flashcard" class = "image1">
-                    <img src = "assets/flashcards/chicken4.png" height = "290" width = "240" alt="chicken flashcard" class = "image2">
-                    <img src = "assets/flashcards/chicken4.png" height = "210" width = "160" alt="chicken flashcard" class = "image3">
+                    <img src = "assets/flashcards/chicken4.png" alt="chicken flashcard" class = "flashcard-image image1" data-flashcard = "chicken">
+                    <img src = "assets/flashcards/chicken4.png" height = "290" width = "240" alt="chicken flashcard" class = "flashcard-image image2" data-flashcard = "chicken">
+                    <img src = "assets/flashcards/chicken4.png" height = "210" width = "160" alt="chicken flashcard" class = "flashcard-image image3" data-flashcard = "chicken">
+                    <button class = "btn button-color flashcard-button" onclick="playSound('chicken')"> Listen </button>
                 </div>
                 <div class = "col-6 col-xl-3">
-                    <img src = "assets/flashcards/duck4.png" alt="duck flashcard" class = "image1">
-                    <img src = "assets/flashcards/duck4.png" height = "290" width = "240" alt="duck flashcard" class = "image2">
-                    <img src = "assets/flashcards/duck4.png" height = "210" width = "160" alt="duck flashcard" class = "image3">
+                    <img src = "assets/flashcards/duck4.png" alt="duck flashcard" class = "flashcard-image image1" data-flashcard = "duck">
+                    <img src = "assets/flashcards/duck4.png" height = "290" width = "240" alt="duck flashcard" class = "flashcard-image image2" data-flashcard = "duck">
+                    <img src = "assets/flashcards/duck4.png" height = "210" width = "160" alt="duck flashcard" class = "flashcard-image image3" data-flashcard = "duck">
+                    <button class = "btn button-color flashcard-button" onclick="playSound('duck')"> Listen </button>
                 </div>
                 <div class = "col-6 col-xl-3">
-                    <img src = "assets/flashcards/pig4.png" alt="pig flashcard" class = "image1">
-                    <img src = "assets/flashcards/pig4.png" height = "290" width = "240" alt="pig flashcard" class = "image2">
-                    <img src = "assets/flashcards/pig4.png" height = "210" width = "160" alt="pig flashcard" class = "image3">
+                    <img src = "assets/flashcards/pig4.png" alt="pig flashcard" class = "flashcard-image image1" data-flashcard = "pig">
+                    <img src = "assets/flashcards/pig4.png" height = "290" width = "240" alt="pig flashcard" class = "flashcard-image image2" data-flashcard = "pig">
+                    <img src = "assets/flashcards/pig4.png" height = "210" width = "160" alt="pig flashcard" class = "flashcard-image image3" data-flashcard = "pig">
+                    <button class = "btn button-color flashcard-button" onclick="playSound('pig')"> Listen </button>
                 </div>
                 <div class = "col-6 col-xl-3">
-                    <img src = "assets/flashcards/cow4.png" alt="cow flashcard" class = "image1">
-                    <img src = "assets/flashcards/cow4.png" height = "290" width = "240" alt="cow flashcard" class = "image2">
-                    <img src = "assets/flashcards/cow4.png" height = "210" width = "160" alt="cow flashcard" class = "image3">
+                    <img src = "assets/flashcards/cow4.png" alt="cow flashcard" class = "flashcard-image image1" data-flashcard = "cow">
+                    <img src = "assets/flashcards/cow4.png" height = "290" width = "240" alt="cow flashcard" class = "flashcard-image image2" data-flashcard = "cow">
+                    <img src = "assets/flashcards/cow4.png" height = "210" width = "160" alt="cow flashcard" class = "flashcard-image image3" data-flashcard = "cow">
+                    <button class = "btn button-color flashcard-button" onclick="playSound('cow')"> Listen </button>
                 </div>
             </div>
         </section>
@@ -133,6 +139,7 @@
                 <div class = "col-12 col-xl-5">
                     <iframe width="660" height="415" src="https://www.youtube.com/embed/MaHWFODvtfU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class = "video1"></iframe>
                     <iframe width="360" height="260" src="https://www.youtube.com/embed/MaHWFODvtfU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class = "video2"></iframe>
+                    <iframe width="300" height="240" src="https://www.youtube.com/embed/MaHWFODvtfU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class = "video3"></iframe>
                 </div>
             </div>
         </section> 
@@ -140,7 +147,7 @@
         <!-- game section-->
         <section class = "container-fluid game-container">
             <div class = "row game-block">
-                <div class = "col-12 col-xl-8 tile-container js-container unclickable">
+                <div class = "col-12 col-xl-8 tile-container js-gameTiles unclickable">
                     <div class = "row">
                         <div class = "col-6 tile tile-chicken" data-tile = "chicken">
                         </div>
@@ -155,7 +162,7 @@
                     </div>   
                 </div>
                 <div class = "col-12 col-xl-4 game-desc-container">
-                    <h3 class = "heading js-heading">
+                    <h3 class = "heading js-title">
                         <i class="fas fa-gamepad"></i>
                             Play a memory Game
                     </h3>
@@ -201,10 +208,10 @@
             <div class = "row">
                 <div class = "col-12 col-xl-8 game-button-col">
                     <div class = "info-section">
-                        <button class = "start-button js-start game-button-color">
+                        <button class = "js-begin-game game-button">
                             Start
                         </button>
-                        <span class = "info-text js-info hidden"></span>
+                        <span class = "info-text js-text hidden"></span>
                     </div>
                 </div>
             </div>
