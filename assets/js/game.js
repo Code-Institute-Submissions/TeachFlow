@@ -6,6 +6,18 @@ function playSound(animal) {
 }
 
 
+// memory game
+
+// instructions button
+let instructbtn = document.querySelector('.instruct-btn').addEventListener("click", toggleDisplay); // get the instruct-btn and add an event listener, toggler on click
+    function toggleDisplay() {
+        let desc = document.querySelector(".showDesc"); //desc is the showDesc class
+        if (desc.style.display === "none") {//if display === none
+            desc.style.display = "block"; // set it to block
+        } else {
+            desc.style.display = "none"; // else set it to none
+        }
+    }
 
  //------------------------------------ declare variables & arrrays ----------------------- //
 
@@ -19,7 +31,6 @@ let gameText = document.querySelector('.js-text'); // info replaced by button
 let heading = document.querySelector('.js-title');// define the heading and tile container
 let gameTiles = document.querySelector('.js-gameTiles');
 
-//compare the sequences
 function resetGame(text) {
     swal(text); /*credit https://sweetalert.js.org/*/
     orderOfTiles = [];
@@ -47,71 +58,64 @@ function tilePressed(animal) {
 
     setTimeout(() => {
         tile.classList.remove('activated');
-    }, 600);
+    }, 200);
 }
 
 
-function playRound(nextSequence) {
+function playRound(nextSequence) { //next seq contains an array of all round values stored
     nextSequence.forEach((animal, index) => {
         setTimeout(() => {
-            tilePressed(animal);
-        }, (index + 1) * 700);
+            tilePressed(animal); // initiate the tilePressed function
+        }, (index + 1) * 850); // tested to suit audio & avoid overlapping
     });
 }
 
 
 function nextStep() {
     let tiles = ['chicken', 'duck', 'pig', 'cow'];
-    let random = tiles[Math.floor(Math.random() * tiles.length)]; // multiply the value from math.random() with the length of the tileswhich gives a range from 0-3
+    let random = tiles[Math.floor(Math.random() * tiles.length)]; // multiply the value from math.random() with the length of the tiles, which gives a range from 0-3
 
     return random;
 }
 
 
-// start the next round
+// runs after start game is pressed & when a round has been completed correctly
 function nextRound() {
-    round +=1;
- 
-    // add the unclickable class to the tile container when round starts
-    // add the contents of info and heading elements are updated
+    round +=1; // increment round
     gameTiles.classList.add('unclickable');
     gameText.textContent = "Listen and Watch";
-    heading.textContent = `Level ${round} of 20`;
-
-    let nextSequence = [...orderOfTiles]; // store the array of sequence
-    nextSequence.push(nextStep()); // adds the value of nextStep to the end of nextSequence{} with all other values from other rounds.
+    heading.textContent = `Round ${round}, Remaining: ${20-round} `;
+    let nextSequence = [...orderOfTiles]; // store the array of tiles in round ["cow", "chicken"]
+    nextSequence.push(nextStep()); // adds  nextStep ["cow"] to the end of nextSequence{} with all other values from other rounds.
     playRound(nextSequence);
 
-    // the humanturn{} needs to be executed after the computers sequence is over so it can't be called immediately.
-    // add a delay and calc when the computer is done with the button tap sequence
     orderOfTiles = [... nextSequence];
     setTimeout(() => {
-        playersTurn(round);
-    }, round * 600 + 1000);
+        playersTurn(round); 
+    }, round * 600 + 1000); // add a delay and calc when the computer is done with the button tap sequence
 }
 
 
-function handleClick(tile) {
-    let index = orderByPlayer.push(tile) -1; // pushes the tile value to the humanSequence array
+function responseToClick(tile) {
+    let index = orderByPlayer.push(tile) -1; // pushes the tile value to the orderByPlayer array
     let sound = document.querySelector(`[data-sound='${tile}']`); //plays the corresponding sound
     sound.play();
 
     let remainingTaps = orderOfTiles.length - orderByPlayer.length; //calc remaining steps
 
     if(orderByPlayer[index] !== orderOfTiles[index]) {
-        resetGame('Incorrect, start again');
+        resetGame('Oh no! you made an incorrect move, start again');
         return; //if the value retrieved by index does not match in index and sequence
     }
 
-    if(orderByPlayer.length === orderOfTiles.length) {
+    if(orderByPlayer.length === orderOfTiles.length) { //if equal, round is over
         
-        if (orderByPlayer.length === 20) {
-            resetGame('Well done, you completed all levels!');
-            return //if 20 levels complete then finish game
+        if (orderByPlayer.length === 15) {
+            resetGame('Superstar! you completed all rounds!');
+            return //if 15 levels complete then finish game
         }
-        
-        orderByPlayer = []; //if equal, round is over
-        gameText.textContent = "Correct! Keep going!";
+        orderByPlayer = [];  
+        gameText.textContent = "Correct! Keep going!"; 
         setTimeout(() => {
             nextRound();
         }, 1000); //delay to allow users to see the success message
@@ -126,33 +130,20 @@ function startGame() {
     beginGameButton.classList.add('hidden');
     gameText.classList.remove('hidden');
     gameText.textContent = 'Listen and Watch'; //add the text
-    nextRound();
+    nextRound(); // instiate the first round
 }
 
 // event listeners
+ 
+beginGameButton.addEventListener('click', startGame); //start game function when the button is clicked
 
-// add an event listener to activate the start game function when the button is clicked
-beginGameButton.addEventListener('click', startGame);
-
-// add an event listener to decide if the players round is a success & they can move on or not
-// if the value of data-tile is clicked
-gameTiles.addEventListener('click', event => {
-    let {tile} = event.target.dataset; //stores the data-tile value
-
-    if(tile) handleClick(tile); //if value is not an empty string execute handleClick
+gameTiles.addEventListener('click', event => { // decide if the players round is a success & they can move on or not
+    let {tile} = event.target.dataset; //stores the data-tile value 
+    if(tile) responseToClick(tile); //if value is not an empty string execute responseToClick
 });
 
 
-// instructions button
-let instructbtn = document.querySelector('.instruct-btn').addEventListener("click", toggleDisplay); // get the instruct-btn and add an event listener, toggler on click
-    function toggleDisplay() {
-        let desc = document.querySelector(".showDesc"); //desc is the showDesc class
-        if (desc.style.display === "none") {//if display === none
-            desc.style.display = "block"; // set it to block
-        } else {
-            desc.style.display = "none"; // else set it to none
-        }
-    }
+
 
 
 
