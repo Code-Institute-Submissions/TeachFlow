@@ -581,8 +581,13 @@ iframe { /* video */
 
 .showDesc{ /* game instructions */
     width:90%;
-    padding: 30px;
+    padding: 5%;
     text-align: left;
     margin:0 auto;
     margin-top:25px;
 }
+
+.list-group-item { /* override bt rules */
+    font-size: 19px;
+    background-color: transparent;
+} 
