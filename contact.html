@@ -12,7 +12,26 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
      
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("user_HegdZCtz6oinaNMX04tte");
+            
+            var templateParams = {
+            name: 'James',
+            notes: 'My enquiry is:'
+            };
+            
+            emailjs.send('google', 'teachflow', templateParams)
+                .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                }, function(error) {
+                console.log('FAILED...', error);
+                });
+                })();
+    </script>
     <!-- css files-->
     <link rel="stylesheet" href="assets/css/stylesheet.css">
 </head>
