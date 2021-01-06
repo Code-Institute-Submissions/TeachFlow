@@ -110,6 +110,13 @@ h1, h2, h3, h4, h5, h6,
     background-color: #246e74;
 }
 
+/* contact button */
+.contact-button {
+    display: block;
+    margin: 0 auto;
+    padding: 3px 10px;
+}
+
 /*icons*/
 .ticon{
     font-size: 2rem;
