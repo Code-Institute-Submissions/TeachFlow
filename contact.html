@@ -73,47 +73,55 @@
     </section>  
 
     <section class = "container-fluid contact-container">
-        <form onsubmit = "return sendMail(this);">
+        <form onsubmit = "return sendMail(this);" >
         <div class = "form-wrapper">
             <div class = "contact-text">
                 <h3 class = "heading">
                     Contact us
                 </h3>
-                <!--<p class = "text-center"> 
-                    If you have any questions about our content please get in touch. 
-                </p> -->
-            </div>
-
-            <div class="mb-3">
-                <label for="fname" class="form-label" >Full Name:</label>
-                <input type="fname" class="form-control" id = "fname" name = "fname" required>
-            </div>
-
-            <div class="mb-3">
-                <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="emailaddress" name ="emailaddress"  placeholder="name@example.com">
-            </div>
-
-            <div class="mb-3">
-                <label for="message" class="form-label">Your Message: </label>
-                <textarea class="form-control" id="message" name = "message" rows="3"></textarea>
-            </div>
-            <div class = "mb-3">
-                <p>
-                    Sign up for our newsletter?  
+                <p class = "text-center"> 
+                    If you have any questions about ESL teaching, please get in touch. 
+                    <br>
+                    Once an inquiry has been submited, we will be in touch as soon as possible.
                 </p>
-                <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-                    <label class="custom-control-label" for="customRadioInline1">Yes</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-                    <label class="custom-control-label" for="customRadioInline2">No</label>
-                </div>
             </div>
-            <button type = "submit" class = "button-color contact-button">
-                Submit
-            </button>
+            <div id = "jswrapper"> <!-- hide when button is pressed-->
+                <div class="mb-3">
+                    <label for="firstname" class="form-label" >First Name:</label>
+                    <input type="firstname" class="form-control" id = "firstname" name = "firstname" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="lastname" class="form-label" >Last Name:</label>
+                    <input type="lastname" class="form-control" id = "lastname" name = "lastname" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="emailaddress" name ="emailaddress"  placeholder="name@example.com">
+                </div>
+
+                <div class="mb-3">
+                    <label for="yourmessage" class="form-label">Your Message: </label>
+                    <textarea class="form-control" id="yourmessage" name = "yourmessage" rows="6"></textarea>
+                </div>
+                <div class = "mb-3">
+                    <p>
+                        Sign up for our newsletter?  
+                    </p>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="subscribe1" name="subscribe" class="custom-control-input" value = "Yes" checked>
+                        <label class="custom-control-label" for="customRadioInline1">Yes</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="subscribe2" name="subscribe" value = "No" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioInline2">No</label>
+                    </div>
+                </div>
+                <button type = "submit" class = "button-color contact-button">
+                    Submit
+                </button>
+            </div>
         </div>
         </form>
     </section>
