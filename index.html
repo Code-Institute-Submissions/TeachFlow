@@ -303,16 +303,18 @@
                     <label for="yourmessage" class="form-label">Your Message: </label>
                     <textarea class="form-control" id="yourmessage" name = "yourmessage" rows="6"></textarea>
                 </div>
-                    <p class = "mb-3">
+                 <div class = "mb-3">
+                    <p>
                         Sign up for our newsletter?  
-                    </p>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="subscribe1" name="subscribe" class="custom-control-input" value = "Yes">
-                        <label class="custom-control-label" for="customRadioInline1">Yes</label>
+                    </p> 
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="subscribe" id="inlineRadio1" value="yes">
+                        <label class="form-check-label" for="inlineRadio1">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="subscribe" id="inlineRadio2" value="no">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
                     </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="subscribe2" name="subscribe" value = "No" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadioInline2">No</label>
                 </div>
                 <button type = "submit" class = "button-color contact-button">
                     Submit
