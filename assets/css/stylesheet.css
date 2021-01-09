@@ -35,7 +35,7 @@ body, html {
 
 .text-center{
     text-align: center;
-    padding:20px;
+    padding: 1% 7%;
 }
 
 .heading{
@@ -540,7 +540,7 @@ iframe { /* video */
     }
 }
 /* tile image resize for ipad*/
-@media only screen and (min-width: 550px) and (max-width: 800px){ 
+@media only screen and (min-width: 550px) and (max-width: 900px){ 
     .tile { /* game images */
         background-size: 200px 200px;
         background-position:50px !important;
@@ -558,6 +558,10 @@ iframe { /* video */
     .video1,
     .video3{
         display:none;
+    }
+    
+    .about-us{
+        width:80%;
     }
 }
 
