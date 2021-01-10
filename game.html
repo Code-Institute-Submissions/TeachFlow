@@ -19,7 +19,7 @@
 <body>
     <!-- navbar -->
     <header class = "container-fluid nav-container">
-        <nav class="navbar navbar-light navbar-expand-lg">
+        <nav class="navbar navbar-light navbar-expand-lg fixed-navbar bg-white">
             <a class="navbar-brand" href=".">
                 <img src="assets/logo/TeachFlow.png"  alt="TeachFlow Logo" loading="lazy">
             </a>
@@ -29,11 +29,8 @@
             <div class="collapse navbar-collapse" id="livinglandscapesnav">
                 <ul class="navbar-nav">
                     <li class="nav-item ">
-                        <a class="nav-link" href="index.html">
-                            Home 
-                            <span class="sr-only">
-                                Home
-                            </span>
+                        <a class="nav-link" href="index.html#home">
+                            Home
                         </a>
                     </li>
                     <li class="nav-item">
@@ -50,7 +47,7 @@
                             </span>
                     </li>
                     <li class="nav-item">
-                            <a class="nav-link" href="contact.html">
+                            <a class="nav-link" href="index.html#contact">
                                 Contact us
                             </a>
                     </li>
@@ -60,10 +57,13 @@
     </header>
 
     <!-- hero image carousel-->
-    <section class = "hero-image-container">
-        <div class="hero-image-game">
-        </div>
-    </section> 
+    <section class = "hero-image-home" id = "home">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="assets/hero-images/a4.png" alt="First slide children in a classroom">
+                    </div>
+            </div>
+    </section>
 
         <!-- about-classtime section-->
         <section class = "container-fluid about-classtime-container about-us">

@@ -187,6 +187,22 @@ img {
     color:#2F3180;
 } 
 
+.fixed-navbar {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 1200; /*required to over-ride leaflet maps*/
+    border-bottom: 5px solid #246e74;
+}
+
+.carousel-item {
+    margin-top: 5rem;
+}
+
+.bg-white {
+    background-color: white;
+}
 /* special text */
 .special-text {
     font-family: 'Caveat Brush', cursive;
@@ -360,16 +376,8 @@ a:hover {
 
 
 /*------------------------------- classtime ------------------------- */
-/*hero image - classtime*/
-.hero-image-game{
-    height:70vh;
-    background:url("/assets/hero-images/a4.png") no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
 
+/*
 .hero-image-contact{
     height:70vh;
     background:url("/assets/hero-images/contact-hero.png") no-repeat center center fixed; 
@@ -377,7 +385,7 @@ a:hover {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
+}*/
 /* Flashcards container*/
 
 .flashcards-container{

@@ -30,7 +30,7 @@
 <body>
     <!-- Home -->
     <header class = "container-fluid nav-container">
-            <nav class="navbar navbar-light navbar-expand-lg">
+            <nav class="navbar navbar-light bg-white navbar-expand-lg fixed-navbar">
                 <a class="navbar-brand" href=".">
                     <img src="assets/logo/TeachFlow.png"  alt="TeachFlow Logo" loading="lazy">
                 </a>
@@ -40,11 +40,8 @@
                 <div class="collapse navbar-collapse" id="teachflownav">
                     <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href=".">
+                        <a class="nav-link" href="#home">
                             Home 
-                            <span class="sr-only">
-                                Home(current)
-                            </span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -68,7 +65,7 @@
     </header>
     
     <!-- hero image carousel-->
-    <section class = "hero-image-home">
+    <section class = "hero-image-home" id = "home">
             <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouseleIndicators" data-slide-to="0" class="active"></li>
@@ -278,7 +275,7 @@
             </div>
     </section>
 
-    <!--contact form -->
+    <!--contact form (linked in nav) -->
     <section class = "container-fluid contact-container" id = "contact">
         <form onsubmit = "return sendMail(this);" >
         <div class = "form-wrapper">
