@@ -2,11 +2,21 @@
 //general page script //
 
 /* preloader */
-$(window).on('load', function() { // makes sure the whole site is loaded 
-  $('#status').fadeOut(); // will first fade out the loading animation 
-  $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
-  $('body').delay(350).css({'overflow':'visible'});
-})
+
+
+
+$(document).ready(function() {
+//Preloader
+  setTimeout(function () {  
+    $('.spinner-wrapper').fadeIn(.1);
+    $('.spinner-wrapper').delay(2000).fadeOut(4000);
+  });
+  });
+
+
+
+
+
 
 // add a scrolling effect, in-place of jumping page location 
 // credit: https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll

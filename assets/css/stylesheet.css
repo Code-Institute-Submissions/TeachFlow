@@ -12,33 +12,26 @@ body{
     background-size: contain;
 }
 /* pre-loader */ 
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #fff;
-  /* change if the mask should have another color then white */
-  z-index: 99;
-  /* makes sure it stays on top */
+
+
+.spinner-wrapper {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgb(253,244,206);
+z-index: 999999;
 }
 
-#status {
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  left: 50%;
-  /* centers the loading animation horizontally one the screen */
-  top: 50%;
-  /* centers the loading animation vertically one the screen */
-  background-image: url(https://raw.githubusercontent.com/niklausgerber/PreLoadMe/master/img/status.gif);
-  /* path to your loading animation */
-  background-repeat: no-repeat;
-  background-position: center;
-  margin: -100px 0 0 -100px;
-  /* is width and height divided by two */
+.spinner {
+    position: absolute;
+    margin:0 auto;
+    top: 45%;
+    left: 45%;
+    z-index: 9999099;
 }
+
 /*
 body, html {
     height: 100%;
