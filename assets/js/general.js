@@ -1,11 +1,19 @@
 
 //general page script //
 
+/* preloader */
+$(window).on('load', function() { // makes sure the whole site is loaded 
+  $('#status').fadeOut(); // will first fade out the loading animation 
+  $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+  $('body').delay(350).css({'overflow':'visible'});
+})
+
 // add a scrolling effect, in-place of jumping page location 
 // credit: https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll
 $(document).ready(function () {
     // add to all <a></a> links
-  $("a").on("click", function (event) {
+    // does not work with 
+  $("a.data-page").on("click", function (event) {
     if (this.hash !== "") {
       event.preventDefault();
       // Store hash
@@ -40,7 +48,7 @@ if ($('.fixed-navbar').length > 0) {
 // add active class to home by default
 $(document).ready(function () {
     $(".home").addClass("active");
-});
+}); 
 
 // close the menu after each click (needed as some sections are on same page )
 window.onclick = function () {
@@ -55,4 +63,4 @@ window.onclick = function () {
 $(".nav-link").on("click", function() {
     $(".nav-link").removeClass("active");
     $(this).addClass("active");
-});
+}); 

@@ -230,6 +230,8 @@ The validity of the CSS code was checked using [The W3C CSS Validation Service](
 
 ### Bugs
 
+- js code hash interferring with contact page
+https://stackoverflow.com/questions/59706410/link-with-anchor-to-different-page-href
 ----------------------------
 
 ## Deployment
