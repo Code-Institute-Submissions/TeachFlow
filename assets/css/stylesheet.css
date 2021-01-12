@@ -13,18 +13,17 @@ body{
 }
 /* pre-loader */ 
 
-
-.spinner-wrapper {
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background-color: rgb(253,244,206);
-z-index: 999999;
+.pinwheel-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(253,244,206);
+    z-index: 999999;
 }
 
-.spinner {
+.pinwheel {
     position: absolute;
     margin:0 auto;
     top: 45%;

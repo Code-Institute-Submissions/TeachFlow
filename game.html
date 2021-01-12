@@ -3,36 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TeachFlow</title> 
+    <title>TeachFlow</title>
+
     <!-- font awesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
     <!--bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
-     
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <!-- css files-->
     <link rel="stylesheet" href="assets/css/stylesheet.css">
 </head>
 <body>
-    <div class="spinner-wrapper">
-        <div class ="spinner">
-            <p class>Preparing the lesson ...</p>
-            <img src = "assets/logo/831.gif" alt="spinner pre-loader">
+    <!-- pre-loader-->
+    <div class="pinwheel-wrapper">
+        <div class ="pinwheel">
+            <p>Preparing the lesson ...</p>
+            <img src = "assets/images/preloader/831.gif" alt="pinwheel pre-loader">
         </div>
     </div>
+
     <!-- navbar -->
     <header class = "container-fluid nav-container">
         <nav class="navbar navbar-light navbar-expand-lg bg-white fixed-navbar">
             <a class="navbar-brand" href=".">
-                <img src="assets/logo/TeachFlow.png"  alt="TeachFlow Logo" loading="lazy">
+                <img src="assets/images/logo/TeachFlow.png"  alt="TeachFlow Logo" loading="lazy">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#livinglandscapesnav" aria-controls="livinglandscapesnav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#teachflownav" aria-controls="teachflownav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="livinglandscapesnav">
+            <div class="collapse navbar-collapse" id="teachflownav">
                 <ul class="navbar-nav">
                     <li class="nav-item ">
                         <a class="nav-link" href="index.html#home">
@@ -45,262 +46,250 @@
                         </a>
                     </li>
                     <li class="nav-item active">
-                            <a class="nav-link" href=".">
-                                Classtime
-                            </a>
-                            <span class="sr-only">
-                                Classtime
-                            </span>
+                        <a class="nav-link" href=".">
+                            Classtime
+                        </a>
+                        <span class="sr-only">
+                            Classtime
+                        </span>
                     </li>
                     <li class="nav-item">
-                            <a class="nav-link" href="index.html#contact">
-                                Contact us
-                            </a>
+                        <a class="nav-link" href="index.html#contact">
+                            Contact us
+                        </a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <!-- hero image carousel-->
+    <!-- Hero image carousel-->
     <section class = "hero-image-home" id = "home">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="assets/hero-images/a4.png" alt="First slide children in a classroom">
-                    </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="assets/images/hero-images/a4.png" alt="children in a classroom">
             </div>
+        </div>
     </section>
 
-        <!-- about-classtime section-->
-        <section class = "container-fluid about-classtime-container about-us">
-            <h2 class = "heading">
-                Classtime
-            </h2>
-            <p>
-                Welcome to TeachFlow Classtime! Below, you'll find a tailor-made lesson for beginner students. 
-                In a fun and engaging manner, your class will learn all about farmyard animals.
-                <br><br>   
-                Each step aims to improve 
-                <strong>
-                    grammer, vocabulary
-                </strong> 
-                and 
-                <strong>
-                    pronouciation
-                </strong> 
-                skills. 
-                To keep your class engaged, a combination of flashcards, songs and games are used. 
-            </p>
-        </section>
+    <!-- About-classtime section-->
+    <section class = "container-fluid about-classtime-container about-us">
+        <h2 class = "heading">
+            Classtime
+        </h2>
+        <p>
+            Welcome to TeachFlow Classtime! Below, you'll find a tailor-made lesson for beginner students. 
+            In a fun and engaging manner, your class will learn all about farmyard animals.
+            <br><br>   
+            Each step aims to improve 
+            <strong>grammer, vocabulary</strong> 
+            and 
+            <strong>pronouciation</strong> 
+            skills. 
+            To keep your class engaged, a combination of flashcards, songs and games are used. 
+        </p>
+    </section>
 
-        <!-- flashcards section-->
-        <section class = "container-fluid flashcards-container">
-            <div class = "row">
-                <div class = "col-12">
-                    <h3 class = "heading">
+    <!-- Flashcards section (play sound)-->
+    <section class = "container-fluid flashcards-container">
+        <!-- title and description-->
+        <div class = "row">
+            <div class = "col-12">
+                <h3 class = "heading">
                     <i class="fas fa-book-reader gicon"></i>
-                        Flashcards
-                   </h3>
-                    <p class = "text-center">
-                        <strong>
-                            Duration:
-                        </strong> 
-                            15 minutes
-                    </p>
-                    <p class = "text-center">
-                        Get your students speaking! 
-                        Repeat the following 
-                        <strong>
-                            vocabulary
-                        </strong> out loud:
-                    </p>
-                </div>
+                    Flashcards
+                </h3>
+                <p class = "text-center">
+                    <strong>Duration:</strong> 
+                    15 minutes
+                </p>
+                <p class = "text-center">
+                    Get your students speaking! 
+                    Repeat the following 
+                    <strong>vocabulary</strong> 
+                    out loud:
+                </p>
             </div>
-            <div class = "row">
-                <div class = "col-6 col-xl-3">
-                    <img src = "assets/flashcards/chicken4.png" alt="chicken flashcard" class = "flashcard-image image1">
-                    <img src = "assets/flashcards/chicken4.png" height = "290" width = "240" alt="chicken flashcard" class = "flashcard-image image2">
-                    <img src = "assets/flashcards/chicken4.png" height = "210" width = "160" alt="chicken flashcard" class = "flashcard-image image3">
-                    <button class = "btn button-color flashcard-button" onclick="playSound('chicken')"> Listen </button>
-                </div>
-                <div class = "col-6 col-xl-3">
-                    <img src = "assets/flashcards/duck4.png" alt="duck flashcard" class = "flashcard-image image1">
-                    <img src = "assets/flashcards/duck4.png" height = "290" width = "240" alt="duck flashcard" class = "flashcard-image image2">
-                    <img src = "assets/flashcards/duck4.png" height = "210" width = "160" alt="duck flashcard" class = "flashcard-image image3">
-                    <button class = "btn button-color flashcard-button" onclick="playSound('duck')"> Listen </button>
-                </div>
-                <div class = "col-6 col-xl-3">
-                    <img src = "assets/flashcards/pig4.png" alt="pig flashcard" class = "flashcard-image image1">
-                    <img src = "assets/flashcards/pig4.png" height = "290" width = "240" alt="pig flashcard" class = "flashcard-image image2">
-                    <img src = "assets/flashcards/pig4.png" height = "210" width = "160" alt="pig flashcard" class = "flashcard-image image3">
-                    <button class = "btn button-color flashcard-button" onclick="playSound('pig')"> Listen </button>
-                </div>
-                <div class = "col-6 col-xl-3">
-                    <img src = "assets/flashcards/cow4.png" alt="cow flashcard" class = "flashcard-image image1">
-                    <img src = "assets/flashcards/cow4.png" height = "290" width = "240" alt="cow flashcard" class = "flashcard-image image2">
-                    <img src = "assets/flashcards/cow4.png" height = "210" width = "160" alt="cow flashcard" class = "flashcard-image image3">
-                    <button class = "btn button-color flashcard-button" onclick="playSound('cow')"> Listen </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- song-lesson-section-->
-        <section class = "container-fluid song-container">
-            <div class = "row song-block">
-                <div class = "col-12 col-xl-7" >
-                    <h3 class = "heading">
-                    <i class="fas fa-music gicon" ></i> 
-                        Learn a Song
-                    </h3>
-                    <p class = "text-center"> 
-                        <strong>
-                            Duration:
-                        </strong> 
-                        20 - 30 minutes
-                    </p>
-                    <p class = "about-para">
-                        Teach <strong>grammer</strong>, through song.
-                        In this exercise, the vocabulary previously learnt is reinforced.
-                        <br> <br>
-                        First, teach your class the words. 
-                        Once mastered, sing the song together. 
-                    </p>
-                </div>
-                <div class = "col-12 col-xl-5">
-                    <iframe width="660" height="415" src="https://www.youtube.com/embed/MaHWFODvtfU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class = "video1"></iframe>
-                    <iframe width="360" height="260" src="https://www.youtube.com/embed/MaHWFODvtfU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class = "video2"></iframe>
-                    <iframe width="300" height="240" src="https://www.youtube.com/embed/MaHWFODvtfU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class = "video3"></iframe>
-                </div>
-            </div>
-        </section> 
-
-        <!-- game section-->
-        <section class = "container-fluid game-container">
-            <div class = "row game-block">
-                <div class = "col-12 col-xl-8 tile-container js-gameTiles unclickable">
-                    <div class = "row">
-                        <div class = "col-6 tile tile-chicken" data-tile = "chicken">
-                        </div>
-                        <div class = "col-6 tile tile-duck" data-tile = "duck">
-                        </div>
-                    </div>
-                    <div class = "row">
-                        <div class = "col-6 tile tile-pig" data-tile = "pig">
-                        </div>
-                        <div class = "col-6 tile tile-cow" data-tile = "cow">
-                        </div>
-                    </div>   
-                </div>
-                <div class = "col-12 col-xl-4 game-desc-container">
-                    <h3 class = "heading js-title">
-                        <i class="fas fa-gamepad gicon"></i>
-                            Play a Game
-                    </h3>
-                    <p class = "text-center"> 
-                            <strong>
-                                Duration:
-                            </strong> 
-                            15 minutes
-                    </p>
-                    <p class = "text-center"> 
-                        Accomplish perfect
-                        <strong>
-                            pronunciation.
-                        </strong>
-                        <br>
-                             Play a fun, interactive game! 
-                    </p>
-                    <button class="btn instruct-btn button-color">
-                        Instructions
-                    </button> 
-                    <!--<p class = "showDesc" style = "display:none;"> -->
-                        <ul class="list-group list-group-flush showDesc js-showDesc" style = "display:none;">
-                            <li class="list-group-item">
-                                <span class = "special-text-main">
-                                    1.
-                                </span> 
-                                Divide the class into 2 groups.
-                            </li>
-                            <li class="list-group-item">
-                                <span class = "special-text-main">
-                                    2.
-                                </span> 
-                                Flip a coin to decide who goes first.
-                            </li>
-                            <li class="list-group-item">
-                                <span class = "special-text-main">
-                                    3.
-                                </span> 
-                                Let the teams take turns after each correct answer.
-                            </li>
-                            <li class="list-group-item">
-                                <span class = "special-text-main">
-                                    4.
-                                </span>
-                                The team that makes an incorrect choice loses the round.
-                            </li>
-                            <li class="list-group-item">
-                                <span class = "special-text-main">
-                                    5.
-                                </span>
-                                The winning team gets 3 points.
-                            </li>
-                            <li class="list-group-item">
-                                <span class = "special-text-main">
-                                    6.
-                                </span>
-                                 Repeat 3 times.
-                            </li>
-                        </ul>
-                        <!--1. 
-                        <br>
-                        2. Flip a coin to choose who goes First
-                        <br>
-                        3. 
-                        <br>
-                        4. The team who make an incorrect choice loses and the points are given to the other team. 
-                        <br>
-                        5. repeat 3 times.  
-                    </p>        -->
-                </div>
-                <div class = "hidden">
-                    <audio src = "assets/audio/chicken.mp3" data-sound = "chicken">
-                    </audio>
-                    <audio src = "assets/audio/duck.mp3" data-sound = "duck">
-                    </audio>
-                    <audio src = "assets/audio/pig.mp3" data-sound = "pig">
-                    </audio>
-                    <audio src = "assets/audio/cow.mp3" data-sound = "cow">
-                    </audio>
-                </div>
-            </div>
-        </section>
-
-        <!-- start button wrapper-->
-        <div class = "container-fluid play-game-wrapper">
-            <div class = "row">
-                <div class = "col-12 col-xl-8 game-button-col">
-                    <div class = "info-section">
-                        <button class = "js-begin-game game-button">
-                            Start
-                        </button>
-                        <span class = "info-text js-text hidden"></span>
-                    </div>
-                </div>
-            </div>
-        </div> 
-
-        <!-- hidden audio for game-->
-        <div class = "hidden">
-            <audio src = "assets/audio/chicken.mp3" data-sound = "chicken">
-            </audio>
-            <audio src = "assets/audio/duck.mp3" data-sound = "duck">
-            </audio>
-            <audio src = "assets/audio/pig.mp3" data-sound = "pig">
-            </audio>
-            <audio src = "assets/audio/cow.mp3" data-sound = "cow">
-            </audio>
         </div>
+        <!-- tiles row-->
+        <div class = "row">
+            <div class = "col-6 col-xl-3">
+                <img src = "assets/images/flashcards/chicken4.png" alt="chicken flashcard" class = "flashcard-image image1">
+                <img src = "assets/images/flashcards/chicken4.png" height = "290" width = "240" alt="chicken flashcard" class = "flashcard-image image2">
+                <img src = "assets/images/flashcards/chicken4.png" height = "210" width = "160" alt="chicken flashcard" class = "flashcard-image image3">
+                <button class = "btn button-color flashcard-button" onclick="playSound('chicken')"> 
+                    Listen 
+                </button>
+            </div>
+            <div class = "col-6 col-xl-3">
+                <img src = "assets/images/flashcards/duck4.png" alt="duck flashcard" class = "flashcard-image image1">
+                <img src = "assets/images/flashcards/duck4.png" height = "290" width = "240" alt="duck flashcard" class = "flashcard-image image2">
+                <img src = "assets/images/flashcards/duck4.png" height = "210" width = "160" alt="duck flashcard" class = "flashcard-image image3">
+                <button class = "btn button-color flashcard-button" onclick="playSound('duck')"> 
+                    Listen 
+                </button>
+            </div>
+            <div class = "col-6 col-xl-3">
+                <img src = "assets/images/flashcards/pig4.png" alt="pig flashcard" class = "flashcard-image image1">
+                <img src = "assets/images/flashcards/pig4.png" height = "290" width = "240" alt="pig flashcard" class = "flashcard-image image2">
+                <img src = "assets/images/flashcards/pig4.png" height = "210" width = "160" alt="pig flashcard" class = "flashcard-image image3">
+                <button class = "btn button-color flashcard-button" onclick="playSound('pig')"> 
+                    Listen 
+                </button>
+            </div>
+            <div class = "col-6 col-xl-3">
+                <img src = "assets/images/flashcards/cow4.png" alt="cow flashcard" class = "flashcard-image image1">
+                <img src = "assets/images/flashcards/cow4.png" height = "290" width = "240" alt="cow flashcard" class = "flashcard-image image2">
+                <img src = "assets/images/flashcards/cow4.png" height = "210" width = "160" alt="cow flashcard" class = "flashcard-image image3">
+                <button class = "btn button-color flashcard-button" onclick="playSound('cow')"> 
+                    Listen 
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Song-lesson-section-->
+    <section class = "container-fluid song-container">
+        <div class = "row song-block">
+            <div class = "col-12 col-xl-7" >
+                <h3 class = "heading">
+                    <i class="fas fa-music gicon" ></i> 
+                    Learn a Song
+                </h3>
+                <p class = "text-center"> 
+                    <strong>Duration:</strong> 
+                    20 - 30 minutes
+                </p>
+                <p class = "about-para">
+                    Teach <strong>grammer</strong>
+                    , through song.
+                    In this exercise, the vocabulary previously learnt is reinforced.
+                    <br> <br>
+                    First, teach your class the words. 
+                    Once mastered, sing the song together. 
+                </p>
+            </div>
+            <div class = "col-12 col-xl-5">
+                <!-- different sizes for screen sizes-->
+                <iframe width="660" height="415" src="https://www.youtube.com/embed/MaHWFODvtfU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class = "video1"></iframe>
+                <iframe width="360" height="260" src="https://www.youtube.com/embed/MaHWFODvtfU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class = "video2"></iframe>
+                <iframe width="300" height="240" src="https://www.youtube.com/embed/MaHWFODvtfU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class = "video3"></iframe>
+            </div>
+        </div>
+    </section> 
+
+    <!-- Game section-->
+    <section class = "container-fluid game-container">
+        <!-- game tiles container-->
+        <div class = "row game-block">
+            <!-- row 1 - 2 animals-->
+            <!-- col 8/12 = animal tile game-->
+            <div class = "col-12 col-xl-8 tile-container js-gameTiles unclickable">
+                <!-- row 1 - 2 animals-->
+                <div class = "row">
+                    <div class = "col-6 tile tile-chicken" data-tile = "chicken">
+                    </div>
+                    <div class = "col-6 tile tile-duck" data-tile = "duck">
+                    </div>
+                </div>
+                <!-- row 2 - 2 animals-->
+                <div class = "row">
+                    <div class = "col-6 tile tile-pig" data-tile = "pig">
+                    </div>
+                    <div class = "col-6 tile tile-cow" data-tile = "cow">
+                    </div>
+                </div>   
+            </div>
+            <!-- 4/12 = Title instructions drop down-->
+            <div class = "col-12 col-xl-4 game-desc-container">
+                <h3 class = "heading js-title">
+                    <i class="fas fa-gamepad gicon"></i>
+                        Play a Game
+                </h3>
+                <p class = "text-center"> 
+                    <strong>Duration:</strong> 
+                    15 minutes
+                </p>
+                <p class = "text-center"> 
+                    Accomplish perfect
+                    <strong>pronunciation.</strong>
+                    <br>
+                    Play a fun, interactive game! 
+                </p>
+                <button class="btn instruct-btn button-color">
+                    Instructions
+                </button> 
+
+                <!-- Instructions - to be shown when-button is clicked -->
+                <div class = "showDesc js-showDesc" style = "display:none;"> 
+                    <ul class="list-group list-group-flush ">
+                        <li class="list-group-item">
+                            <span class = "special-text-main">1.</span> 
+                            Divide the class into 2 groups.
+                        </li>
+                        <li class="list-group-item">
+                            <span class = "special-text-main">2.</span> 
+                            Flip a coin to decide who goes first.
+                        </li>
+                        <li class="list-group-item">
+                            <span class = "special-text-main">3.</span> 
+                            Let the teams take turns after each correct answer.
+                        </li>
+                        <li class="list-group-item">
+                            <span class = "special-text-main">4.</span>
+                            The team that makes an incorrect choice loses the round.
+                        </li>
+                        <li class="list-group-item">
+                            <span class = "special-text-main">5.</span>
+                            The winning team gets 3 points.
+                        </li>
+                        <li class="list-group-item">
+                            <span class = "special-text-main">6.</span>
+                            Repeat 3 times.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- hidden audio for tiles when pressed-->
+            <div class = "hidden">
+                <audio src = "assets/audio/chicken.mp3" data-sound = "chicken">
+                </audio>
+                <audio src = "assets/audio/duck.mp3" data-sound = "duck">
+                </audio>
+                <audio src = "assets/audio/pig.mp3" data-sound = "pig">
+                </audio>
+                <audio src = "assets/audio/cow.mp3" data-sound = "cow">
+                </audio>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start button-->
+    <div class = "container-fluid play-game-wrapper">
+        <div class = "row">
+            <div class = "col-12 col-xl-8 game-button-col">
+                <div class = "info-section">
+                    <button class = "js-begin-game game-button">
+                        Start
+                    </button>
+                    <!-- info = text button is replaced by info text-->
+                    <span class = "info-text js-text hidden"></span>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <!-- hidden audio for game-->
+    <div class = "hidden">
+        <audio src = "assets/audio/chicken.mp3" data-sound = "chicken">
+        </audio>
+        <audio src = "assets/audio/duck.mp3" data-sound = "duck">
+        </audio>
+        <audio src = "assets/audio/pig.mp3" data-sound = "pig">
+        </audio>
+        <audio src = "assets/audio/cow.mp3" data-sound = "cow">
+        </audio>
+    </div>
 
 
     <!-- footer section-->
@@ -361,19 +350,19 @@
         </div>
     </footer>
 
-    <!-- link js script-->
-    <script src="assets/js/game.js" type="text/javascript"></script>
+    <!-- styles alert box for memory game-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     
     <!--bootstrap js links-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
-    <!-- game.js-->
-    <script src="assets/js/game.js" type="text/javascript"></script>
-
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- game.js-->
+    <script src="assets/js/game.js" type="text/javascript"></script>
 
     <!--general -->
     <script src= "assets/js/general.js" type="text/javascript"></script>

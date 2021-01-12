@@ -8,13 +8,10 @@
 $(document).ready(function() {
 //Preloader
   setTimeout(function () {  
-    $('.spinner-wrapper').fadeIn(.1);
-    $('.spinner-wrapper').delay(2000).fadeOut(4000);
+    $('.pinwheel-wrapper').fadeIn(.1);
+    $('.pinwheel-wrapper').delay(2000).fadeOut(4000);
   });
   });
-
-
-
 
 
 
