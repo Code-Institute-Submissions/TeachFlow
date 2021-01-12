@@ -492,15 +492,14 @@ iframe { /* video */
 /*game container*/
 /*general */
 .game-container { /* over-ride default settings */
-    margin:0;
     padding:0;
+    background-color: rgba(253,244,206,0.7);
 }
 
 .game-block { /* game and instructions */
     margin: auto 0;
-    padding-top: 30px;
+    padding: 30px;
     align-items: center;
-    background-color: rgba(253,244,206,0.7);
 }
 
 .game-button-col{
