@@ -232,6 +232,12 @@ The validity of the CSS code was checked using [The W3C CSS Validation Service](
 
 - js code hash interferring with contact page
 https://stackoverflow.com/questions/59706410/link-with-anchor-to-different-page-href
+
+hide the nav bar when scrolling down - fixes the anchor link issue which cuts off top of section 
+
+/* switch the three game divs for mobile view */
+/* credit https://stackoverflow.com/questions/17115995/what-is-the-best-way-to-move-an-element-thats-on-the-top-to-the-bottom-in-respo */
+
 ----------------------------
 
 ## Deployment
@@ -283,6 +289,7 @@ The following websites were used for inspiration and assistance:
 * [Stack Overflow](https://stackoverflow.com/)
 * [Bootstrap Documentation](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
 
+https://ianlunn.github.io/Hover/ - hover effects on icons
 ###  Media
 The images used on this site are royalty-free and were obtained from the following websites:
 

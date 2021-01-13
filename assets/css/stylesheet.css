@@ -1,9 +1,8 @@
-/* pre-loader https://icons8.com/preloaders/en/circular*/
 
 /* fonts and general styling*/
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@400;500&family=Caveat+Brush&display=swap');
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
     line-height: 170%;
@@ -11,48 +10,27 @@ body{
     background-image:url("/assets/hero-images/bk.png");
     background-size: contain;
 }
+
 /* pre-loader */ 
 
 .pinwheel-wrapper {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    width:100%;
+    height: 100%;
     background-color: rgb(253,244,206);
-    z-index: 999999;
+    z-index: 999999; /* place on top of all page content */
 }
 
 .pinwheel {
     position: absolute;
-    margin:0 auto;
-    top: 45%;
-    left: 45%;
-    z-index: 9999099;
+    margin: 0 auto;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index: 9999999; /* place on top of pinwheel-wrapper */
 }
 
-/*
-body, html {
-    height: 100%;
-    margin: 0;
-}
-
-.info-text{
-    text-align: center;
-}
-
- media queries forgame section on mobile
-@media screen and (max-width: 600px) {
-  .game-container {
-    width: 100%;
-  }
-
-  .tile-container {
-    width: 100%;
-    height: 100%;
-  }
-}
-*/
+/*------------------------- general typography */
 
 .text-center{
     text-align: center;
@@ -76,9 +54,22 @@ h1, h2, h3, h4, h5, h6,
     text-align: center;
 }
 
+/* special text */
+.special-text {
+    font-family: 'Caveat Brush', cursive;
+    font-size: 200%;
+    line-height: 120%;
+    color: #246e74;
+    margin-bottom: 50px;
+}
 
-
-/* General rules */
+.special-text-main{
+    font-family: 'Caveat Brush', cursive;
+    color: #246e74;
+    font-size: 130%;
+    line-height: 170%;
+}
+/* --------------------------------- General rules */
 .hidden {
     display: none!important;
 }
@@ -87,7 +78,7 @@ h1, h2, h3, h4, h5, h6,
     pointer-events: none;
 }
 
-/* general button styling */
+/* --------------------------------- General button styling */
 .button-color{
     background-color: #246e74;
     color: white;
@@ -108,6 +99,13 @@ h1, h2, h3, h4, h5, h6,
      box-shadow: none;
 }
 
+/* maps button */
+.tfbutton {
+    padding: 5px;
+    font-size: 18px;
+    width: 150px;
+    margin:5px;
+}
 /* flashcard button*/
 .flashcard-button {
     margin: 0 auto; 
@@ -124,11 +122,7 @@ h1, h2, h3, h4, h5, h6,
 .game-button{
     background-color: #034cae;
     color:white;
-    display: inline-block;
-    height:38px;
-    padding: 0 30px;
     text-align: center;
-    font-size:14px;
     font-weight:bold;
     cursor: pointer;
 }
@@ -137,6 +131,7 @@ h1, h2, h3, h4, h5, h6,
 .game-button:focus,
 .game-button:active {
     background-color: #246e74;
+    color:white;
 }
 
 /* contact button */
@@ -146,14 +141,14 @@ h1, h2, h3, h4, h5, h6,
     padding: 3px 10px;
 }
 
-/*icons*/
-.ticon{
+/*------------------------------------- icons*/
+.ticon {
     font-size: 2rem;
     color: #fccf14;
-    margin:5px;
+    margin: 5px;
 }
 
-.gicon{
+.gicon { /*gaame icon*/
     font-size: 2.5rem;
     color: #246e74;
     margin-right: 15px;
@@ -185,7 +180,7 @@ img {
     display: block;
 }
 
-/*navbar */
+/*----------------------------------------- navbar */
 .nav-container{
     padding:0;
     background-color:white;
@@ -204,7 +199,7 @@ img {
     font-weight: bold;
 }
 
-/* active & hover link */
+/* Add underline hover effect to nav bar links */
 .nav-link:after {
     display:block;
     content: "";
@@ -218,24 +213,24 @@ img {
     transform:scaleX(1); 
 }
 
-/* hide the nav bar when scrolling down */
-.scroll-down{
-   transform:translateY(-100%); transition: all 0.3s ease-in-out;
-}
-.scroll-up{
-   transform:translateY(0); transition: all 0.3s ease-in-out;
-}
-
-
+/* shorten the underline length when navbar toggler is expanded */
 @media only screen and (max-width: 1100px) {
-    .nav-link:after{
+    .nav-link {
             width:35%;
             margin: 0 auto;
     }
 }
 
 
+/* hide the nav bar when scrolling down - fixes the anchor link issue which cuts off top of section  */
+.scroll-down {
+   transform:translateY(-100%); transition: all 0.3s ease-in-out;
+}
+.scroll-up {
+   transform:translateY(0); transition: all 0.3s ease-in-out;
+}
 
+/* over-ride bootstrap defaults to set active colour */
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .active>.nav-link {
     color:#070958;
@@ -250,34 +245,16 @@ img {
     box-shadow: 1px 4px 7px;
 }
 
+/* lower carousel below fixed nav-bar*/
 .carousel-item {
     margin-top: 5rem;
 }
 
+/*nav-bar color*/
 .bg-white {
     background-color: white;
 }
-/* special text */
-.special-text {
-    font-family: 'Caveat Brush', cursive;
-    font-size: 200%;
-    line-height: 120%;
-    color: #246e74;
-    margin-bottom: 50px;
-}
 
-.special-text-main{
-    font-family: 'Caveat Brush', cursive;
-    color: #246e74;
-    font-size: 130%;
-    line-height: 170%;
-}
-
-.class-lesson-section {
-    text-align: center;
-    padding: 50px;
-
-}
 
 
 /*----------------------------------- about us page -----------------------------------*/
@@ -288,7 +265,13 @@ img {
     /*background-color: white;*/
     margin-top:50px;
     width:60%;
+}
 
+.about-para { /* gen styling used in all pages */
+    width:90%;
+    text-align: left;
+    padding-bottom:30px;
+    margin: 0 auto;
 }
 
 /* second section block */
@@ -324,20 +307,9 @@ img {
     margin-bottom: 30px;
 }
 
-/* map */
-            
-/* Style tab links */
-.tfbutton {
-    padding: 5px;
-    font-size: 18px;
-    width: 150px;
-    margin:5px;
-}
+/*-----------------------------------  map */
+        
 
-.flashbutton {
-    display:block;
-    margin:0 auto;
-}
 .dest-button-row{
     text-align:center;
 }
@@ -404,14 +376,33 @@ img {
     }
 }
 
-/* Special text section */
+/* a href to classtime section */
+.class-lesson-section {
+    text-align: center;
+    padding: 50px;
+}
+
+
+/* --------------------------- contact us ------------------------------ */
+.contact-container{
+    padding: 10% 0;
+    background-color: rgba(253,244,206,0.7);
+    box-shadow: 5px 5px 10px;
+}
+
+.form-wrapper {
+    max-width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+/* ----------------------------- Special text section */
 a, 
 a:hover {
     color: white;
     text-decoration: none;
 }
 
-/*footer & social links styling */
+/*------------------------------ footer & social links styling */
 .footer-container{
     background-color: #034cae;
     padding: 40px 4%;
@@ -429,18 +420,7 @@ a:hover {
 }
 
 
-/*------------------------------- classtime ------------------------- */
-
-/*
-.hero-image-contact{
-    height:70vh;
-    background:url("/assets/hero-images/contact-hero.png") no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}*/
-/* Flashcards container*/
+/*---------------------------------------- classtime ------------------------- */
 
 .flashcards-container{
     padding:50px 0px;
@@ -454,7 +434,7 @@ a:hover {
     border-bottom: 10px solid transparent;
     border-top: 15px solid transparent
 }
-/* swap imaages & videos depending on screen size*/
+/* hide these by default */
 .image2,
 .image3,
 .video2,
@@ -462,8 +442,7 @@ a:hover {
     display:none;
 }
 
-
-/* song-section */
+/*---------------------------- song-section */
 
 .song-container{
     padding:50px 0px;
@@ -476,20 +455,13 @@ a:hover {
     padding: 50px;
 }
 
-.about-para { /* gen styling used in all pages */
-    width:90%;
-    text-align: left;
-    padding-bottom:30px;
-    margin: 0 auto;
-}
-
 iframe { /* video */
     margin: 0 auto;
     margin-top: 20px;
     display: block;
 }
 
-/*game container*/
+/*----------------------- game container*/
 /*general */
 .game-container { /* over-ride default settings */
     padding:0;
@@ -517,7 +489,7 @@ iframe { /* video */
 }
 
 .tile-chicken {
-    background-image: url(/assets/gameimg/chicken.png);
+    background-image: url(/assets/images/gameimg/chicken.png);
    transition: 0.15s;
 }
 
@@ -525,12 +497,12 @@ iframe { /* video */
 .tile-chicken:focus,
 .tile-chicken:active,
 .tile-chicken.activated{ /* swap images for focused */
-    background-image: url(/assets/gameimg/chicken2.png);
+    background-image: url(/assets/images/gameimg/chicken2.png);
     transform: translate(10px);
 }
 
 .tile-duck {
-    background-image: url(/assets/gameimg/duck.png);
+    background-image: url(/assets/images/gameimg/duck.png);
     transition: 0.15s;
 }
 
@@ -538,12 +510,12 @@ iframe { /* video */
 .tile-duck:focus,
 .tile-duck:active,
 .tile-duck.activated{
-    background-image: url(/assets/gameimg/duck2.png);
+    background-image: url(/assets/images/gameimg/duck2.png);
     transform: translate(10px);
 }
 
 .tile-pig {
-    background-image: url(/assets/gameimg/pig.png);
+    background-image: url(/assets/images/gameimg/pig.png);
     transition: 0.15s;
 }
 
@@ -551,12 +523,12 @@ iframe { /* video */
 .tile-pig:focus,
 .tile-pig:active,
 .tile-pig.activated{
-    background-image: url(/assets/gameimg/pig2.png);
+    background-image: url(/assets/images/gameimg/pig2.png);
     transform: translate(10px);
 }
 
 .tile-cow {
-    background-image: url(/assets/gameimg/cow.png);
+    background-image: url(/assets/images/gameimg/cow.png);
     transition: 0.15s;
 }
 
@@ -564,7 +536,7 @@ iframe { /* video */
 .tile-cow:focus,
 .tile-cow:active,
 .tile-cow.activated {
-    background-image: url(/assets/gameimg/cow2.png);
+    background-image: url(/assets/images/gameimg/cow2.png);
     transform: translate(10px);
 }
 
@@ -628,7 +600,7 @@ iframe { /* video */
 }
 
 
-/* switch the three game divs for mobile */
+/* switch the three game divs for mobile view */
 /* credit https://stackoverflow.com/questions/17115995/what-is-the-best-way-to-move-an-element-thats-on-the-top-to-the-bottom-in-respo */
 
 @media (max-width: 1200px) {
@@ -663,6 +635,7 @@ iframe { /* video */
     -webkit-order: 1;
     order: 1;
   }
+  
     .game-container .play-game-wrapper { /* game button @ position 3*/
     -webkit-box-ordinal-group: 3;
     -moz-box-ordinal-group: 3;
@@ -671,7 +644,6 @@ iframe { /* video */
     order: 3;
     }
 }
-
 
 .showDesc{ /* game instructions */
     width:90%;
@@ -685,16 +657,3 @@ iframe { /* video */
     font-size: 19px;
     background-color: transparent;
 } 
-
-/* --------------------------- contact us ------------------------------ */
-.contact-container{
-    padding: 10% 0;
-    background-color: rgba(253,244,206,0.7);
-    box-shadow: 5px 5px 10px;
-}
-
-.form-wrapper {
-    max-width: 70%;
-    display: block;
-    margin: 0 auto;
-}
