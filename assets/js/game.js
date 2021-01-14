@@ -4,12 +4,6 @@ function playSound(animal) {
     let sound = document.querySelector(`[data-sound='${animal}']`);
     sound.play();
     return;
-    /* let orig = button.style.backgroundColor;
-    
-    button.style.backgroundColor = '#034cae';
-    setTimeout(function(){
-            button.style.color = orig;
-    }, 300); */
 }
 
 

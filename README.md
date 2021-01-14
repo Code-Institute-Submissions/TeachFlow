@@ -237,7 +237,14 @@ hide the nav bar when scrolling down - fixes the anchor link issue which cuts of
 
 /* switch the three game divs for mobile view */
 /* credit https://stackoverflow.com/questions/17115995/what-is-the-best-way-to-move-an-element-thats-on-the-top-to-the-bottom-in-respo */
+/* credit https://sweetalert.js.org/*/
+/* credit: https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll
 
+// hide nav bar on scrolling
+// CREDIT: https://bootstrap-menu.com/detail-smart-hide.html
+
+//------------------ function to display the map and info contents ------------ //
+/* inspiration CREDIT https://www.w3schools.com/howto/howto_js_full_page_tabs.asp*/
 ----------------------------
 
 ## Deployment

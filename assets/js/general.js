@@ -1,43 +1,39 @@
 
-//general page script //
-
-/* preloader */
-
-
-
+// Preloader
+// create pre-loader function & add active class to home link by default
 $(document).ready(function() {
-//Preloader
   setTimeout(function () {  
-    $('.pinwheel-wrapper').fadeIn(.1);
+    $('.pinwheel-wrapper').fadeIn("slow");
     $('.pinwheel-wrapper').delay(2000).fadeOut(4000);
+    $(".home").addClass("active");
   });
   });
 
+  // add and remove active class on click
+$(".nav-link").on("click", function() {
+    $(".nav-link").removeClass("active");
+    $(this).addClass("active");
+}); 
 
-
-// add a scrolling effect, in-place of jumping page location 
-// credit: https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll
+// Add smooth scrolling
+// CREDIT: https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll
 $(document).ready(function () {
-    // add to all <a></a> links
-    // does not work with 
-  $("a.data-page").on("click", function (event) {
+  $("a.data-page").on("click", function (event) { // add to all <a> links which jump to a specific section in index.html (does not work with game.html)
     if (this.hash !== "") {
       event.preventDefault();
-      // Store hash
-      let hash = this.hash;
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
+      let hash = this.hash; // Store hash
+      // 800 milliseconds taken to scroll
+      $('html, body').animate({ //  jQuery's animate() method adds smooth page scroll
         scrollTop: $(hash).offset().top
       }, 800, function(){
-        // Add hash (#) to URL when done scrolling (default click behavior)
+        // Add hash (id) to URL when scrolling complete
         window.location.hash = hash;
       });
-    } // End if
+    } 
   });
 });
 
-// hide nav bar on scrolling
+// Hide nav bar on scrolling
 // CREDIT: https://bootstrap-menu.com/detail-smart-hide.html
 if ($('.fixed-navbar').length > 0) {
     let last_scroll_top = 0;
@@ -50,24 +46,12 @@ if ($('.fixed-navbar').length > 0) {
         }
         last_scroll_top = scroll_top;
     });
-}
+} 
 
-// add active class to home by default
-$(document).ready(function () {
-    $(".home").addClass("active");
-}); 
-
-// close the menu after each click (needed as some sections are on same page )
+// close the menu after each click (needed as some sections are on same page)
 window.onclick = function () {
   let nav = document.getElementById("teachflownav");
   if (nav.classList.contains("show")) {
     nav.classList.remove("show");
   }
 };
-
-
-// add and remove active class on click
-$(".nav-link").on("click", function() {
-    $(".nav-link").removeClass("active");
-    $(this).addClass("active");
-}); 
