@@ -7,7 +7,7 @@ body {
     overflow-x: hidden;
     line-height: 170%;
     font-size:1.3rem;
-    background-image:url("/assets/hero-images/bk.png");
+    background-image:url("../images/hero-images/bk.png");
     background-size: contain;
 }
 
@@ -489,7 +489,7 @@ iframe { /* video */
 }
 
 .tile-chicken {
-    background-image: url(/assets/images/gameimg/chicken.png);
+    background-image: url("../images/gameimg/chicken.png");
    transition: 0.15s;
 }
 
@@ -497,12 +497,12 @@ iframe { /* video */
 .tile-chicken:focus,
 .tile-chicken:active,
 .tile-chicken.activated{ /* swap images for focused */
-    background-image: url(/assets/images/gameimg/chicken2.png);
+    background-image: url("../images/gameimg/chicken2.png");
     transform: translate(10px);
 }
 
 .tile-duck {
-    background-image: url(/assets/images/gameimg/duck.png);
+    background-image: url("../images/gameimg/duck.png");
     transition: 0.15s;
 }
 
@@ -510,12 +510,12 @@ iframe { /* video */
 .tile-duck:focus,
 .tile-duck:active,
 .tile-duck.activated{
-    background-image: url(/assets/images/gameimg/duck2.png);
+    background-image: url("../images/gameimg/duck2.png");
     transform: translate(10px);
 }
 
 .tile-pig {
-    background-image: url(/assets/images/gameimg/pig.png);
+    background-image: url("../images/gameimg/pig.png");
     transition: 0.15s;
 }
 
@@ -523,12 +523,12 @@ iframe { /* video */
 .tile-pig:focus,
 .tile-pig:active,
 .tile-pig.activated{
-    background-image: url(/assets/images/gameimg/pig2.png);
+    background-image: url("../images/gameimg/pig2.png");
     transform: translate(10px);
 }
 
 .tile-cow {
-    background-image: url(/assets/images/gameimg/cow.png);
+    background-image: url("../images/gameimg/cow.png");
     transition: 0.15s;
 }
 
@@ -536,7 +536,7 @@ iframe { /* video */
 .tile-cow:focus,
 .tile-cow:active,
 .tile-cow.activated {
-    background-image: url(/assets/images/gameimg/cow2.png);
+    background-image: url("../images/gameimg/cow2.png");
     transform: translate(10px);
 }
 
