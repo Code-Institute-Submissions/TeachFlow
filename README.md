@@ -2,13 +2,13 @@
 
 ## Interactive Frontend Development 
 
-[View the Live Site here.](#)
+[View the Live Site here.](https://emmahartedev.github.io/ms2-teachflow/)
 
-![Teachflow logo](#) 
+![Teachflow logo](assets/images/logo/TeachFlow.png) 
 
-![Generated from Am I Responsive](#)
+![Generated from Am I Responsive](assets/images/logo/amiresponsive.jpg)
 
-Teachflow is a fictitious company, providing support, information and materials to both potential and current ESL teachers in Asia.
+Teachflow is a fictitious company, providing support, information and materials to poeple considering ESL teschin in Asia, or to those who are already working in the field.
 
 The purpose of this project to create a one-stop-shop of information for ESL teachers. 
 The website highlights a selection of 4 destination countries, with information for potential ESL teachers. Additional countries may be added in future releases.
@@ -86,7 +86,9 @@ Based on the above user stories, the following are features that will be include
 
 The following is a list of features that will not be included: 
 
-* #
+* More than one lesson planes
+* functionality to enter a zip code on maps
+* A save high score function on the memory game 
 
 ### Design
 
