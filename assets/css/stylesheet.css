@@ -2,12 +2,14 @@
 /* fonts and general styling*/
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@400;500&family=Caveat+Brush&display=swap');
 
+
 body {
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
     line-height: 170%;
+    font-weight:400;
     font-size:1.3rem;
-    background-image:url("../images/hero-images/bk.png");
+    background-image:url("../images/background/bk.png");
     background-size: contain;
 }
 
@@ -50,6 +52,7 @@ body {
 h1, h2, h3, h4, h5, h6, 
 .navbar .nav-link{
     font-family:'Lato', sans-serif;
+    font-weight:700;
     text-transform: capitalize;
     text-align: center;
 }

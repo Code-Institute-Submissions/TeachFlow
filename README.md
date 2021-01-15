@@ -6,7 +6,7 @@
 
 ![Teachflow logo](assets/images/logo/TeachFlow.png) 
 
-![Generated from Am I Responsive](assets/images/logo/amiresponsive.jpg)
+![Generated from Am I Responsive](assets/images/readme_files/amiresponsive.jpg)
 
 Teachflow is a fictitious company, providing support, information and materials to poeple considering ESL teschin in Asia, or to those who are already working in the field.
 
@@ -88,6 +88,7 @@ The following is a list of features that will not be included:
 
 * More than one lesson planes
 * functionality to enter a zip code on maps
+* Coronavirus adapated ESL content 
 * A save high score function on the memory game 
 
 ### Design
@@ -96,25 +97,24 @@ The following is a list of features that will not be included:
 All fonts used are from [Google Fonts](https://fonts.google.com/). 
 
 Fonts used include:
-* 
-* 
+* Roboto (regular 400) - used for body text
+* Lato (700) - used for headings; h1 - h6
 
 #### Colour Scheme
 A blue/yellow color palette was used which creates a bright undertone and compliments the striking imagery well. 
 
 ![color palette](assets/readme_files/color-pal.png).
 
-Colours include: Blue (2F3180) dark blue (1D1E4E) teal (108690) and Yellow(#FCCF14).
+Colours used for inspiration include: Blue (2F3180) dark blue (1D1E4E) teal (108690) and Yellow(#FCCF14).
+The actual colours used on the website include blue (#034cae), dark blue (#070958), teal (#246e74), yellow light (#fef7dd) and Yellow dark (#fccf14).
 
 #### Imagery
-* The hero image on each page was designed to take up 70% of the full-screen height. In doing so, a hint of the following content is given. 
-
+* A carousel banner was used on index.html which contains three striking images that focus on the ESL journey.
+* In game.html, the animal images used for the flashcards are re-used for the memory game. This is done intentionally, as reusing material to reinfoce learning is common practice in teaching. 
 
 #### Design justifications
-A consistent layout was used throughout the pages. Sections were reused throughout pages as needed to both decrease the amount of new code needed and improve the familiarity of content. 
-
-To improve the user experience, the use of the ```<a href = "" target = "_blank"> </a>``` was limited, applying the ```target = "_blank">``` attribute only for external links, such as social links and mailto. 
-
+* Home, About & Contact us are all sections on index.html. In doing this, a strong pathway is created which shows information the company, ESL teaching and finally a contact form.   
+* Classtime is created as a seperate page (game.html). This was done, as the 'classroom' is seperate experience and the page is heavy with content.  
 
 ### Wireframes
 All wireframes were created using the software [Balsamiq](https://balsamiq.com/). 
@@ -122,26 +122,13 @@ Layouts were created following research on the five planes of UX and before codi
 
 <strong>
 Please note, the final website layout contains slight variations to the original wireframes.
+Each of the following files contain wireframes for desktop, tablet and mobile devices.
 </strong>
 
-
-**Desktop** 
-* [Home Page](#)
-* [About](#)
-* [Portfolio](#)
-* [Contact Us](#)
-
-**Tablet**
-* [Home Page](#)
-* [About](#)
-* [Portfolio](#)
-* [Contact Us](#)
-
-**Mobile**
-* [Home Page](#)
-* [About](#)
-* [Portfolio](#)
-* [Contact Us](#)
+* [Home Page](assets/wireframes/home.png)
+* [About](assets/wireframes/about.png)
+* [Contact us](assets/wireframes/contact.png)
+* [Classtime](assets/wireframes/classtime.png))
 
 ----------------------------
 
@@ -149,7 +136,7 @@ Please note, the final website layout contains slight variations to the original
 
 ### Existing Features 
 * **Navigation** 
-    * The navigation contains the brand logo and four links which lead to 4 separate pages. 
+    * The navigation contains the brand logo with four links. 3 links, link to section on index.html (home, about & contact us). 1 link, links to a separate pages (game.html). 
     * The brand logo is an anchor tag, which is linked to the homepage. 
     * The pages are ordered to create a walk-through experience (Home > About > Portfolio > Contact Us)
     * For mobile devices, the navbar is designed to collapse.
