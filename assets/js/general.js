@@ -9,29 +9,12 @@ $(document).ready(function() {
   });
   });
 
-  // add and remove active class on click
+  // and remove active class on click
 $(".nav-link").on("click", function() {
     $(".nav-link").removeClass("active");
     $(this).addClass("active");
 }); 
 
-// Add smooth scrolling
-// CREDIT: https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll
-$(document).ready(function () {
-  $("a.data-page").on("click", function (event) { // add to all <a> links which jump to a specific section in index.html (does not work with game.html)
-    if (this.hash !== "") {
-      event.preventDefault();
-      let hash = this.hash; // Store hash
-      // 800 milliseconds taken to scroll
-      $('html, body').animate({ //  jQuery's animate() method adds smooth page scroll
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-        // Add hash (id) to URL when scrolling complete
-        window.location.hash = hash;
-      });
-    } 
-  });
-});
 
 // Hide nav bar on scrolling
 // CREDIT: https://bootstrap-menu.com/detail-smart-hide.html
@@ -55,3 +38,21 @@ window.onclick = function () {
     nav.classList.remove("show");
   }
 };
+
+// Add smooth scrolling
+// CREDIT: https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll
+$(document).ready(function () {
+  $("a[data-page='index']").on("click", function (event) { // add to all <a> links which jump to a specific section in index.html (does not work with game.html)
+    if (this.hash !== "") {
+      event.preventDefault();
+      let hash = this.hash; // Store hash
+      // 800 milliseconds taken to scroll
+      $('html, body').animate({ //  jQuery's animate() method adds smooth page scroll
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        // Add hash (id) to URL when scrolling complete
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
