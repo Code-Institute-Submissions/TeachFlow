@@ -232,7 +232,41 @@ These include:
 ## Testing
 
 ### User Story Testing
-The following user stories which were defined in the [UX](#ux "goto-ux") section of this README document were re-examined; to ensure that the needs and expectations of both the business owner and clients have been met. 
+In this section, the user stories which were defined in the [UX](#ux "goto-ux") section of this README document are re-evaluated.
+
+### User Stories
+
+#### Potential ESL Teacher Goals
+As a potential ESL teacher:
+
+* I am looking for information on ESL countries so that I can find out what appeals to me.
+    * ![maps](assets/images/readme_files/maps.png)
+
+* I usually do all my research on my phone so I would like the website to be mobile responsiveness.
+    * ![Mobile responsiveness](assets/images/readme_files/mobilerespons.png)
+
+* I am looking for information about a typical class lesson so I can learn about a typical day on the job. 
+    * ![Classtime](assets/images/readme_files/classtime.png)
+
+* I would like to be able to contact the website owners if I have any questions about the content.
+
+
+* I would like to see the requirements for becoming an ESL teacher, the salary and benefits.
+
+#### Current ESL Teacher Goals
+As a current ESL Teacher:
+
+* I would like to see information on regions in countries as I am familiar the countries do not give me indepth information. 
+
+
+* I would like to see some interactive information about the countries, such as the current weather or statistics so that I am receiving live, updated information. 
+
+
+* I would like any class material featured to be focused on learning English words and improving students speaking skills. 
+
+
+* I would like to be able to sign up to a newsletter. 
+
 
 #### user stories here !!
 
@@ -278,6 +312,10 @@ hide the nav bar when scrolling down - fixes the anchor link issue which cuts of
 
 //------------------ function to display the map and info contents ------------ //
 /* inspiration CREDIT https://www.w3schools.com/howto/howto_js_full_page_tabs.asp*/
+
+@media (max-width: 1200px) { /* switch the three game divs for mobile view */
+/* credit https://stackoverflow.com/questions/17115995/what-is-the-best-way-to-move-an-element-thats-on-the-top-to-the-bottom-in-respo */
+
 ----------------------------
 
 ## Deployment

@@ -8,7 +8,7 @@ body {
     overflow-x: hidden;
     line-height: 170%;
     font-weight:400;
-    font-size:1.3rem;
+    font-size:1.5rem;
     background-image:url("../images/background/bk.png");
     background-size: contain;
 }
@@ -216,14 +216,6 @@ img {
     transform:scaleX(1); 
 }
 
-/* shorten the underline length when navbar toggler is expanded */
-@media only screen and (max-width: 1100px) {
-    .nav-link {
-            width:35%;
-            margin: 0 auto;
-    }
-}
-
 
 /* hide the nav bar when scrolling down - fixes the anchor link issue which cuts off top of section  */
 .scroll-down {
@@ -351,33 +343,6 @@ img {
     line-height:110%;
 }
 
-/* set maps size for mobile */ 
-@media only screen and (max-width:600px){
-    body{
-        font-size:16px;
-    }
-    .about-us{
-        width:80%;
-    }
-    .map { /* make map full screen */
-        width: 100%;
-        height: 50%;
-    }
-    .info { /* make info full screen */
-        width:100%;
-        height:50%;
-        padding-left:20px;
-    }
-    .countrymap{ /* size entire map block */
-        height:800px;
-    }
-    .copyright span{ /* change span font-size */
-        font-size:1.2rem !important;
-    }
-    .ticon{ /* resize icons */
-        font-size: 1.2rem !important;
-    }
-}
 
 /* a href to classtime section */
 .class-lesson-section {
@@ -554,42 +519,89 @@ iframe { /* video */
     background-color: rgba(253,244,206,0.7);
 }
 
-/* resizing the classtime page to mobile*/
-@media only screen and (max-width: 550px){ 
+.showDesc{ /* game instructions */
+    width:90%;
+    padding: 5%;
+    text-align: left;
+    margin:0 auto;
+    margin-top:25px;
+}
+
+.list-group-item { /* override bt rules */
+    font-size: 19px;
+    background-color: transparent;
+} 
+
+/* Media Queries */
+/* shorten the underline length when navbar toggler is expanded */
+/*@media only screen and (max-width: 1100px) {
+    .nav-link {
+            width:35%;
+            margin: 0 auto;
+    }
+}*/
+/*MOBILE*/
+/* set maps size for mobile */ 
+@media only screen and (max-width:600px){
+    body{
+        font-size:16px;
+    }
+    .about-us{
+        width:80%;
+    }
+    .map { /* make map full screen */
+        width: 100%;
+        height: 50%;
+    }
+    .info { /* make info full screen */
+        width:100%;
+        height:50%;
+        padding-left:20px;
+    }
+    .countrymap{ /* size entire map block */
+        height:800px;
+    }
+    .copyright span{ /* change span font-size */
+        font-size:1.2rem !important;
+    }
+    .ticon{ /* resize icons */
+        font-size: 1.2rem !important;
+    }
    .image1,
    .video1,
    .image2,
    .video2 {
      display: none;
    }
-
    .image3, /* display smaller images/videos*/
    .video3{
      display: block;
    }
-
    .tile { /* style rules for game images */
     background-size: 150px 150px;
     background-position:0px !important;
     width: 310px;
     height: 190px;
     }
-
+    .nav-link {
+            width:30%;
+            margin: 0 auto;
+    }
 }
+
+/* TABLET */
 /* tile image resize for ipad*/
-@media only screen and (min-width: 550px) and (max-width: 900px){ 
+@media only screen and (min-width: 600px) and (max-width: 900px){ 
     .tile { /* game images */
         background-size: 200px 200px;
         background-position:50px !important;
         width: 310px;
         height: 190px;
-    }
-    
+    }  
     .video2,
     .image2{ /* flashcards, show only image 2*/
         display:block;
     }
-
     .image1,
     .image3,
     .video1,
@@ -600,13 +612,15 @@ iframe { /* video */
     .about-us{
         width:80%;
     }
+    .nav-link {
+        margin: 0 auto;
+        width:33%;
+    }
 }
-
-
-/* switch the three game divs for mobile view */
+ /* ALL SCREEN SIZES LARGE & UNDER */
+@media (max-width: 1200px) { /* switch the three game divs for mobile view */
 /* credit https://stackoverflow.com/questions/17115995/what-is-the-best-way-to-move-an-element-thats-on-the-top-to-the-bottom-in-respo */
 
-@media (max-width: 1200px) {
   .game-container {
     display: -webkit-box;
     display: -moz-box;
@@ -647,16 +661,3 @@ iframe { /* video */
     order: 3;
     }
 }
-
-.showDesc{ /* game instructions */
-    width:90%;
-    padding: 5%;
-    text-align: left;
-    margin:0 auto;
-    margin-top:25px;
-}
-
-.list-group-item { /* override bt rules */
-    font-size: 19px;
-    background-color: transparent;
-} 
