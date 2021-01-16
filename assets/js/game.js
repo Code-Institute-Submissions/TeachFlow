@@ -88,7 +88,7 @@ function startRound() {
     round +=1; // increment round
     gameTiles.classList.add('unclickable');
     gameText.textContent = "Listen and Watch";
-    heading.textContent = `Round ${round}, Remaining: ${20-round} `;
+    heading.textContent = `Remaining Rounds: ${15-round} `;
     let storedRoundTiles = [...orderOfTiles]; // store the array of tiles eg ["cow", "chicken"]
     storedRoundTiles.push(newTileinRound()); // adds newTileinRound ["cow"] to the end of storedRoundTiles{} with all other values from other rounds.
     itertateThrough(storedRoundTiles); // trigger to play sound & change pic

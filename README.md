@@ -79,17 +79,19 @@ As a current ESL Teacher:
 ### Project Scope
 Based on the above user stories, the following are features that will be included:
 
-* a newsletter signup
-* a simple memory game focused on speaking english words
-* a contact us page
+* a newsletter signup.
+* a simple memory game focused on speaking english words.
+* a maps API which will show 4 countries in Asia.
+* a contact us form, for users who who would to get more information about ESL teaching.
 * Interactive Information on ESL countries which incorporates an API.
 
 The following is a list of features that will not be included: 
 
-* More than one lesson planes
-* functionality to enter a zip code on maps
-* Coronavirus adapated ESL content 
-* A save high score function on the memory game 
+* More than one lesson plan.
+* functionality to enter a zip code on maps.
+* custom designed maps with colors and detailed markers. 
+* Coronavirus adapated ESL content.
+* A save high score function on the memory game.
 
 ### Design
 
@@ -109,8 +111,9 @@ Colours used for inspiration include: Blue (2F3180) dark blue (1D1E4E) teal (108
 The actual colours used on the website include blue (#034cae), dark blue (#070958), teal (#246e74), yellow light (#fef7dd) and Yellow dark (#fccf14).
 
 #### Imagery
-* A carousel banner was used on index.html which contains three striking images that focus on the ESL journey.
-* In game.html, the animal images used for the flashcards are re-used for the memory game. This is done intentionally, as reusing material to reinfoce learning is common practice in teaching. 
+* A carousel banner was used on index.html which contains three striking images that focus on ESL teaching.
+* In game.html, the animal images used for the flashcards are re-used for the memory game. 
+    This is done intentionally, as reusing material to reinfoce learning is common practice in teaching. 
 
 #### Design justifications
 * Home, About & Contact us are all sections on index.html. In doing this, a strong pathway is created which shows information the company, ESL teaching and finally a contact form.   
@@ -128,35 +131,66 @@ Each of the following files contain wireframes for desktop, tablet and mobile de
 * [Home Page](assets/wireframes/home.png)
 * [About](assets/wireframes/about.png)
 * [Contact us](assets/wireframes/contact.png)
-* [Classtime](assets/wireframes/classtime.png))
+* [Classtime](assets/wireframes/classtime.png)
 
-----------------------------
+--------------------------------------------------------------------------------------------
 
 ## Features
 
 ### Existing Features 
 * **Navigation** 
-    * The navigation contains the brand logo with four links. 3 links, link to section on index.html (home, about & contact us). 1 link, links to a separate pages (game.html). 
-    * The brand logo is an anchor tag, which is linked to the homepage. 
-    * The pages are ordered to create a walk-through experience (Home > About > Portfolio > Contact Us)
-    * For mobile devices, the navbar is designed to collapse.
-    * This feature was created using Bootstrap 4 and styled with custom CSS. 
+    * The navigation contains the brand logo (anchor tag to homepage) with four links. 
+        3 links, connect to sections on index.html (home, about & contact us). 1 link, connects to a separate page (game.html). 
+    * For mobile devices, the navbar collapses to a toggler button.
+    * The nav bar is fixed, disappears on scroll down and reappears on scroll up. 
+    * The navigation was created using [Bootstrap](https://getbootstrap.com/). 
+
+* **Maps API**
+    * The user is able to explore 4 Asian countries using the Maps API.
+    * 3 markers showing popular city to teach ESL in are featured on each map.
+    * Information and statistics are displayed alongside each map. 
+    * [Javascript](https://www.w3schools.com/js/DEFAULT.asp) and [Leaflet maps](https://leafletjs.com/) were used to create this feature.
 
 * **Contact Us Form**
-    * The contact form includes the necessary information required by the team. 
-    * Several fields are required and the user will be alerted by a message if a required field has not been filled in. 
-    * This feature was created using a Bootstrap 4 form and JavaScript.
+    * The contact form includes fields for name, email address and message text area.
+    * A newsletter signup option is included.
+    * Once a message has been submitted, the form collapes and a confirmation message is displayed.
+    * [EmailJS](https://www.emailjs.com/) and [Bootstrap](https://getbootstrap.com/) were used to to create this feature.
+
+* **Flashcards**
+    * 4 animal flashcards, which onclick play a sound are featured. 
+    * Duration for the lesson is featured at 15 minutes.
+    * Flashcard sizes descrease with smaller device sizes.
+    * [Javascript](https://www.w3schools.com/js/DEFAULT.asp) was used to create the onclick playsound function. 
+
+* **Song lesson**
+    * A youtube video (iframe) and content block create the song lesson. 
+    * Duration for the lesson is featured at 20 - 30 minutes.
+    * The iframe size descrease with smaller device sizes.
+
+* **Memory Game**
+    * The memory game re-used the flashcard animal tiles
+    * There are 15 rounds, with taps incrementing at each new round. 
+    * An event handler allows the player to progress when the order of tiles played by them matches the order played by the computer. 
+    * When the sequences do not match, the game is reset.
+    * Colorful tiles are added to on hover.
+    * Audio sound and colorful tiles are to on press.  
+    * [SweetAlert](https://sweetalert.js.org/) is used to create an aesthetic alert box.
+    * [Javascript](https://www.w3schools.com/js/DEFAULT.asp) was used to create the memory game.
    
 * **Footer**
-    * The brand logo is featured on the footer left.
-    * Quick contact links are included in the footer center.
+    * Copyright information is included in the footer center.
     * Social media links are visible on the footer right.
+    * The footer was created using [Bootstrap](https://getbootstrap.com/).
 
 ### Features Left to Implement
-Due to project scope, the following features were not implemented in the current release. 
+The following are features were not included in this release  
 
 These include:
-*
+* Use an API to create the maps information. This would ensure that all data is up to date and accurate. 
+    Unfortuately I was not able to find an API which would display the right information. 
+* An automatic reply to be send to the user after they submit a contact form. 
+* An API which will include ESL jobs in the 4 featured Asian countries. 
 
 ----------------------------
 
@@ -167,6 +201,16 @@ These include:
 * [CSS](https://www.w3schools.com/css/) - Used for styling the site pages.
 
 * [Bootstrap 4](https://getbootstrap.com/) - Framework used for building the site pages.
+
+* [Javascript](https://www.w3schools.com/js/DEFAULT.asp) - Used to make the website interactive.
+
+* [jQuery](https://jquery.com/) - Used to make the website interactive.
+
+* [Leaflet](https://leafletjs.com/) - Used to create the maps.
+
+* [SweetAlert](https://sweetalert.js.org/) - Used to create pretty alert boxes.
+
+* [EmailJS](https://www.emailjs.com/) - Used to create the email service.
 
 * [Google Fonts](https://fonts.google.com/) - Used for typography.
 
