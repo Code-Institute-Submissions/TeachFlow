@@ -39,10 +39,6 @@ body {
     padding: 1% 7%;
 }
 
-.indent {
-    text-indent: 10%;
-}
-
 .heading{
     margin: 0 auto 1.75rem;
     text-align: center;
@@ -336,12 +332,6 @@ img {
     padding:20px;
 }
 
-/* info styling */
-.countrymap .info h5
-/*.countrymap span*/{
-    font-weight:bold;
-}
-
 .countrymap .info {
     font-size: 16px;
     line-height:110%;
@@ -566,10 +556,10 @@ iframe { /* video */
         height:800px;
     }
     .copyright span{ /* change span font-size */
-        font-size:1.2rem !important;
+        font-size:1.2rem;
     }
     .ticon{ /* resize icons */
-        font-size: 1.2rem !important;
+        font-size: 1.2rem;
     }
    .image1,
    .video1,
@@ -600,6 +590,21 @@ iframe { /* video */
     }
     .tfbutton{
         width:120px;
+    }
+    .special-text{
+        font-size:170%;
+    }
+    .ticon{
+        margin:2px;
+    }
+    .copyright span{
+        font-size: 1rem;
+    }
+    .navbar-brand img{
+        width: 180px;
+    }
+    .nav-link{
+        width:60%;
     }
 }
 /* TABLET */
