@@ -223,10 +223,10 @@ img {
 
 /* hide the nav bar when scrolling down - fixes the anchor link issue which cuts off top of section  */
 .scroll-down {
-   transform:translateY(-100%); transition: all 0.3s ease-in-out;
+   transform:translateY(-100%); transition: all 0.4s ease-in-out;
 }
 .scroll-up {
-   transform:translateY(0); transition: all 0.3s ease-in-out;
+   transform:translateY(0); transition: all 0.4s ease-in-out;
 }
 
 /* over-ride bootstrap defaults to set active colour */
@@ -532,17 +532,35 @@ iframe { /* video */
     background-color: transparent;
 } 
 
-/* Media Queries */
-/* shorten the underline length when navbar toggler is expanded */
-/*@media only screen and (max-width: 1100px) {
-    .nav-link {
-            width:35%;
-            margin: 0 auto;
+
+/*iPhone 5/SE*/
+@media only screen and (max-width:325px){
+    .about-us{
+        max-width: 90%;
     }
-}*/
-/*MOBILE*/
+    .tfbutton{
+        width:120px;
+    }
+    .special-text{
+        font-size:170%;
+    }
+    .ticon{
+        margin:2px;
+    }
+    .copyright span{
+        font-size: 1rem;
+    }
+    .navbar-brand img{
+        width: 180px;
+    }
+    .nav-link{
+        width:60%;
+ }
+}
+
+/*MOBILE IPhone 6/7/8*/
 /* set maps size for mobile */ 
-@media only screen and (max-width:600px){
+@media only screen and (min-width:326px) and (max-width:600px){
     body{
         font-size:16px;
     }
@@ -582,36 +600,12 @@ iframe { /* video */
     background-position:0px !important;
     height: 150px;
     }
-    .nav-link {
-            width:30%;
-            margin: 0 auto;
-    }
-}
-
-/*iPhone 5/SE*/
-@media only screen and (max-width:325px){
-    .about-us{
-        max-width: 90%;
-    }
-    .tfbutton{
-        width:120px;
-    }
-    .special-text{
-        font-size:170%;
-    }
-    .ticon{
-        margin:2px;
-    }
-    .copyright span{
-        font-size: 1rem;
-    }
-    .navbar-brand img{
-        width: 180px;
-    }
     .nav-link{
         width:60%;
+        margin: 0 auto;
+ }
 }
-}
+
 /* TABLET */
 /* tile image resize for ipad*/
 @media only screen and (min-width: 600px) and (max-width: 900px){ 
@@ -637,7 +631,7 @@ iframe { /* video */
     }
     .nav-link {
         margin: 0 auto;
-        width:33%;
+        width:60%;
     }
 }
  /* ALL SCREEN SIZES LARGE & UNDER */
