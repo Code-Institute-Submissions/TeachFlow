@@ -39,6 +39,10 @@ body {
     padding: 1% 7%;
 }
 
+.indent {
+    text-indent: 10%;
+}
+
 .heading{
     margin: 0 auto 1.75rem;
     text-align: center;
@@ -333,8 +337,8 @@ img {
 }
 
 /* info styling */
-.countrymap .info h5,
-.countrymap span{
+.countrymap .info h5
+/*.countrymap span*/{
     font-weight:bold;
 }
 
@@ -589,6 +593,15 @@ iframe { /* video */
     }
 }
 
+/*iPhone 5/SE*/
+@media only screen and (max-width:320px){
+    .about-us{
+        max-width: 90%;
+    }
+    .tfbutton{
+        width:120px;
+    }
+}
 /* TABLET */
 /* tile image resize for ipad*/
 @media only screen and (min-width: 600px) and (max-width: 900px){ 

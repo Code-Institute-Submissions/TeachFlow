@@ -240,56 +240,81 @@ In this section, the user stories which were defined in the [UX](#ux "goto-ux") 
 As a potential ESL teacher:
 
 * I am looking for information on ESL countries so that I can find out what appeals to me.
-    * 4 Asian countries which are popular ESL destinations are focued upon, on this website release. 
+    * 4 Asian countries which are popular ESL destinations are focued upon, on this website release.
+
     * ![maps](assets/images/readme_files/maps.png)
 
 * I usually do all my research on my phone so I would like the website to be mobile responsive.
     * A mobile-first design approad has been adopted.
+
     * ![Mobile responsiveness](assets/images/readme_files/mobilerespons.png)
 
 * I am looking for information about a typical class lesson so I can learn about a typical day on the job.
-    * An entire class lesson is provided in game.html which gives the user a clear idea of what a typical class lesson looks liek 
+    * An entire class lesson is provided in game.html which gives the user a clear idea of what a typical class lesson looks like.
+
     * ![Classtime](assets/images/readme_files/classtime.png)
 
 * I would like to be able to contact the website owners if I have any questions about the content.
     * A contact form is available on index.html.
+
     * ![Contact us](assets/images/readme_files/contact.png)
 
 * I would like to see the requirements for becoming an ESL teacher, the salary and benefits.
     * Requirements, salary and additional information is featured in the country maps information section.
+
     * ![Maps information](assets/images/readme_files/mapsinfo.png)
 
 #### Current ESL Teacher Goals
 As a current ESL Teacher:
 
 * I would like to see information on regions in countries as I am familiar the countries do not give me indepth information. 
- * 3 Markers have been placed on each map, showing popular cities to teach in. 
- * ![Maps information](assets/images/readme_files/mapsinfo.png)
+    * 3 Markers have been placed on each map, showing popular cities to teach in. 
+
+    * ![Maps information](assets/images/readme_files/mapsinfo.png)
 
 
 * I would like to see some interactive information about the countries, such as the current weather or statistics so that I am receiving live, updated information. 
     * Due to time limitation, a weather API was not integrated into this release. 
     * Country info however can be seen in the country maps information section.
+
     * ![Maps information](assets/images/readme_files/mapsinfo.png)
 
 
 * I would like any class material featured to be focused on learning English words and improving students speaking skills. 
     * Multipe content is featured including flashcards, a song lesson and a memory game.
+
     * ![Classtime content](assets/images/readme_files/classtimeeng.png)
 
 
 * I would like to be able to sign up to a newsletter. 
- * ![Newsletter signup](assets/images/readme_files/newslettersignup.png)
+    * Newsletter signup option is offered on the contact us form.
+
+    * ![Newsletter signup](assets/images/readme_files/newslettersignup.png)
 
 ### Browser Compatibility
+The website was viewed on the following browsers:
+* Google Chrome
+* Firefox
+* Microsoft Edge
+* Safari
+* Opera
+
 
 
 [Cross Browser Testing](https://crossbrowsertesting.com/) 
 
 
 ### Responsiveness
-* The website's responsiveness was tested using [Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools).
-* Devices tested include: 
+The website's responsiveness was tested using [Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools).
+The devices tested and screen with include: 
+    * iPhone 5/SE (320px)
+    * iPhone 6/7/8 (375px)
+    * iPhone 6/7/8 Plus (414px)
+    * iPad (768px)
+    * iPad Pro (1024px)
+    * Laptop (1200px)
+    * Desktop (1920px)
+    
 In addition to this, [Lighthouse](https://developers.google.com/web/tools/lighthouse) was run in Chrome Dev Tools, to generate reports on the quality of the website.
 
 ### W3C Validation
