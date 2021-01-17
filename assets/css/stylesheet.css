@@ -220,22 +220,13 @@ img {
     transform:scaleX(1); 
 }
 
-
-/* hide the nav bar when scrolling down - fixes the anchor link issue which cuts off top of section  */
-.scroll-down {
-   transform:translateY(-100%); transition: all 0.4s ease-in-out;
-}
-.scroll-up {
-   transform:translateY(0); transition: all 0.4s ease-in-out;
-}
-
 /* over-ride bootstrap defaults to set active colour */
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .active>.nav-link {
     color:#070958;
 } 
 
-.fixed-navbar {
+.navbar {
     position:fixed;
     top:0;
     left:0;
@@ -254,8 +245,17 @@ img {
     background-color: white;
 }
 
+/* for scroll up and down - make navbar dissapear*/
+nav {
+    position: fixed;
+    top: 0;
+    transition: top 0.15s ease-in-out;
+    width: 100%;
+}
 
-
+.scroll-up{
+    top: -60px;
+} 
 /*----------------------------------- about us page -----------------------------------*/
 
 /* first section */
