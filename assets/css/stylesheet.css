@@ -2,10 +2,12 @@
 /* fonts and general styling*/
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@400;500&family=Caveat+Brush&display=swap');
 
+html, body {
+  overflow-x:hidden 
+} 
 
 body {
     font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
     line-height: 170%;
     font-weight:400;
     font-size:1.5rem;
@@ -385,7 +387,7 @@ a:hover {
 /*---------------------------------------- classtime ------------------------- */
 
 .flashcards-container{
-    padding:50px 0px;
+    padding:5%;
     background-color:rgba(253,244,206,0.7);
     margin: 50px 0px
 }
@@ -407,14 +409,15 @@ a:hover {
 /*---------------------------- song-section */
 
 .song-container{
-    padding:50px 0px;
+    padding:5%;
+    margin:50px 0;
+    background-color: rgba(253,244,206,0.7);
 }
 
 .song-block { /* video and content */
     margin: auto 0;
     align-items: center;
-    background-color: rgba(253,244,206,0.7);
-    padding: 50px;
+    padding: 5%;
 }
 
 iframe { /* video */
@@ -426,13 +429,14 @@ iframe { /* video */
 /*----------------------- game container*/
 /*general */
 .game-container { /* over-ride default settings */
-    padding:0;
+    padding:5%;
+    margin: 50px 0 0;
     background-color: rgba(253,244,206,0.7);
 }
 
 .game-block { /* game and instructions */
     margin: auto 0;
-    padding: 30px;
+    width:100%;
     align-items: center;
 }
 
@@ -514,8 +518,8 @@ iframe { /* video */
 }
 
 .showDesc{ /* game instructions */
-    width:90%;
-    padding: 5%;
+    width:99%;
+    padding: 2%;
     text-align: left;
     margin:0 auto;
     margin-top:25px;
@@ -572,10 +576,9 @@ iframe { /* video */
      display: block;
    }
    .tile { /* style rules for game images */
-    background-size: 150px 150px;
+    background-size: 120px 120px;
     background-position:0px !important;
-    width: 310px;
-    height: 190px;
+    height: 150px;
     }
     .nav-link {
             width:30%;
@@ -584,7 +587,7 @@ iframe { /* video */
 }
 
 /*iPhone 5/SE*/
-@media only screen and (max-width:320px){
+@media only screen and (max-width:325px){
     .about-us{
         max-width: 90%;
     }
@@ -605,7 +608,7 @@ iframe { /* video */
     }
     .nav-link{
         width:60%;
-    }
+}
 }
 /* TABLET */
 /* tile image resize for ipad*/
