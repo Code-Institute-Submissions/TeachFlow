@@ -532,11 +532,19 @@ iframe { /* video */
     background-color: transparent;
 } 
 
+/*
+    body{
+        font-size:16px;
+    }
+*/
 
 /*iPhone 5/SE*/
 @media only screen and (max-width:325px){
+    body{
+        font-size:16px;
+    }
     .about-us{
-        max-width: 90%;
+        width: 90%;
     }
     .tfbutton{
         width:120px;
@@ -606,8 +614,7 @@ iframe { /* video */
  }
 }
 
-/* TABLET */
-/* tile image resize for ipad*/
+/* IPad */
 @media only screen and (min-width: 600px) and (max-width: 900px){ 
     .tile { /* game images */
         background-size: 200px 200px;
@@ -631,7 +638,7 @@ iframe { /* video */
     }
     .nav-link {
         margin: 0 auto;
-        width:60%;
+        width:35%;
     }
 }
  /* ALL SCREEN SIZES LARGE & UNDER */
