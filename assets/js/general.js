@@ -1,4 +1,3 @@
-
 // Preloader
 // create pre-loader function & add active class to home link by default
 $(document).ready(function() {
@@ -15,65 +14,39 @@ $(".nav-link").on("click", function() {
     $(this).addClass("active");
 }); 
 
-// Hide nav bar on scrolling
-// CREDIT: https://bootstrap-menu.com/detail-smart-hide.html
-/*if ($('.fixed-navbar').length > 0) {
-    let last_scroll_top = 0;
-    $(window).on('scroll', function() {
-        scroll_top = $(this).scrollTop(); //set scrolltop value as dist from top to first element
-        if(scroll_top < last_scroll_top)
-        {
-            $('.fixed-navbar').removeClass('scroll-down').addClass('scroll-up'); //add the navbar
-        } else {
-            
-            $('.fixed-navbar').removeClass('scroll-up').addClass('scroll-down'); //hide nav bar
-        }
-        last_scroll_top = scroll_top;
-    });
-} */
- /* hideTimer = setTimeout(() => {
-    document.getElementById("navbar").style.top = "0";
-  }, 500); // delayed by 0.5 second
-}*/
-
 // Hide Navbar on scroll down
-//https://codepen.io/fbmiranda/pen/edqgxm
-var didScroll;
-var lastScrollTop = 0;
-var delta = 15;
-var navbarHeight = $('nav').outerHeight();
+var firstScroll = 0;
+let scrolled;
 
-$(window).scroll(function(event){
-    didScroll = true;
+//on scroll set the scrolled value to true;
+$(window).on("scroll", function(event){
+    scrolled = true;
 });
 
-setInterval(function() {
-    if (didScroll) {
-        hasScrolled();
-        didScroll = false;
+//if scrolled = true, call userScrolled func & set scrolled to false
+setInterval(function() { 
+    if (scrolled) {
+        userScrolled(); 
+        scrolled = false;
     }
-}, 250);
+}, 190);
 
-function hasScrolled() {
-    var st = $(this).scrollTop();
-    
-    // Make sure they scroll more than delta
-    if(Math.abs(lastScrollTop - st) <= delta)
-        return;
-    
+function userScrolled() {
+    let dist = $(this).scrollTop(); // dist = pixels scrolled
+    let scrollMin = 0;
+    let navUlHeight = $('nav').outerHeight(); //used later to make sure user has scrolled past navbar
+    if(Math.abs(firstScroll - dist) <= scrollMin) // if 0 - dist  <= 0 then return
+        return;  
     // If they scrolled down and are past the navbar, add class .nav-up.
     // This is necessary so you never see what is "behind" the navbar.
-    if (st > lastScrollTop && st > navbarHeight){
-        // Scroll Down
+    if (dist > firstScroll && dist > navUlHeight){ //if dist > 0 and dist > navbar outer height then scroll down
         $('nav').removeClass('nav-down').addClass('scroll-up');
     } else {
-        // Scroll Up
-        if(st + $(window).height() < $(document).height()) {
-            $('nav').removeClass('scroll-up');
+        if(dist + $(window).height() < $(document).height()) { // dist + height of the (browser) window < height of the document being rendered
+            $('nav').removeClass('scroll-up');         // Else scroll up
         }
     }
-    
-    lastScrollTop = st;
+    firstScroll = dist;
 }
 // close the menu after each click (needed as some sections are on same page)
 window.onclick = function () {
