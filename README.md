@@ -337,8 +337,9 @@ hide the nav bar when scrolling down - fixes the anchor link issue which cuts of
 /* credit https://sweetalert.js.org/*/
 /* credit: https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll
 
-// hide nav bar on scrolling
-// CREDIT: https://bootstrap-menu.com/detail-smart-hide.html
+/* Grow hover effect */
+/* https://ianlunn.github.io/Hover/ */
+
 
 //------------------ function to display the map and info contents ------------ //
 /* inspiration CREDIT https://www.w3schools.com/howto/howto_js_full_page_tabs.asp*/
