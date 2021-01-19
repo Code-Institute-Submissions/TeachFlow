@@ -214,7 +214,7 @@ These include:
 
 * [Google Fonts](https://fonts.google.com/) - Used for typography.
 
-* [Adobe Photoshop](https://www.adobe.com/de/products/photoshop.html?sdid=88X75SKP&mv=search&ef_id=EAIaIQobChMI95Sd8Zyv7QIVA893Ch3SYQCaEAAYASAAEgI41vD_BwE:G:s&s_kwcid=AL!3085!3!341205896389!e!!g!!adobe%20photoshop!1419109629!54636022246&gclid=EAIaIQobChMI95Sd8Zyv7QIVA893Ch3SYQCaEAAYASAAEgI41vD_BwE) - Used to resize and edit images.
+* [Adobe Photoshop](https://www.adobe.com/de/products/photoshop.html?sdid=88X75SKP&mv=search&ef_id=EAIaIQobChMI95Sd8Zyv7QIVA893Ch3SYQCaEAAYASAAEgI41vD_BwE:G:s&s_kwcid=AL!3085!3!341205896389!e!!g!!adobe%20photoshop!1419109629!54636022246&gclid=EAIaIQobChMI95Sd8Zyv7QIVA893Ch3SYQCaEAAYASAAEgI41vD_BwE) - Used to resize and edit images including the company logo and game tiles.
 
 * [Font Awesome](https://fontawesome.com/) - Used for all Icons.
 
@@ -380,42 +380,50 @@ git clone https://github.com/emmahartedev/ms2-teachflow.git
 ----------------------------
 
 ## Credits 
-/* switch the three game divs for mobile view */
-/* credit https://stackoverflow.com/questions/17115995/what-is-the-best-way-to-move-an-element-thats-on-the-top-to-the-bottom-in-respo */
-/* credit https://sweetalert.js.org/*/
-/* credit: https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll
-
-/* Grow hover effect */
-/* https://ianlunn.github.io/Hover/ */
-
-
-//------------------ function to display the map and info contents ------------ //
-/* inspiration CREDIT https://www.w3schools.com/howto/howto_js_full_page_tabs.asp*/
-
-@media (max-width: 1200px) { /* switch the three game divs for mobile view */
-/* credit https://stackoverflow.com/questions/17115995/what-is-the-best-way-to-move-an-element-thats-on-the-top-to-the-bottom-in-respo */
-
+the following material is not my own. Sources have been listed alongside the content type. 
 
 ### Content
-All content was written and developed by me.
+* Map information - [Go Overseas](https://www.gooverseas.com/teach-abroad)
+
+### Audio
+* Animal names used in game.html - [Voice Maker](https://voicemaker.in/) (Joanna, Female) was used to create all audio files. 
 
 ### Code
 The following websites were used for inspiration and assistance:
-
 * [CSS Tricks](https://css-tricks.com/)
-* [Awwwards](https://www.awwwards.com/)
 * [Stack Overflow](https://stackoverflow.com/)
 * [Bootstrap Documentation](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
 
-https://ianlunn.github.io/Hover/ - hover effects on icons
+The following were installed/used in the project:
+* [SweetAlert](https://sweetalert.js.org) - used for popup messages
+* [Grow hover effect](https://ianlunn.github.io/Hover/) - used on footer icons
+
+The following code has been directly used in this project:
+* [Switch div display](https://stackoverflow.com/questions/17115995/what-is-the-best-way-to-move-an-element-thats-on-the-top-to-the-bottom-in-respo) - used to switch the 3 'game-container' divs in game.html for mobile view */
+* [smooth scroll](https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll)  - used to create a smooth-scrolling effect on index.html
+* [Full Page Tabs](https://www.w3schools.com/howto/howto_js_full_page_tabs.asp) - idea used to display the map and info contents on button click
+
 ###  Media
-The images used on this site are royalty-free and were obtained from the following websites:
+The images used on this website were obtained from the following sources:
+
+home.html
+* [Students in a classroom](https://www.pexels.com/photo/three-toddler-eating-on-white-table-1001914/)
+* [Students running outside](https://www.pexels.com/photo/boy-in-white-and-red-school-uniform-raising-hands-outdoors-1153976/)
+* [Teacher writing on blackboard](https://www.pexels.com/photo/woman-in-red-long-sleeve-writing-on-chalk-board-3769714/)
+* [Student outside looking to sky](pexels-artem-beliaikin-1565521)
+* [Woman walking up a temple path](https://www.pexels.com/photo/woman-in-blue-dress-walking-on-concrete-staircase-leading-to-buildings-929168/)
+* Child in Classroom - owned by me
+
+game.html
+* [Chicken](https://unsplash.com/photos/auijD19Byq8)
+* [Duck](https://unsplash.com/photos/kCZSzqvIei4)
+* [Cow](https://unsplash.com/photos/etrxob-VZRs)
+* [Pig](https://unsplash.com/photos/W7uMPs8aeXs)
+* [Finger Family Farm Animals Song](https://www.youtube.com/watch?v=MaHWFODvtfU&feature=emb_logo)
 
 * [Unsplash](https://unsplash.com/)
 * [Pexels](https://www.pexels.com/de-de/)
 * [Pixabay](https://pixabay.com/de/)
-
-The company logo was generated on []().
 
 ### Acknowledgments
 * 
