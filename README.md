@@ -40,7 +40,7 @@ Important information and features to the company include:
     * [User Story Testing](#user-story-testing " goto user story testing")
     * [Browser Compatibility](#browser-compatibility "goto browser compatibility")
     * [Responsiveness](#responsiveness "goto responsiveness")
-    * [W3C Validation](#w3c-validation "goto w3c validation")
+    * [Code Validation](#Code-validation "goto code validation")
     * [Bugs](#bugs "goto bugs")
     
 5. [Deployment](#deployment "goto deployment")
@@ -306,32 +306,80 @@ The website was viewed on the following browsers:
 
 ### Responsiveness
 The website's responsiveness was tested using [Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools).
-The devices tested and screen with include: 
-    * iPhone 5/SE (320px)
-    * iPhone 6/7/8 (375px)
-    * iPhone 6/7/8 Plus (414px)
-    * iPad (768px)
-    * iPad Pro (1024px)
-    * Laptop (1200px)
-    * Desktop (1920px)
+CSS Media Queries were written as required to improve appearances. 
+
+The devices (and screen widths) tested with include: 
+* iPhone 5/SE (320px)
+* iPhone 6/7/8 (375px)
+* iPhone 6/7/8 Plus (414px)
+* iPad (768px)
+* iPad Pro (1024px)
+* Laptop (1200px)
+* Desktop (1920px)
     
 In addition to this, [Lighthouse](https://developers.google.com/web/tools/lighthouse) was run in Chrome Dev Tools, to generate reports on the quality of the website.
 
-### W3C Validation
-The validity of each page's HTML code was checked using [The W3C Markup Validation Service](https://validator.w3.org/).
-The following code changes were made to satisfy the validator:
+### Code Validation
+#### HTML
+* All HTML code was checked using [The W3C Markup Validation Service](https://validator.w3.org/).
+* No errors or warnings were produced.
 
-
-The validity of the CSS code was checked using [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/).
+#### CSS
+* All CSS code was checked using [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/).
+* No erros were produced. 
+* 26 noncritical warnings associated with imported stylesheets and vendor extensions were produced. 
 
 
 ### Bugs
 
-- js code hash interferring with contact page
-https://stackoverflow.com/questions/59706410/link-with-anchor-to-different-page-href
+#### Solved
+* The js hash code was interferring with the functionality of the nav link to game.html. While researching, I found a similar issue on [Stack Overflow](https://stackoverflow.com/questions/59706410/link-with-anchor-to-different-page-href). 
+After reading this, I created a data attribute for the anchor links on index.html and targeted these only in the js hash code. The navigation then worked without any issues.
 
-hide the nav bar when scrolling down - fixes the anchor link issue which cuts off top of section 
+* The userScrolled function was causing the nav bar to dissapear for a few seconds once it reached the top of the page. 
+Because of this, the carousel's margin was unasthetically exposed. [Codepen](https://codepen.io/fbmiranda/pen/edqgxm) 
+provided a solution to this, making sure that the user scrolls past the navbar before it dissapears. After modifying the code, the bug was solved. 
 
+
+----------------------------
+
+## Deployment
+
+The website was hosted on Github Pages. It was deployed by carrying out the following steps:
+
+1. login into Github.
+2. Select the repository from the profile.
+3. go to 'settings' in the repository.
+4. In 'Github Pages' choose 'Master Branch' as Source and save.
+
+The Live site deployed can be viewed on the following link: 
+[TeachFlow](https://emmahartedev.github.io/ms2-teachflow/)
+
+### Local
+To clone this project locally; a Chrome browser and Github account are required. 
+
+The following steps can then be followed:
+1. Install the [Gitpod Browser Chrome Extention](https://chrome.google.com/webstore/detail/gitpod-dev-environments-i/dodmmooeoklaejobgleioelladacbeki), restarting the browser after installation.
+2. Log into [Gitpod](https://gitpod.io/).
+3. Click on the following link to go to the [project repository](https://github.com/emmahartedev/living-landscapes).
+4. Click on the green 'Gitpod' button which is located to the right of the repository to launch a new workspace.
+5. The code can be worked on in this newly launched workspace. 
+
+To clone code within an IDE of your choice:
+
+1. Click on the following link to go to the [project repository](https://github.com/emmahartedev/ms2-teachflow).
+2. Click 'Code' and in the Clone with HTTPs, copy the provided repository URL. 
+3. Open a terminal in your IDE.
+4. Change the current working directory to the location you wish to generate the cloned directory.
+5. Type ```git clone```, and then paste the URL from step 2. 
+
+```
+git clone https://github.com/emmahartedev/ms2-teachflow.git
+```
+
+----------------------------
+
+## Credits 
 /* switch the three game divs for mobile view */
 /* credit https://stackoverflow.com/questions/17115995/what-is-the-best-way-to-move-an-element-thats-on-the-top-to-the-bottom-in-respo */
 /* credit https://sweetalert.js.org/*/
@@ -347,45 +395,6 @@ hide the nav bar when scrolling down - fixes the anchor link issue which cuts of
 @media (max-width: 1200px) { /* switch the three game divs for mobile view */
 /* credit https://stackoverflow.com/questions/17115995/what-is-the-best-way-to-move-an-element-thats-on-the-top-to-the-bottom-in-respo */
 
-----------------------------
-
-## Deployment
-
-The website was hosted on Github Pages. It was deployed by carrying out the following steps:
-
-1. login into Github.
-2. Select the repository from the profile.
-3. go to 'settings' in the repository.
-4. In 'Github Pages' choose 'Master Branch' as Source and save.
-
-The Live site deployed can be viewed on the following link: 
-[TeachFlow](#)
-
-### Local
-To clone this project locally; a Chrome browser and Github account are required. 
-
-The following steps can then be followed:
-1. Install the [Gitpod Browser Chrome Extention](https://chrome.google.com/webstore/detail/gitpod-dev-environments-i/dodmmooeoklaejobgleioelladacbeki), restarting the browser after installation.
-2. Log into [Gitpod](https://gitpod.io/).
-3. Click on the following link to go to the [project repository](https://github.com/emmahartedev/living-landscapes).
-4. Click on the green 'Gitpod' button which is located to the right of the repository to launch a new workspace.
-5. The code can be worked on in this newly launched workspace. 
-
-To clone code within an IDE of your choice:
-
-1. Click on the following link to go to the [project repository](https://github.com/emmahartedev/living-landscapes).
-2. Click 'Code' and in the Clone with HTTPs, copy the provided repository URL. 
-3. Open a terminal in your IDE.
-4. Change the current working directory to the location you wish to generate the cloned directory.
-5. Type ```git clone```, and then paste the URL from step 2. 
-
-```
-git clone #
-```
-
-----------------------------
-
-## Credits 
 
 ### Content
 All content was written and developed by me.
