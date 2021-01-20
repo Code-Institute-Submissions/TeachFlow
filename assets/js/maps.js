@@ -46,7 +46,7 @@ let mapSouthKorea = L.map('mapSouthKorea', {
 });
 
 //set one map tiles source
-googleStreetsSouthKorea = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
     attribution: '<a href="https://www.google.com/maps">Google Maps</a>',
     maxZoom: 20,
     subdomains:['mt0','mt1','mt2','mt3']
@@ -54,9 +54,9 @@ googleStreetsSouthKorea = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={
 }).addTo(mapSouthKorea);
             
 // add some markers
-let seoul = L.marker([37.9078, 126.9780]).addTo(mapSouthKorea).bindPopup("Seoul");;
-let busan = L.marker([35.1796, 129.0756]).addTo(mapSouthKorea).bindPopup("Busan");;
-let incheon = L.marker([37.4563, 126.7052]).addTo(mapSouthKorea).bindPopup("Incheon");;
+L.marker([37.9078, 126.9780]).addTo(mapSouthKorea).bindPopup("Seoul");;
+L.marker([35.1796, 129.0756]).addTo(mapSouthKorea).bindPopup("Busan");;
+L.marker([37.4563, 126.7052]).addTo(mapSouthKorea).bindPopup("Incheon");;
 
 // Japan
 let LatJapan = 36.20;
@@ -69,15 +69,15 @@ let mapJapan = L.map('mapJapan', {
 });
 
 //set one map tiles source
-googleStreetsJapan = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
     attribution: '<a href="https://www.google.com/maps">Google Maps</a>',
     maxZoom: 20,
     subdomains:['mt0','mt1','mt2','mt3']
 }).addTo(mapJapan);
 
-let osaka = L.marker([34.6937, 135.5023]).addTo(mapJapan).bindPopup("Osaka");
-let tokyo = L.marker([35.6762, 139.6503]).addTo(mapJapan).bindPopup("Tokyo");;
-let sapporo = L.marker([43.0618, 141.3545]).addTo(mapJapan).bindPopup("Sapporo");;
+L.marker([34.6937, 135.5023]).addTo(mapJapan).bindPopup("Osaka");
+L.marker([35.6762, 139.6503]).addTo(mapJapan).bindPopup("Tokyo");;
+L.marker([43.0618, 141.3545]).addTo(mapJapan).bindPopup("Sapporo");;
 
 // China
 let LatChina = 35.8617;
@@ -90,15 +90,15 @@ let mapChina = L.map('mapChina', {
 });
 
 //set one map tiles source
-googleStreetsChina = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
     attribution: '<a href="https://www.google.com/maps">Google Maps</a>',
     maxZoom: 20,
     subdomains:['mt0','mt1','mt2','mt3']
 }).addTo(mapChina);
 
-let beijing = L.marker([39.9042, 116.4074]).addTo(mapChina).bindPopup("Beijing");
-let guangzhou = L.marker([23.1291, 113.2644]).addTo(mapChina).bindPopup("Guangzhou");
-let shenzhen = L.marker([22.5431, 114.0579]).addTo(mapChina).bindPopup("Shenzhen");
+L.marker([39.9042, 116.4074]).addTo(mapChina).bindPopup("Beijing");
+L.marker([23.1291, 113.2644]).addTo(mapChina).bindPopup("Guangzhou");
+L.marker([22.5431, 114.0579]).addTo(mapChina).bindPopup("Shenzhen");
 
 // Thailand
 let LatThailand = 11.973342;
@@ -111,15 +111,15 @@ let mapThailand = L.map('mapThailand', {
 });
 
 //set one map tiles source
-googleStreetsThailand = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
     attribution: '<a href="https://www.google.com/maps">Google Maps</a>',
     maxZoom: 20,
     subdomains:['mt0','mt1','mt2','mt3']
 }).addTo(mapThailand);
 
-let chiangmai = L.marker([18.7883, 98.9853]).addTo(mapThailand).bindPopup("Chiang mai");
-let bangkok = L.marker([13.7563, 100.5018]).addTo(mapThailand).bindPopup("Bangkok");
-let phuket = L.marker([7.8804, 98.3923]).addTo(mapThailand).bindPopup("Phuket");
+L.marker([18.7883, 98.9853]).addTo(mapThailand).bindPopup("Chiang mai");
+L.marker([13.7563, 100.5018]).addTo(mapThailand).bindPopup("Bangkok");
+L.marker([7.8804, 98.3923]).addTo(mapThailand).bindPopup("Phuket");
 
             
         

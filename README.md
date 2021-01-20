@@ -40,7 +40,7 @@ Important information and features to the company include:
     * [User Story Testing](#user-story-testing " goto user story testing")
     * [Browser Compatibility](#browser-compatibility "goto browser compatibility")
     * [Responsiveness](#responsiveness "goto responsiveness")
-    * [Code Validation](#Code-validation "goto code validation")
+    * [Code Validation & Testing](#code-validation-&-testing "goto code validation & testing")
     * [Bugs](#bugs "goto bugs")
     
 5. [Deployment](#deployment "goto deployment")
@@ -127,6 +127,7 @@ Layouts were created following research on the five planes of UX and before codi
 Please note, the final website layout contains slight variations to the original wireframes.
 Each of the following files contain wireframes for desktop, tablet and mobile devices.
 </strong>
+
 
 * [Home Page](assets/wireframes/home.png)
 * [About](assets/wireframes/about.png)
@@ -242,27 +243,27 @@ As a potential ESL teacher:
 * I am looking for information on ESL countries so that I can find out what appeals to me.
     * 4 Asian countries which are popular ESL destinations are focued upon, on this website release.
 
-    * ![maps](assets/images/readme_files/maps.png)
+    ![maps](assets/images/readme_files/maps.png)
 
 * I usually do all my research on my phone so I would like the website to be mobile responsive.
     * A mobile-first design approad has been adopted.
 
-    * ![Mobile responsiveness](assets/images/readme_files/mobilerespons.png)
+    ![Mobile responsiveness](assets/images/readme_files/mobilerespons.png)
 
 * I am looking for information about a typical class lesson so I can learn about a typical day on the job.
     * An entire class lesson is provided in game.html which gives the user a clear idea of what a typical class lesson looks like.
 
-    * ![Classtime](assets/images/readme_files/classtime.png)
+    ![Classtime](assets/images/readme_files/classtime.png)
 
 * I would like to be able to contact the website owners if I have any questions about the content.
     * A contact form is available on index.html.
 
-    * ![Contact us](assets/images/readme_files/contact.png)
+    ![Contact us](assets/images/readme_files/contact.png)
 
 * I would like to see the requirements for becoming an ESL teacher, the salary and benefits.
     * Requirements, salary and additional information is featured in the country maps information section.
 
-    * ![Maps information](assets/images/readme_files/mapsinfo.png)
+    ![Maps information](assets/images/readme_files/mapinfo.png)
 
 #### Current ESL Teacher Goals
 As a current ESL Teacher:
@@ -270,26 +271,26 @@ As a current ESL Teacher:
 * I would like to see information on regions in countries as I am familiar the countries do not give me indepth information. 
     * 3 Markers have been placed on each map, showing popular cities to teach in. 
 
-    * ![Maps information](assets/images/readme_files/mapsinfo.png)
+    ![Maps information](assets/images/readme_files/mapinfo.png)
 
 
 * I would like to see some interactive information about the countries, such as the current weather or statistics so that I am receiving live, updated information. 
     * Due to time limitation, a weather API was not integrated into this release. 
     * Country info however can be seen in the country maps information section.
 
-    * ![Maps information](assets/images/readme_files/mapsinfo.png)
+    ![Maps information](assets/images/readme_files/mapinfo.png)
 
 
 * I would like any class material featured to be focused on learning English words and improving students speaking skills. 
     * Multipe content is featured including flashcards, a song lesson and a memory game.
 
-    * ![Classtime content](assets/images/readme_files/classtimeeng.png)
+    ![Classtime content](assets/images/readme_files/classtimeeng.png)
 
 
 * I would like to be able to sign up to a newsletter. 
     * Newsletter signup option is offered on the contact us form.
 
-    * ![Newsletter signup](assets/images/readme_files/newslettersignup.png)
+    ![Newsletter signup](assets/images/readme_files/newslettersignup.png)
 
 ### Browser Compatibility
 The website was viewed on the following browsers:
@@ -319,7 +320,7 @@ The devices (and screen widths) tested with include:
     
 In addition to this, [Lighthouse](https://developers.google.com/web/tools/lighthouse) was run in Chrome Dev Tools, to generate reports on the quality of the website.
 
-### Code Validation
+### Code Validation & Testing
 #### HTML
 * All HTML code was checked using [The W3C Markup Validation Service](https://validator.w3.org/).
 * No errors or warnings were produced.
@@ -329,6 +330,10 @@ In addition to this, [Lighthouse](https://developers.google.com/web/tools/lighth
 * No erros were produced. 
 * 26 noncritical warnings associated with imported stylesheets and vendor extensions were produced. 
 
+#### Javascript
+* All Javascript code was checked using [JSHint](https://jshint.com/). 
+* As a result, all undefined variables were found and removed. 
+* Several warnings were received stating that: 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). To resolve, a file named ".jshintrc"  was added to this project.
 
 ### Bugs
 
@@ -420,10 +425,6 @@ game.html
 * [Cow](https://unsplash.com/photos/etrxob-VZRs)
 * [Pig](https://unsplash.com/photos/W7uMPs8aeXs)
 * [Finger Family Farm Animals Song](https://www.youtube.com/watch?v=MaHWFODvtfU&feature=emb_logo)
-
-* [Unsplash](https://unsplash.com/)
-* [Pexels](https://www.pexels.com/de-de/)
-* [Pixabay](https://pixabay.com/de/)
 
 ### Acknowledgments
 * 

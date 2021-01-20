@@ -11,8 +11,10 @@ function playSound(animal) {
 //------------------------------------ memory game ------------------------------------ //
 
 // ------------------------------------ instructions button ------------------------------------
-let instructbtn = document.querySelector('.instruct-btn').addEventListener("click", toggleDisplay); // get the instruct-btn and add an event listener, toggler on click
-    function toggleDisplay() {
+let instructbtn = document.querySelector('.instruct-btn')
+instructbtn.addEventListener("click", toggleDisplay); // get the instruct-btn and add an event listener, toggler on click
+        
+function toggleDisplay() {
         let desc = document.querySelector(".js-showDesc"); //desc is the showDesc class
         if (desc.style.display === "none") {//if display === none
             desc.style.display = "block"; // set it to block

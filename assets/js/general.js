@@ -19,7 +19,7 @@ var firstScroll = 0;
 let scrolled;
 
 //on scroll set the scrolled value to true;
-$(window).on("scroll", function(event){
+$(window).on("scroll", function(){
     scrolled = true;
 });
 
