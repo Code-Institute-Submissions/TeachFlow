@@ -241,65 +241,68 @@ In this section, the user stories which were defined in the [UX](#ux "goto-ux") 
 As a potential ESL teacher:
 
 * I am looking for information on ESL countries so that I can find out what appeals to me.
-    * 4 Asian countries which are popular ESL destinations are focued upon, on this website release.
-
-    ![maps](assets/images/readme_files/maps.png)
+    * 4 Asian countries (popular ESL destinations) are featured in the maps section on index.html. 
+    * Upon clicking on a country, an info section is displayed. 
+    * 3 markers are placed on each country. Each marker shows a popular city to teach ESL in. 
+    * [Maps example](assets/images/readme_files/maps.png)
 
 * I usually do all my research on my phone so I would like the website to be mobile responsive.
-    * A mobile-first design approad has been adopted.
-
-    ![Mobile responsiveness](assets/images/readme_files/mobilerespons.png)
+    * A mobile-first design approach has been adopted.
+    * The Bootstrap grid system provides an easy solution to creating mobile responsiveness.  
+    * [Mobile responsiveness example](assets/images/readme_files/mobilerespons.png)
 
 * I am looking for information about a typical class lesson so I can learn about a typical day on the job.
     * An entire class lesson is provided in game.html which gives the user a clear idea of what a typical class lesson looks like.
-
-    ![Classtime](assets/images/readme_files/classtime.png)
+    * The class lesson includes flashcards, a song and a memory game.
+    * the entire class lesson is approx. 1 hour in length. 
+    * [Classtime](assets/images/readme_files/classtime.png) 
 
 * I would like to be able to contact the website owners if I have any questions about the content.
     * A contact form is available on index.html.
-
-    ![Contact us](assets/images/readme_files/contact.png)
+    * Once a message has been submitted successfully, the contact form collapses and a admission message is dispalyed.
+    * [Contact us](assets/images/readme_files/contact.png)
 
 * I would like to see the requirements for becoming an ESL teacher, the salary and benefits.
     * Requirements, salary and additional information is featured in the country maps information section.
-
-    ![Maps information](assets/images/readme_files/mapinfo.png)
+    * This information is displayed when a country is selected.
+    * [Maps information](assets/images/readme_files/mapinfo.png)
 
 #### Current ESL Teacher Goals
 As a current ESL Teacher:
 
 * I would like to see information on regions in countries as I am familiar the countries do not give me indepth information. 
+    * General country information is included in the content map section. 
     * 3 Markers have been placed on each map, showing popular cities to teach in. 
-
-    ![Maps information](assets/images/readme_files/mapinfo.png)
+    * [Maps information](assets/images/readme_files/mapinfo.png)
 
 
 * I would like to see some interactive information about the countries, such as the current weather or statistics so that I am receiving live, updated information. 
-    * Due to time limitation, a weather API was not integrated into this release. 
+    * Due to time limitation & project scope, a weather API was not integrated into this release. 
     * Country info however can be seen in the country maps information section.
-
-    ![Maps information](assets/images/readme_files/mapinfo.png)
+        As this is not an API, this information would need to be updated manually. 
+    * [Maps information](assets/images/readme_files/mapinfo.png)
 
 
 * I would like any class material featured to be focused on learning English words and improving students speaking skills. 
-    * Multipe content is featured including flashcards, a song lesson and a memory game.
-
-    ![Classtime content](assets/images/readme_files/classtimeeng.png)
+    * Multiple content is featured including flashcards, a song lesson and a memory game.
+    * A 'Farmyard Animal' theme is used to create a realistic class lesson. 
+    * The class lesson is focused on improving vocabulary, pronounciation & grammer. 
+    * [Classtime content](assets/images/readme_files/classtimeeng.png)
 
 
 * I would like to be able to sign up to a newsletter. 
-    * Newsletter signup option is offered on the contact us form.
-
-    ![Newsletter signup](assets/images/readme_files/newslettersignup.png)
+    * A newsletter signup option is offered on the contact us form.
+    * [Newsletter signup](assets/images/readme_files/newslettersignup.png)
 
 ### Browser Compatibility
 The website was viewed on the following browsers:
 * Google Chrome
 * Firefox
 * Microsoft Edge
-* Safari
+* Safari - not checked 
 * Opera
 
+internet explorer - all js not working inc flashcard sounds, game, emailform, instructions
 
 
 [Cross Browser Testing](https://crossbrowsertesting.com/) 

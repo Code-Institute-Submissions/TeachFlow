@@ -10,7 +10,7 @@ function sendMail(contactForm) {
         function() {
             console.log("SUCCESS");
             let form = document.getElementById('jswrapper');
-            form.innerHTML= `<h3 class = "special-text-main">Your message has seen successfully sent!</h3`;
+            form.innerHTML= `<h3 class = "special-text-main">Your message has been successfully sent!</h3`;
         },
         function(error) {
             console.log("FAILED", error);
