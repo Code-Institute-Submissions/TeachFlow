@@ -295,14 +295,17 @@ As a current ESL Teacher:
     * [Newsletter signup](assets/images/readme_files/newslettersignup.png)
 
 ### Browser Compatibility
-The website was viewed on the following browsers:
+[LamdaTest](https://www.lambdatest.com/) was used tp test the website on the following browsers:
+
 * Google Chrome
 * Firefox
 * Microsoft Edge
-* Safari - not checked 
+* Safari 
 * Opera
 
-internet explorer - all js not working inc flashcard sounds, game, emailform, instructions
+In addition, internet explorer was tested. As expected issues with Javascript were encountered.
+In index.html, the contact form does not submit successfully. In game.html,  all onclick button function are not working. 
+As IE is outdated, these bugs were not resolved in this reslease. 
 
 
 [Cross Browser Testing](https://crossbrowsertesting.com/) 
@@ -322,6 +325,13 @@ The devices (and screen widths) tested with include:
 * Desktop (1920px)
     
 In addition to this, [Lighthouse](https://developers.google.com/web/tools/lighthouse) was run in Chrome Dev Tools, to generate reports on the quality of the website.
+Primary, actions were taken to improve the 'Performance' rating on mobile devices. 
+The following report was generated before changes were made:
+![Lighthouse Mobile Report ](aassets/images/readme_files/lhmobb.png)
+
+Actions taken to improve the rating included:
+* 
+
 
 ### Code Validation & Testing
 #### HTML
