@@ -8,17 +8,21 @@
 
 ![Generated from Am I Responsive](assets/images/readme_files/amiresponsive.jpg)
 
-Teachflow is a fictitious company, providing support, information and materials to poeple considering ESL teschin in Asia, or to those who are already working in the field.
+Teachflow is a fictitious company, providing support, information and materials to two groups of poeple.
+a) Those considering ESL teaching in Asia &
+b) Those who are already working in as ESL teachers.
 
 The purpose of this project to create a one-stop-shop of information for ESL teachers. 
-The website highlights a selection of 4 destination countries, with information for potential ESL teachers. Additional countries may be added in future releases.
-Teaching materials are also highlighted which include a game and flashcards, a class lesson. 
+The website focuses on providing information on 4 destination countries. Additional countries may be added in future releases.
+Teaching materials are also featured on the website and can be accessed by entering a link. This leads to the classroom portal.
+Class material includes flashcards, a song lesson and a memory game. 
 
 Important information and features to the company include: 
 
-* providing information on 4 Asian countries
+* Providing information on 4 Asian countries
 * Providing a class lesson (game and flashcards)
 * Providing information on ESL teaching
+* Including a contact form, a long term goal is to build up a network of ESL teachers who may use the 'Classtime' portal. 
 
 ----------------------------
 
@@ -56,41 +60,47 @@ Important information and features to the company include:
 ## UX
 
 ### Overview
-TeachFlow aims to provide users with a personal and thorough resources for ESL teaching. 
-By highlights both the personal and financial benefit to ESL teaching, the website aims to promote the experience for when the Coronavirus lock-downs end. 
+TeachFlow aims to provide users with honest and thorough ESL teaching-related information. 
+In this release, as well as featuring in depth information about teaching in Asia, a virtual classroom will be incorporated. 
+This aims to give users a realistic impression of what a typical class lesson would entail. 
+In future releases, 'Classtime' may be further developed and TeachFlow may charge for access to this material. 
+
+By creating an in-depth ESL information hub, TeachFlow hopes to promote ESL teaching as a career, post Coronavirus lock-downs. 
 
 ### User Stories
 
 #### Potential ESL Teacher Goals
 As a potential ESL teacher:
-* I am looking for information on ESL countries so that I can find out what appeals to me.
-* I usually do all my reseach on my phone so I would like the website to be mobile responsiveness
-* I am looking for information about a typical class lesson so I can learn about a typical day on the job. 
+* I am looking for information on ESL countries, so that I can find out what appeals to me.
+* I usually do all my research on my phone, so I would like the website to be mobile responsive.
+* I am looking for information about a typical class lesson, so that I can learn about a typical day on the job. 
 * I would like to be able to contact the website owners if I have any questions about the content.
-* I would like to see the requirements for becoming an ESL teacher, the salary and benefits.
+* I would like to see the requirements for becoming an ESL teacher; the salary and benefits.
 
 #### Current ESL Teacher Goals
 As a current ESL Teacher:
+
 * I would like to see information on regions in countries as I am familiar the countries do not give me indepth information. 
 * I would like to see some interactive information about the countries, such as the current weather or statistics so that I am receiving live, updated information. 
 * I would like any class material featured to be focused on learning English words and improving students speaking skills. 
 * I would like to be able to sign up to a newsletter. 
 
 ### Project Scope
-Based on the above user stories, the following are features that will be included:
+Based on the above user stories, the following are features that will be included in this release:
 
-* a newsletter signup.
-* a simple memory game focused on speaking english words.
-* a maps API which will show 4 countries in Asia.
-* a contact us form, for users who who would to get more information about ESL teaching.
-* Interactive Information on ESL countries which incorporates an API.
+* A newsletter signup.
+* A maps API which will show 4 countries in Asia.
+* A contact us form, for users who would like to learn more about ESL teaching.
+* A Map & Interactive Information on ESL countries which is created using an API.
+* A simple memory game focused on speaking English words.
+* Flashcard / a song focused on learning vocabulary.
 
-The following is a list of features that will not be included: 
+The following is a list of features that will not be included in this release: 
 
 * More than one lesson plan.
-* functionality to enter a zip code on maps.
-* custom designed maps with colors and detailed markers. 
-* Coronavirus adapated ESL content.
+* Functionality to enter a zip code on maps.
+* Custom designed maps with colours or detailed markers. 
+* Coronavirus adapted ESL content.
 * A save high score function on the memory game.
 
 ### Design
@@ -99,33 +109,40 @@ The following is a list of features that will not be included:
 All fonts used are from [Google Fonts](https://fonts.google.com/). 
 
 Fonts used include:
-* Roboto (regular 400) - used for body text
-* Lato (700) - used for headings; h1 - h6
+* Roboto (regular 400) - used for body text.
+* Lato (700) - used for headings (H1 - H6).
 
 #### Colour Scheme
 A blue/yellow color palette was used which creates a bright undertone and compliments the striking imagery well. 
 
-![color palette](assets/readme_files/color-pal.png).
+![colour palette](assets/images/readme_files/color-pal.png).
 
-Colours used for inspiration include: Blue (2F3180) dark blue (1D1E4E) teal (108690) and Yellow(#FCCF14).
-The actual colours used on the website include blue (#034cae), dark blue (#070958), teal (#246e74), yellow light (#fef7dd) and Yellow dark (#fccf14).
+The Colours above were used for inspiration.
+In this project, the following shades were used:
+
+* Blue (#034cae)
+* Dark blue (#070958)
+* Teal (#246e74)
+* Light yellow (#fef7dd)
+* Dark yellow (#fccf14)
 
 #### Imagery
-* A carousel banner was used on index.html which contains three striking images that focus on ESL teaching.
-* In game.html, the animal images used for the flashcards are re-used for the memory game. 
-    This is done intentionally, as reusing material to reinfoce learning is common practice in teaching. 
+* A carousel banner is used in index.html. This contains 4 striking images that focus on ESL teaching.
+* A Hero image is used in game.html. This focuses on ESL teaching; the classroom. 
+* In game.html, multiple animal images are used and re-used throughout the class lesson. 
+    This is done intentionally, as reusing material to reinforce learning is common practice in teaching. 
 
 #### Design justifications
-* Home, About & Contact us are all sections on index.html. In doing this, a strong pathway is created which shows information the company, ESL teaching and finally a contact form.   
-* Classtime is created as a seperate page (game.html). This was done, as the 'classroom' is seperate experience and the page is heavy with content.  
+* 'Home', 'About' & 'Contact us' are all sections on index.html. In doing this, a strong index.html is strengthened. The pathway shows company information, ESL teaching information, and finally a contact form.   
+* Classtime is created as a stand-alone page (game.html). This is done, as 'Classtime' is a separate experience and the page is heavy with content.  
 
 ### Wireframes
 All wireframes were created using the software [Balsamiq](https://balsamiq.com/). 
-Layouts were created following research on the five planes of UX and before coding.
+Layouts were created following research on the five planes of UX, and before coding.
 
 <strong>
 Please note, the final website layout contains slight variations to the original wireframes.
-Each of the following files contain wireframes for desktop, tablet and mobile devices.
+Each of the following files contain wireframes for desktop, tablet, and mobile devices.
 </strong>
 
 
@@ -140,58 +157,60 @@ Each of the following files contain wireframes for desktop, tablet and mobile de
 
 ### Existing Features 
 * **Navigation** 
-    * The navigation contains the brand logo (anchor tag to homepage) with four links. 
+    * The navigation contains the brand logo (anchor tag to the homepage) with four links. 
         3 links, connect to sections on index.html (home, about & contact us). 1 link, connects to a separate page (game.html). 
     * For mobile devices, the navbar collapses to a toggler button.
-    * The nav bar is fixed, disappears on scroll down and reappears on scroll up. 
-    * The navigation was created using [Bootstrap](https://getbootstrap.com/). 
+    * The navbar is fixed, disappears on scroll down, and reappears on scroll up. 
+    * The navigation was created using [Bootstrap](https://getbootstrap.com/) and [Javascript](https://www.w3schools.com/js/DEFAULT.asp).
 
 * **Maps API**
-    * The user is able to explore 4 Asian countries using the Maps API.
-    * 3 markers showing popular city to teach ESL in are featured on each map.
+    * The user is able to explore 4 Asian countries using a Maps API.
+    * 3 markers showing popular cities to teach ESL in are featured on each map.
     * Information and statistics are displayed alongside each map. 
     * [Javascript](https://www.w3schools.com/js/DEFAULT.asp) and [Leaflet maps](https://leafletjs.com/) were used to create this feature.
 
 * **Contact Us Form**
-    * The contact form includes fields for name, email address and message text area.
+    * The contact form includes fields for name, email address, and message text area.
     * A newsletter signup option is included.
-    * Once a message has been submitted, the form collapes and a confirmation message is displayed.
+    * Once a message has been submitted, the form collapses and a confirmation message is displayed.
     * [EmailJS](https://www.emailjs.com/) and [Bootstrap](https://getbootstrap.com/) were used to to create this feature.
 
 * **Flashcards**
     * 4 animal flashcards, which onclick play a sound are featured. 
-    * Duration for the lesson is featured at 15 minutes.
-    * Flashcard sizes descrease with smaller device sizes.
+    * Duration for this lesson is listed at 15 minutes.
+    * Flashcard sizes decrease with smaller device sizes.
     * [Javascript](https://www.w3schools.com/js/DEFAULT.asp) was used to create the onclick playsound function. 
 
 * **Song lesson**
     * A youtube video (iframe) and content block create the song lesson. 
-    * Duration for the lesson is featured at 20 - 30 minutes.
-    * The iframe size descrease with smaller device sizes.
+    * Duration for the lesson is listed at 20 - 30 minutes.
+    * The iframe size decreases with smaller device sizes.
 
 * **Memory Game**
-    * The memory game re-used the flashcard animal tiles
-    * There are 15 rounds, with taps incrementing at each new round. 
-    * An event handler allows the player to progress when the order of tiles played by them matches the order played by the computer. 
-    * When the sequences do not match, the game is reset.
-    * Colorful tiles are added to on hover.
-    * Audio sound and colorful tiles are to on press.  
+    * The memory game re-uses the flashcard animal tiles.
+    * There are 15 rounds, each round sequence is stored and compared to the player's round. 
+    * Pressing a tile plays the animal audio file and activates a coloured tile. 
+    * The number of tiles per round increments by one with each new round. 
+    * If the player's sequence matches the computer sequence, the user is allowed to proceed. 
+        When the sequences do not match, the game is reset. 
+    * An event handler function decides if the correct tile has been pressed and allows or stops the player from proceeding.    
     * [SweetAlert](https://sweetalert.js.org/) is used to create an aesthetic alert box.
     * [Javascript](https://www.w3schools.com/js/DEFAULT.asp) was used to create the memory game.
    
 * **Footer**
-    * Copyright information is included in the footer center.
+    * Copyright information is included in the footer left.
     * Social media links are visible on the footer right.
     * The footer was created using [Bootstrap](https://getbootstrap.com/).
 
 ### Features Left to Implement
-The following are features were not included in this release  
+The following are features were not included in this release:
 
-These include:
-* Use an API to create the maps information. This would ensure that all data is up to date and accurate. 
-    Unfortuately I was not able to find an API which would display the right information. 
-* An automatic reply to be send to the user after they submit a contact form. 
-* An API which will include ESL jobs in the 4 featured Asian countries. 
+* Use of an API to create the map information. This would ensure that all data is up to date and accurate. 
+    Unfortunately, I was not able to find an API that would display the right information. 
+* Sending an automatic reply to the user after they submit a contact form. 
+    I was not able to add this, due to time pressure in this project. 
+* An API that will include ESL jobs in the 4 featured Asian countries. 
+    This was out of scope for this project.
 
 ----------------------------
 
@@ -227,136 +246,10 @@ These include:
 
 * [Chrome Dev tools](https://developers.google.com/web/tools/chrome-devtools) - Used for monitoring the responsiveness of the website.
 
-* [Cross Browser Testing](https://crossbrowsertesting.com/) - Used for monitoring the responsiveness of the website.
+* [LamdaTest](https://www.lambdatest.com/) - Used for monitoring the responsiveness of the website.
 
 ----------------------------
 ## Testing
-
-### User Story Testing
-In this section, the user stories which were defined in the [UX](#ux "goto-ux") section of this README document are re-evaluated.
-
-### User Stories
-
-#### Potential ESL Teacher Goals
-As a potential ESL teacher:
-
-* I am looking for information on ESL countries so that I can find out what appeals to me.
-    * 4 Asian countries (popular ESL destinations) are featured in the maps section on index.html. 
-    * Upon clicking on a country, an info section is displayed. 
-    * 3 markers are placed on each country. Each marker shows a popular city to teach ESL in. 
-    * [Maps example](assets/images/readme_files/maps.png)
-
-* I usually do all my research on my phone so I would like the website to be mobile responsive.
-    * A mobile-first design approach has been adopted.
-    * The Bootstrap grid system provides an easy solution to creating mobile responsiveness.  
-    * [Mobile responsiveness example](assets/images/readme_files/mobilerespons.png)
-
-* I am looking for information about a typical class lesson so I can learn about a typical day on the job.
-    * An entire class lesson is provided in game.html which gives the user a clear idea of what a typical class lesson looks like.
-    * The class lesson includes flashcards, a song and a memory game.
-    * the entire class lesson is approx. 1 hour in length. 
-    * [Classtime](assets/images/readme_files/classtime.png) 
-
-* I would like to be able to contact the website owners if I have any questions about the content.
-    * A contact form is available on index.html.
-    * Once a message has been submitted successfully, the contact form collapses and a admission message is dispalyed.
-    * [Contact us](assets/images/readme_files/contact.png)
-
-* I would like to see the requirements for becoming an ESL teacher, the salary and benefits.
-    * Requirements, salary and additional information is featured in the country maps information section.
-    * This information is displayed when a country is selected.
-    * [Maps information](assets/images/readme_files/mapinfo.png)
-
-#### Current ESL Teacher Goals
-As a current ESL Teacher:
-
-* I would like to see information on regions in countries as I am familiar the countries do not give me indepth information. 
-    * General country information is included in the content map section. 
-    * 3 Markers have been placed on each map, showing popular cities to teach in. 
-    * [Maps information](assets/images/readme_files/mapinfo.png)
-
-
-* I would like to see some interactive information about the countries, such as the current weather or statistics so that I am receiving live, updated information. 
-    * Due to time limitation & project scope, a weather API was not integrated into this release. 
-    * Country info however can be seen in the country maps information section.
-        As this is not an API, this information would need to be updated manually. 
-    * [Maps information](assets/images/readme_files/mapinfo.png)
-
-
-* I would like any class material featured to be focused on learning English words and improving students speaking skills. 
-    * Multiple content is featured including flashcards, a song lesson and a memory game.
-    * A 'Farmyard Animal' theme is used to create a realistic class lesson. 
-    * The class lesson is focused on improving vocabulary, pronounciation & grammer. 
-    * [Classtime content](assets/images/readme_files/classtimeeng.png)
-
-
-* I would like to be able to sign up to a newsletter. 
-    * A newsletter signup option is offered on the contact us form.
-    * [Newsletter signup](assets/images/readme_files/newslettersignup.png)
-
-### Browser Compatibility
-[LamdaTest](https://www.lambdatest.com/) was used tp test the website on the following browsers:
-
-* Google Chrome
-* Firefox
-* Microsoft Edge
-* Safari 
-* Opera
-
-In addition, internet explorer was tested. As expected issues with Javascript were encountered.
-In index.html, the contact form does not submit successfully. In game.html,  all onclick button function are not working. 
-As IE is outdated, these bugs were not resolved in this reslease. 
-
-
-[Cross Browser Testing](https://crossbrowsertesting.com/) 
-
-
-### Responsiveness
-The website's responsiveness was tested using [Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools).
-CSS Media Queries were written as required to improve appearances. 
-
-The devices (and screen widths) tested with include: 
-* iPhone 5/SE (320px)
-* iPhone 6/7/8 (375px)
-* iPhone 6/7/8 Plus (414px)
-* iPad (768px)
-* iPad Pro (1024px)
-* Laptop (1200px)
-* Desktop (1920px)
-    
-In addition to this, [Lighthouse](https://developers.google.com/web/tools/lighthouse) was run in Chrome Dev Tools, to generate reports on the quality of the website.
-Primary, actions were taken to improve the 'Performance' rating on mobile devices. 
-The following report was generated before changes were made:
-![Lighthouse Mobile Report ](aassets/images/readme_files/lhmobb.png)
-
-Actions taken to improve the rating included:
-* 
-
-
-### Code Validation & Testing
-#### HTML
-* All HTML code was checked using [The W3C Markup Validation Service](https://validator.w3.org/).
-* No errors or warnings were produced.
-
-#### CSS
-* All CSS code was checked using [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/).
-* No erros were produced. 
-* 26 noncritical warnings associated with imported stylesheets and vendor extensions were produced. 
-
-#### Javascript
-* All Javascript code was checked using [JSHint](https://jshint.com/). 
-* As a result, all undefined variables were found and removed. 
-* Several warnings were received stating that: 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). To resolve, a file named ".jshintrc"  was added to this project.
-
-### Bugs
-
-#### Solved
-* The js hash code was interferring with the functionality of the nav link to game.html. While researching, I found a similar issue on [Stack Overflow](https://stackoverflow.com/questions/59706410/link-with-anchor-to-different-page-href). 
-After reading this, I created a data attribute for the anchor links on index.html and targeted these only in the js hash code. The navigation then worked without any issues.
-
-* The userScrolled function was causing the nav bar to dissapear for a few seconds once it reached the top of the page. 
-Because of this, the carousel's margin was unasthetically exposed. [Codepen](https://codepen.io/fbmiranda/pen/edqgxm) 
-provided a solution to this, making sure that the user scrolls past the navbar before it dissapears. After modifying the code, the bug was solved. 
 
 
 ----------------------------
