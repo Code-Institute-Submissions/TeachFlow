@@ -71,7 +71,7 @@ function itertateThrough(storedRoundTiles) {
     storedRoundTiles.forEach((animal, index) => { //iterate through all tiles (index = index in array)
         setTimeout(() => {
             tilePressed(animal); // initiate the tilePressed function
-        }, (index + 1) * 850); // allow time between tiles
+        }, (index + 1) * 850); // allow time between tiles 
     });
 }
 
@@ -94,8 +94,9 @@ function startRound() {
     let storedRoundTiles = [...orderOfTiles]; // store the array of tiles eg ["cow", "chicken"]
     storedRoundTiles.push(newTileinRound()); // adds newTileinRound ["cow"] to the end of storedRoundTiles{} with all other values from other rounds.
     itertateThrough(storedRoundTiles); // trigger to play sound & change pic
-
+    
     orderOfTiles = [... storedRoundTiles]; //reverse it back
+    //console.log(orderOfTiles); used to log tiles to console for testing
     setTimeout(() => {
         playersTurn(round); // initiate the playersturn
     }, round * 700 + 1000); // add a delay to stop text changing immediately
