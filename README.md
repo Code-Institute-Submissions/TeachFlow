@@ -127,7 +127,7 @@ In this project, the following shades were used:
 * Dark yellow (#fccf14)
 
 #### Imagery
-* A carousel banner is used in index.html. This contains 4 striking images that focus on ESL teaching.
+* A carousel banner is used in index.html. This contains 3 striking images that focus on ESL teaching.
 * A Hero Image is used in game.html. This focuses on ESL teaching; the classroom. 
 * In game.html, multiple animal images are used and re-used throughout the class lesson. 
     This is done intentionally, as reusing material to reinforce learning is common practice in teaching. 
@@ -340,15 +340,15 @@ The images used on this website were obtained from the following sources:
 (the image alt attribute is used to describe each image)
 </strong>
 
-In home.html: 
+In index.html: 
 * Students in a classroom: [Source](https://www.pexels.com/photo/three-toddler-eating-on-white-table-1001914/)
-* Students running outside: [Source](https://www.pexels.com/photo/boy-in-white-and-red-school-uniform-raising-hands-outdoors-1153976/)
 * Teacher writing on blackboard: [Source](https://www.pexels.com/photo/woman-in-red-long-sleeve-writing-on-chalk-board-3769714/)
 * Student outside looking to sky: [Source](pexels-artem-beliaikin-1565521)
 * Woman walking up a temple path: [Source](https://www.pexels.com/photo/woman-in-blue-dress-walking-on-concrete-staircase-leading-to-buildings-929168/)
 * Child in Classroom:  Owned by me
 
 In game.html:
+* Students running outside: [Source](https://www.pexels.com/photo/boy-in-white-and-red-school-uniform-raising-hands-outdoors-1153976/)
 * Chicken: [Source](https://unsplash.com/photos/auijD19Byq8)
 * Duck: [Source](https://unsplash.com/photos/kCZSzqvIei4)
 * Cow: [Source](https://unsplash.com/photos/etrxob-VZRs)

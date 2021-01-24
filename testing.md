@@ -93,7 +93,7 @@ As a current ESL Teacher:
 
 In addition, internet explorer was tested. As expected issues with Javascript were encountered.
 In index.html, the contact form does not submit successfully. In game.html,  all onclick button function are not working. 
-As IE is outdated, these bugs were not resolved in this reslease. 
+With these findings, I recommend that this website is not viewed on IE. 
 
 
 ### Responsiveness
@@ -110,7 +110,7 @@ The devices (and screen widths) tested with include:
 * Desktop (1920px)
     
 In addition to this, [Lighthouse](https://developers.google.com/web/tools/lighthouse) was run in Chrome Dev Tools, to generate reports on the quality of the website.
-Primary, actions were taken to improve the 'Performance' rating on mobile devices. 
+Primarilyy, actions were taken to improve the 'Performance' rating on mobile devices. 
 The following report was generated before changes were made:
 ![Lighthouse Mobile Report ](aassets/images/readme_files/lhmobb.png)
 
