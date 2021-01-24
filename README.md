@@ -115,7 +115,7 @@ Fonts used include:
 #### Colour Scheme
 A blue/yellow color palette was used which creates a bright undertone and compliments the striking imagery well. 
 
-![colour palette](assets/images/readme_files/color-pal.png).
+![colour palette](assets/images/readme_files/color-pal.png)
 
 The Colours above were used for inspiration.
 In this project, the following shades were used:
@@ -128,7 +128,7 @@ In this project, the following shades were used:
 
 #### Imagery
 * A carousel banner is used in index.html. This contains 4 striking images that focus on ESL teaching.
-* A Hero image is used in game.html. This focuses on ESL teaching; the classroom. 
+* A Hero Image is used in game.html. This focuses on ESL teaching; the classroom. 
 * In game.html, multiple animal images are used and re-used throughout the class lesson. 
     This is done intentionally, as reusing material to reinforce learning is common practice in teaching. 
 
@@ -188,12 +188,14 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
 
 * **Memory Game**
     * The memory game re-uses the flashcard animal tiles.
-    * There are 15 rounds, each round sequence is stored and compared to the player's round. 
-    * Pressing a tile plays the animal audio file and activates a coloured tile. 
-    * The number of tiles per round increments by one with each new round. 
-    * If the player's sequence matches the computer sequence, the user is allowed to proceed. 
-        When the sequences do not match, the game is reset. 
-    * An event handler function decides if the correct tile has been pressed and allows or stops the player from proceeding.    
+    * Game instructions are accessible by clicking on a button. 
+    * There are 15 rounds. A random tile is selected and added to each new round. 
+    * First, the sequence of tiles is played by the computer, then the player's turn begins. 
+    * In the player's turn, pressing a tile plays the animal audio file and activates a coloured tile. 
+    * The index of each tile pressed is compared to the index of the actual tile in the sequence.
+        If correct, the game continues. If incorrect, the game resets. 
+    * If the player completes 15 rounds, they win and the game ends. 
+    * The 'Rounds Remaining' & 'Taps left' in each round are calculated and displayed on the screen.
     * [SweetAlert](https://sweetalert.js.org/) is used to create an aesthetic alert box.
     * [Javascript](https://www.w3schools.com/js/DEFAULT.asp) was used to create the memory game.
    
@@ -203,13 +205,19 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
     * The footer was created using [Bootstrap](https://getbootstrap.com/).
 
 ### Features Left to Implement
-The following are features were not included in this release:
+The following are features were not included in this release. These may be developed in the future:
 
-* Use of an API to create the map information. This would ensure that all data is up to date and accurate. 
+* Use of an API to create the map information:
+    This would ensure that all data is up to date and accurate. 
     Unfortunately, I was not able to find an API that would display the right information. 
-* Sending an automatic reply to the user after they submit a contact form. 
-    I was not able to add this, due to time pressure in this project. 
-* An API that will include ESL jobs in the 4 featured Asian countries. 
+
+* Use of an API for real-time weather:
+    This was intended as a stretch goal for this release. Due to time pressures, I was not able to include this feature.  
+
+* Sending an automatic reply to the user after they submit a contact form:
+    I was not able to research this fully, due to time pressure in this project. 
+
+* An API that will include ESL jobs in the 4 featured Asian countries:
     This was out of scope for this project.
 
 ----------------------------
@@ -250,12 +258,11 @@ The following are features were not included in this release:
 
 ----------------------------
 ## Testing
-
+All testing documentation is stored in a separate file called TESTING.md. This can be accessed [here](assets/images/readme_files/TESTING.md) 
 
 ----------------------------
 
 ## Deployment
-
 The website was hosted on Github Pages. It was deployed by carrying out the following steps:
 
 1. login into Github.
@@ -273,7 +280,7 @@ The following steps can then be followed:
 1. Install the [Gitpod Browser Chrome Extention](https://chrome.google.com/webstore/detail/gitpod-dev-environments-i/dodmmooeoklaejobgleioelladacbeki), restarting the browser after installation.
 2. Log into [Gitpod](https://gitpod.io/).
 3. Click on the following link to go to the [project repository](https://github.com/emmahartedev/living-landscapes).
-4. Click on the green 'Gitpod' button which is located to the right of the repository to launch a new workspace.
+4. Click on the green 'Gitpod' button (which is located to the right of the repository) to launch a new workspace.
 5. The code can be worked on in this newly launched workspace. 
 
 To clone code within an IDE of your choice:
@@ -291,13 +298,17 @@ git clone https://github.com/emmahartedev/ms2-teachflow.git
 ----------------------------
 
 ## Credits 
-the following material is not my own. Sources have been listed alongside the content type. 
+The following material is not my own. Sources have been listed alongside a description of the content used. 
 
 ### Content
-* Map information - [Go Overseas](https://www.gooverseas.com/teach-abroad)
+* Map information 
+    * Capital city, salary, requirements & benefits.
+    * Source: [Go Overseas](https://www.gooverseas.com/teach-abroad)
 
 ### Audio
-* Animal names used in game.html - [Voice Maker](https://voicemaker.in/) (Joanna, Female) was used to create all audio files. 
+* Animal names (mp3) used in game.html 
+    * these mp3 files are used in the flashcard and memory game section.
+    * Source: [Voice Maker](https://voicemaker.in/) (Joanna, Female) used to create all files. 
 
 ### Code
 The following websites were used for inspiration and assistance:
@@ -305,32 +316,44 @@ The following websites were used for inspiration and assistance:
 * [Stack Overflow](https://stackoverflow.com/)
 * [Bootstrap Documentation](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
 
-The following were installed/used in the project:
+The following scripts/plugins were used in the project:
 * [SweetAlert](https://sweetalert.js.org) - used for popup messages
 * [Grow hover effect](https://ianlunn.github.io/Hover/) - used on footer icons
 
 The following code has been directly used in this project:
-* [Switch div display](https://stackoverflow.com/questions/17115995/what-is-the-best-way-to-move-an-element-thats-on-the-top-to-the-bottom-in-respo) - used to switch the 3 'game-container' divs in game.html for mobile view */
-* [smooth scroll](https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll)  - used to create a smooth-scrolling effect on index.html
-* [Full Page Tabs](https://www.w3schools.com/howto/howto_js_full_page_tabs.asp) - idea used to display the map and info contents on button click
+
+* Switch div display
+    * Used to switch the 3 'game-container' divs in game.html for mobile view.
+    * Source: [code](https://stackoverflow.com/questions/17115995/what-is-the-best-way-to-move-an-element-thats-on-the-top-to-the-bottom-in-respo)
+
+* Smooth scrolling
+    * Used to create a smooth-scrolling effect on index.html.
+    * Source: [code](https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll)
+
+* Full page Tabs
+    * Idea used to display the map and info contents on button click.
+    * Source: [code](https://www.w3schools.com/howto/howto_js_full_page_tabs.asp)
 
 ###  Media
 The images used on this website were obtained from the following sources:
+<strong>
+(the image alt attribute is used to describe each image)
+</strong>
 
-home.html
-* [Students in a classroom](https://www.pexels.com/photo/three-toddler-eating-on-white-table-1001914/)
-* [Students running outside](https://www.pexels.com/photo/boy-in-white-and-red-school-uniform-raising-hands-outdoors-1153976/)
-* [Teacher writing on blackboard](https://www.pexels.com/photo/woman-in-red-long-sleeve-writing-on-chalk-board-3769714/)
-* [Student outside looking to sky](pexels-artem-beliaikin-1565521)
-* [Woman walking up a temple path](https://www.pexels.com/photo/woman-in-blue-dress-walking-on-concrete-staircase-leading-to-buildings-929168/)
-* Child in Classroom - owned by me
+In home.html: 
+* Students in a classroom: [Source](https://www.pexels.com/photo/three-toddler-eating-on-white-table-1001914/)
+* Students running outside: [Source](https://www.pexels.com/photo/boy-in-white-and-red-school-uniform-raising-hands-outdoors-1153976/)
+* Teacher writing on blackboard: [Source](https://www.pexels.com/photo/woman-in-red-long-sleeve-writing-on-chalk-board-3769714/)
+* Student outside looking to sky: [Source](pexels-artem-beliaikin-1565521)
+* Woman walking up a temple path: [Source](https://www.pexels.com/photo/woman-in-blue-dress-walking-on-concrete-staircase-leading-to-buildings-929168/)
+* Child in Classroom:  Owned by me
 
-game.html
-* [Chicken](https://unsplash.com/photos/auijD19Byq8)
-* [Duck](https://unsplash.com/photos/kCZSzqvIei4)
-* [Cow](https://unsplash.com/photos/etrxob-VZRs)
-* [Pig](https://unsplash.com/photos/W7uMPs8aeXs)
-* [Finger Family Farm Animals Song](https://www.youtube.com/watch?v=MaHWFODvtfU&feature=emb_logo)
+In game.html:
+* Chicken: [Source](https://unsplash.com/photos/auijD19Byq8)
+* Duck: [Source](https://unsplash.com/photos/kCZSzqvIei4)
+* Cow: [Source](https://unsplash.com/photos/etrxob-VZRs)
+* Pig: [Source](https://unsplash.com/photos/W7uMPs8aeXs)
+* Finger Family Farm Animals Song: [Source](https://www.youtube.com/watch?v=MaHWFODvtfU&feature=emb_logo)
 
 ### Acknowledgments
 * 
