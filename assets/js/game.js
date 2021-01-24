@@ -55,8 +55,8 @@ function playersTurn(round) {
 
 // play sound and change pic when tile is pressed 
 function tilePressed(animal) {
-    let tile = document.querySelector(`[data-tile='${animal}']`);
-    let sound = document.querySelector(`[data-sound='${animal}']`);
+    let tile = document.querySelector(`[data-tile="${animal}"]`);
+    let sound = document.querySelector(`[data-sound="${animal}"]`);
 
     tile.classList.add('activated');
     sound.play();
@@ -64,6 +64,7 @@ function tilePressed(animal) {
     setTimeout(() => {
         tile.classList.remove('activated');
     }, 200);
+    console.log("removed");
 }
 
 // iterate through the tiles in each round, to play sound and change pic for every tile.

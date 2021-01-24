@@ -455,12 +455,10 @@ iframe { /* video */
    transition: 0.15s;
 }
 
-.tile-chicken:hover,
-.tile-chicken:focus,
-.tile-chicken:active,
+
 .tile-chicken.activated{ /* swap images for focused */
     background-image: url("../images/gameimg/chicken2.png");
-    transform: translate(10px);
+    transform: translate(2%);
 }
 
 .tile-duck {
@@ -468,12 +466,10 @@ iframe { /* video */
     transition: 0.15s;
 }
 
-.tile-duck:hover,
-.tile-duck:focus,
-.tile-duck:active,
+
 .tile-duck.activated{
     background-image: url("../images/gameimg/duck2.png");
-    transform: translate(10px);
+    transform: translate(2%);
 }
 
 .tile-pig {
@@ -481,12 +477,10 @@ iframe { /* video */
     transition: 0.15s;
 }
 
-.tile-pig:hover,
-.tile-pig:focus,
-.tile-pig:active,
+
 .tile-pig.activated{
     background-image: url("../images/gameimg/pig2.png");
-    transform: translate(10px);
+    transform: translate(2%);
 }
 
 .tile-cow {
@@ -494,12 +488,9 @@ iframe { /* video */
     transition: 0.15s;
 }
 
-.tile-cow:hover,
-.tile-cow:focus,
-.tile-cow:active,
 .tile-cow.activated {
     background-image: url("../images/gameimg/cow2.png");
-    transform: translate(10px);
+    transform: translate(2%);
 }
 
 /* style text replaced by button */
@@ -591,7 +582,7 @@ iframe { /* video */
    .video3{
      display: block;
    }
-   .tile { /* style rules for game images */
+   .tile{ /* style rules for game images */
     background-size: 120px 120px;
     background-position:0px !important;
     height: 150px;
