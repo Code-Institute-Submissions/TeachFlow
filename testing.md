@@ -109,14 +109,20 @@ The devices (and screen widths) tested with include:
 * Laptop (1200px)
 * Desktop (1920px)
     
-In addition to this, [Lighthouse](https://developers.google.com/web/tools/lighthouse) was run in Chrome Dev Tools, to generate reports on the quality of the website.
-Primarilyy, actions were taken to improve the 'Performance' rating on mobile devices. 
+In addition to this, [Lighthouse](https://developers.google.com/web/tools/lighthouse) was run in Chrome Dev Tools regularly throughout developement, to generate reports on the quality of the website.
+Primarily mobile reports were focused upon. 
+
 The following report was generated before changes were made:
-![Lighthouse Mobile Report ](aassets/images/readme_files/lhmobb.png)
 
-Actions taken to improve the rating included:
-* 
+![Lighthouse Mobile Report ](assets/images/readme_files/lighthouse-before.png)
 
+By correctly sizing imagery and cleaning CSS & JavaScript code, an increase in the performance rating was acheived.
+It has been noted however that this rating fluctuates in every report. Going forward, it would be preferrable to serve images in next gen format. At the moment, the large file sizes have a negative impact on performance. 
+
+![Lighthouse Mobile Report ](assets/images/readme_files/lighthouse-after.png)
+
+On Desktop, even high scores were acheived:
+![Lighthouse Mobile Report ](assets/images/readme_files/lhdesb.png)
 
 ### Code Validation
 #### HTML 
@@ -136,7 +142,7 @@ Actions taken to improve the rating included:
 ### Javascript Manual Testing 
 
 #### General 
-   * All javascript variables were logged to the console in Testinga
+   * All javascript variables were logged to the console in Testing.
 
 * Pre-loader
     * Loaded both index.html & game.html to test. 
@@ -165,10 +171,10 @@ Actions taken to improve the rating included:
     
 * Maps section (map and info content )
     * Clicked all four 'country' buttons, map and info content appears as expected 
-    * Clicked on all markers in country maps, content appears as expected. 
+    * Clicked on all markers in each country map, content appears as expected. 
 
 * Contact us section
-    * Tested form submission, section collapes as expected on successfully sending a message. 
+    * Tested form submission, section collapses as expected on successfully sending a message. 
     * Tested each 'required' field, all confirmed to be needed. 
 
 #### game.html
@@ -177,8 +183,8 @@ Actions taken to improve the rating included:
     * Clicked each tile to playSound, sound plays as expected. 
 
 * Memory Game section
-    * Intructions
-        * clicked the instructions button, the toggleDisplay function runs as expected. 
+    * Instructions
+        * Clicked the instructions button, the toggleDisplay function runs as expected. 
         * Clicked the button again to close, no issues found. 
 
     * Tiles pressed (sound and activation colour):
@@ -186,37 +192,35 @@ Actions taken to improve the rating included:
        * Sounds were overlapping, documented bug [here](#bugs "goto-bugs").
 
     * Start game (computer round):
-        * clicked the start button. 
-        * startRound funtion switches 'memory game' with the round information as expected. 
-        * Start button is replaced by 'Listen & watch' as expected. 
+        * Clicked the start button. 
+        * StartRound function switches 'memory game' with the round information as expected. 
+        * The start button is replaced by 'Listen & watch' as expected. 
     
     * Players turn (play round):
         * 'Listen & watch' is replaced with 'your go' & taps left info, as expected. 
-        * tiles are clickable with coloured tiles on hover, as expected.
+        * Tiles are clickable with coloured tiles on hover, as expected.
 
     * Remaining taps calculation: 
-        * Clicked on correct tile, remaining tap descreases by one. 
+        * Clicked on the correct tile, the taps remaining (displayed on the screen) decreases by one. 
     
     * Remaining round calculation:
-         * Completed a round successfully, remaining rounds descreases by one.
-         * Last remaining round is 0, this is replayed by 'Memory Game' once game is complete. 
+         * Completed a round successfully, the remaining rounds (displayed on the screen) decreases by one.
+         * The last remaining round is 0, this is replayed by 'Memory Game' once the game is complete. 
 
-    * Round successfull:
-        * clicked on correct order of tiles
+    * Round successful:
+        * clicked on the correct order of tiles
         * Start button section is replaced with a 'keep going message' as expected. 
         * StartRound function runs as expected
 
-    * Round unsucessful: 
-        * pressed a wrong tile in a round. The gameOver function ran as expected, displaying an alert box with a 'Whoops' message.
+    * Round unsuccessful: 
+        * Pressed the wrong tile in a round. The gameOver function ran as expected, displaying an alert box with a 'Whoops' message.
 
     * Game completed:
-        * Played 15 rounds to test gameOver function. As expected an alert box with 'success' message is displayed and game is restarted.
+        * Played 15 rounds to test gameOver function. As expected an alert box with a 'success' message is displayed and the game is restarted.
 
-### Bugs
-
-#### Solved
+### Bugs (Solved)
 * Navlinks in game.html not working:
-The js hash code was interferring with the functionality of the nav link to game.html. While researching, I found a similar issue on [Stack Overflow](https://stackoverflow.com/questions/59706410/link-with-anchor-to-different-page-href). 
+The js hash code was interfering with the functionality of the nav link to game.html. While researching, I found a similar issue on [Stack Overflow](https://stackoverflow.com/questions/59706410/link-with-anchor-to-different-page-href). 
 After reading this, I created a data attribute for the anchor links on index.html and targeted these only in the js hash code. The navigation then worked without any issues.
 
 * Carousel image cut off in mobile:
@@ -225,17 +229,15 @@ After adding this code, the carousel appeared as expected.
 
 * Navbar Collapse not closing in index.html:
 The collapsed navbar was not closing when one of the anchor links was clicked in index.html.  
-To fix this, a javascript function which added & removed a show class to the navbar on click, was added to general.js. This resolved the issue.
+To fix this, a javascript function that added & removed a show class to the navbar on click was added to general.js. This resolved the issue.
 
-* Fixed navbar dissapear on scroll: 
-The userScrolled function was causing the nav bar to dissapear for a few seconds once it reached the top of the page. 
-Because of this, the carousel's margin was unasthetically exposed. [Codepen](https://codepen.io/fbmiranda/pen/edqgxm) 
-provided a solution to this, making sure that the user scrolls past the navbar before it dissapears. After modifying the code, the bug was solved. 
+* Fixed navbar disappears on scroll: 
+The userScrolled function was causing the navbar to disappear for a few seconds once it reached the top of the page. 
+Because of this, the carousel's margin was exposed. [Codepen](https://codepen.io/fbmiranda/pen/edqgxm) 
+provided a solution to this, making sure that the user scrolls past the navbar before it disappears. After modifying the code, the bug was solved. 
 
 * Memory Game - Tiles pressed (sound and activation colour):
 When iterating through each tile in a round, the longer audio files were overlapping. To fix, a timeout was set to the itertateThrough(storedRoundTiles) function. 
 When tested again, the issue was fixed. 
 
-#### Unsolved
-* Double click on nav item 'Classtime' leads back to index.html.
 ----------------------------
