@@ -40,7 +40,7 @@ Important information and features to the company include:
 
 3. [Technology Used](#technology-used "goto technology used")
 
-4. [Testing](#testing "goto testing")
+4. [Testing](https://github.com/emmahartedev/ms2-teachflow/blob/master/testing.md)
     * [User Story Testing](#user-story-testing " goto user story testing")
     * [Browser Compatibility](#browser-compatibility "goto browser compatibility")
     * [Responsiveness](#responsiveness "goto responsiveness")

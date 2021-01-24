@@ -1,53 +1,68 @@
 ## Testing
 
 ### User Story Testing
-In this section, the user stories which were defined in the [UX](#ux "goto-ux") section of this README document are re-evaluated.
+In this section, the user stories defined in the UX section of [README.md](https://github.com/emmahartedev/ms2-teachflow/blob/master/README.md) are re-evaluated.
 
 ### User Stories
-
 #### Potential ESL Teacher Goals
 As a potential ESL teacher:
 
-* I am looking for information on ESL countries so that I can find out what appeals to me.
+* I am looking for information on ESL countries, so that I can find out what appeals to me.
     * 4 Asian countries (popular ESL destinations) are featured in the maps section on index.html. 
-    * Upon clicking on a country, an info section is displayed. 
+    * By clicking on a country, an info section is displayed. 
     * 3 markers are placed on each country. Each marker shows a popular city to teach ESL in. 
-     ![Maps example](assets/images/readme_files/maps.png)
+    * The screenshot below shows an example of the information and map which are displayed on click of a country. 
 
-* I usually do all my research on my phone so I would like the website to be mobile responsive.
+     ![Maps example](assets/images/readme_files/mapinfo.png)
+
+* I usually do all my research on my phone, so I would like the website to be mobile responsive.
     * A mobile-first design approach has been adopted.
     * The Bootstrap grid system provides an easy solution to creating mobile responsiveness.  
+    * The screenshot below how the navbar collapses for ease of mobile use.
+
      ![Mobile responsiveness example](assets/images/readme_files/mobilerespons.png)
 
-* I am looking for information about a typical class lesson so I can learn about a typical day on the job.
+* I am looking for information about a typical class lesson, so that I can learn about a typical day on the job.
     * An entire class lesson is provided in game.html which gives the user a clear idea of what a typical class lesson looks like.
     * The class lesson includes flashcards, a song and a memory game.
     * the entire class lesson is approx. 1 hour in length. 
+    * The screenshot below shows an introduction to 'Classtime' which states the learning outcomes and summaries the material on the page.  
+
     ![Classtime](assets/images/readme_files/classtime.png) 
 
 * I would like to be able to contact the website owners if I have any questions about the content.
     * A contact form is available on index.html.
-    * Once a message has been submitted successfully, the contact form collapses and a admission message is dispalyed.
+    * Once a message has been submitted successfully, the contact form collapses and an admission message is dispalyed.
+    * All fields are required for submission
+    * The screenshot below shows the contact form.
+
     ![Contact us](assets/images/readme_files/contact.png)
 
-* I would like to see the requirements for becoming an ESL teacher, the salary and benefits.
+* I would like to see the requirements for becoming an ESL teacher; the salary and benefits.
     * Requirements, salary and additional information is featured in the country maps information section.
     * This information is displayed when a country is selected.
+    * The screenshot below shows are info section where this information is displayed.
+
     ![Maps information](assets/images/readme_files/mapinfo.png)
 
 #### Current ESL Teacher Goals
 As a current ESL Teacher:
 
-* I would like to see information on regions in countries as I am familiar the countries do not give me indepth information. 
-    * General country information is included in the content map section. 
+* I would like to see information on regions in countries as I am familiar the countries do not give me indepth information.
+    * General country information is included in the map info section. 
     * 3 Markers have been placed on each map, showing popular cities to teach in. 
-    ![Maps information](assets/images/readme_files/mapinfo.png)
+    * A pop-up is included with each marker which shoes the city name.
+    * The screenshot below the map, marker and info section for South Korea.
+
+    ![Maps information](assets/images/readme_files/marker.png)
 
 
-* I would like to see some interactive information about the countries, such as the current weather or statistics so that I am receiving live, updated information. 
+* I would like to see some interactive information about the countries, such as the current weather or statistics so that I am receiving live, updated information.  
     * Due to time limitation & project scope, a weather API was not integrated into this release. 
     * Country info however can be seen in the country maps information section.
         As this is not an API, this information would need to be updated manually. 
+    * The screenshot below shows all information which is available on click of a country. 
+
     ![Maps information](assets/images/readme_files/mapinfo.png)
 
 
@@ -55,11 +70,16 @@ As a current ESL Teacher:
     * Multiple content is featured including flashcards, a song lesson and a memory game.
     * A 'Farmyard Animal' theme is used to create a realistic class lesson. 
     * The class lesson is focused on improving vocabulary, pronounciation & grammer. 
+    * Each section of the lesson includes duration recommendations. 
+    * The screenshot below shows the 'Flashcard' section of 'Classtime'.
+
     ![Classtime content](assets/images/readme_files/classtimeeng.png)
 
 
 * I would like to be able to sign up to a newsletter. 
     * A newsletter signup option is offered on the contact us form.
+    * The screenshot below shows the signup option.
+    
     ![Newsletter signup](assets/images/readme_files/newslettersignup.png)
 
 ### Browser Compatibility
