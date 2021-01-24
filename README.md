@@ -2,7 +2,7 @@
 
 ## Interactive Frontend Development 
 
-[View the Live Site here.](https://emmahartedev.github.io/ms2-teachflow/)
+[View the Live Site here.](https://emmahartedev.github.io/TeachFlow/)
 
 ![Teachflow logo](assets/images/logo/TeachFlow.png) 
 
