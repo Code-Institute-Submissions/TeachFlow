@@ -46,7 +46,7 @@ let mapSouthKorea = L.map('mapSouthKorea', {
 });
 
 //set one map tiles source
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
     attribution: '<a href="https://www.google.com/maps">Google Maps</a>',
     maxZoom: 20,
     subdomains:['mt0','mt1','mt2','mt3']
@@ -69,7 +69,7 @@ let mapJapan = L.map('mapJapan', {
 });
 
 //set one map tiles source
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
     attribution: '<a href="https://www.google.com/maps">Google Maps</a>',
     maxZoom: 20,
     subdomains:['mt0','mt1','mt2','mt3']
@@ -90,7 +90,7 @@ let mapChina = L.map('mapChina', {
 });
 
 //set one map tiles source
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
     attribution: '<a href="https://www.google.com/maps">Google Maps</a>',
     maxZoom: 20,
     subdomains:['mt0','mt1','mt2','mt3']
