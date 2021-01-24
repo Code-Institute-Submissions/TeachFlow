@@ -258,7 +258,7 @@ The following are features were not included in this release. These may be devel
 
 ----------------------------
 ## Testing
-All testing documentation is stored in a separate file called TESTING.md. This can be accessed [here](assets/images/readme_files/TESTING.md) 
+All testing documentation is stored in a separate testing file, which can be accessed [here](https://github.com/emmahartedev/ms2-teachflow/blob/master/testing.md).
 
 ----------------------------
 
