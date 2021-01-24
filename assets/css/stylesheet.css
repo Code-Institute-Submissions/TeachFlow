@@ -336,7 +336,6 @@ nav {
     line-height:110%;
 }
 
-
 /* a href to classtime section */
 .class-lesson-section {
     text-align: center;
@@ -580,7 +579,7 @@ iframe { /* video */
         font-size:1.2rem;
     }
     .ticon{ /* resize icons */
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
    .image1,
    .video1,
