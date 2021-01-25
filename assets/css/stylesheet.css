@@ -450,43 +450,44 @@ iframe { /* video */
     background-size: contain;
 }
 
-.tile-chicken {
+.tile-chicken{
     background-image: url("../images/gameimg/chicken.png");
-   transition: 0.15s;
+   transition: 0.30s;
 }
 
-
-.tile-chicken.activated{ /* swap images for focused */
+.tile-chicken:hover,
+.tile-chicken.activated{ 
     transform:translateY(10px);
 }
 
 .tile-duck {
     background-image: url("../images/gameimg/duck.png");
-    transition: 0.15s;
+    transition: 0.30s;
 }
 
-
+.tile-duck:hover,
 .tile-duck.activated{
     transform: translateY(10px);
 }
 
 .tile-pig {
     background-image: url("../images/gameimg/pig.png");
-    transition: 0.15s;
+    transition: 0.30s;
 }
 
-
+.tile-pig:hover,
 .tile-pig.activated{
     transform: translateY(10px);
 }
 
 .tile-cow {
     background-image: url("../images/gameimg/cow.png");
-    transition: 0.15s;
+    transition: 0.30s;
 }
 
+.tile-cow:hover,
 .tile-cow.activated {
-    transform: translate(2%);
+    transform: translateY(10px)
 }
 
 /* style text replaced by button */

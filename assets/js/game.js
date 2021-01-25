@@ -63,8 +63,7 @@ function tilePressed(animal) {
 
     setTimeout(() => {
         tile.classList.remove('activated');
-    }, 200);
-    console.log("removed");
+    }, 150);
 }
 
 // iterate through the tiles in each round, to play sound and change pic for every tile.
@@ -72,7 +71,7 @@ function itertateThrough(storedRoundTiles) {
     storedRoundTiles.forEach((animal, index) => { //iterate through all tiles (index = index in array)
         setTimeout(() => {
             tilePressed(animal); // initiate the tilePressed function
-        }, (index + 1) * 850); // allow time between tiles 
+        }, (index + 1) * 1000); // allow time between tiles 
     });
 }
 
