@@ -1,5 +1,5 @@
 function sendMail(contactForm) {
-    emailjs.send("google", "teachflow", {
+    emailjs.send("googles", "teachflow", {
         "from_fname": contactForm.firstname.value,
         "from_lname": contactForm.lastname.value,
         "from_email": contactForm.emailaddress.value,
@@ -8,12 +8,15 @@ function sendMail(contactForm) {
     })
     .then(
         function() {
-            console.log("SUCCESS");
+            // successful - message sent
             let form = document.getElementById('jswrapper');
             form.innerHTML= `<h3 class = "special-text-main">Your message has been successfully sent!</h3`;
         },
-        function(error) {
-            console.log("FAILED", error);
+        // failed - message not sent
+        function() {
+            swal(`Error!
+            Your message has not been sent.
+            Please try again. `)
         }
     );
     return false;  // To block from loading a new page
