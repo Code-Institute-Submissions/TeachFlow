@@ -452,7 +452,7 @@ iframe { /* video */
 
 .tile-chicken{
     background-image: url("../images/gameimg/chicken.png");
-   transition: 0.30s;
+   transition: .2s;
 }
 
 .tile-chicken:hover,
@@ -462,7 +462,7 @@ iframe { /* video */
 
 .tile-duck {
     background-image: url("../images/gameimg/duck.png");
-    transition: 0.30s;
+    transition: .2s;
 }
 
 .tile-duck:hover,
@@ -472,7 +472,7 @@ iframe { /* video */
 
 .tile-pig {
     background-image: url("../images/gameimg/pig.png");
-    transition: 0.30s;
+    transition: .2s;
 }
 
 .tile-pig:hover,
@@ -482,7 +482,7 @@ iframe { /* video */
 
 .tile-cow {
     background-image: url("../images/gameimg/cow.png");
-    transition: 0.30s;
+    transition: .2s;
 }
 
 .tile-cow:hover,

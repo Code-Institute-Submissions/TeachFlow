@@ -108,11 +108,11 @@ Fonts used include:
 * Lato (700) - used for headings (H1 - H6).
 
 #### Colour Scheme
-A blue/yellow color palette was used which creates a bright undertone and compliments the striking imagery well. 
+A blue/yellow colour palette was used which creates a bright undertone and compliments the striking imagery well. 
 
 ![colour palette](assets/images/readme_files/color-pal.png)
 
-The Colours above were used for inspiration.
+The colours above were used for inspiration.
 In this project, the following shades were used:
 
 * Blue (#034cae)
@@ -167,7 +167,8 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
 * **Contact Us Form**
     * The contact form includes fields for name, email address, and message text area.
     * A newsletter signup option is included.
-    * Once a message has been submitted, the form collapses and a confirmation message is displayed.
+    * If a message has been submitted successfully, the form collapses and a confirmation message is displayed.
+    * If a message fails to send, a [SweetAlert](https://sweetalert.js.org/) modal appears. The message states that there has been an error. 
     * [EmailJS](https://www.emailjs.com/) and [Bootstrap](https://getbootstrap.com/) were used to to create this feature.
 
 * **Flashcards**
@@ -185,8 +186,10 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
     * The memory game re-uses the flashcard animal tiles.
     * Game instructions are accessible by clicking on a button. 
     * There are 15 rounds. A random tile is selected and added to each new round. 
-    * First, the sequence of tiles is played by the computer, then the player's turn begins. 
-    * In the player's turn, pressing a tile plays the animal audio file and activates a coloured tile. 
+    * First, the sequence of tiles is played by the computer. As the sequence plays, the tiles audio file plays and a CSS transform property is applied. 
+         When complete, the player's turn begins. 
+    * In the player's turn, hovering over a tile activates a CSS transform property. 
+        Pressing a tile plays the animal audio file and also activates a CSS tranform property. 
     * The index of each tile pressed is compared to the index of the actual tile in the sequence.
         If correct, the game continues. If incorrect, the game resets. 
     * If the player completes 15 rounds, they win and the game ends. 

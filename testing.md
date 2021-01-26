@@ -41,7 +41,8 @@ As a potential ESL teacher:
 
 * I would like to be able to contact the website owners if I have any questions about the content.
     * A contact form is available on index.html.
-    * Once a message has been submitted successfully, the contact form collapses and an admission message is dispalyed.
+    * If a message has been submitted successfully, the form collapses and a confirmation message is displayed.
+    * If a message fails to send, a [SweetAlert](https://sweetalert.js.org/) modal appears. The message states that there has been an error.
     * All fields are required for submission
     * The screenshot below shows the contact form.
 
@@ -183,7 +184,8 @@ On Desktop, even higher scores were acheived:
     * Clicked on all markers in each country map, content appears as expected. 
 
 * Contact us section
-    * Tested form submission, section collapses as expected on successfully sending a message. 
+    * Tested successful form submission, section collapses as expected on successfully sending a message. 
+    * Tested failed form submission, a modal appears with an error message as expected. 
     * Tested each 'required' field, all confirmed to be needed. 
 
 #### game.html
@@ -196,9 +198,9 @@ On Desktop, even higher scores were acheived:
         * Clicked the instructions button, the toggleDisplay function runs as expected. 
         * Clicked the button again to close, no issues found. 
 
-    * Tiles pressed (sound and activation colour):
-       * Clicked each tile, activation coloured tile appeared as expected. 
-       * Sounds were overlapping, documented bug [here](#bugs "goto-bugs").
+    * Tiles pressed (sound and activation class):
+       * Clicked each tile, the activation class is applied and the audio file plays as expected. 
+       * Sounds were found to be overlapping, this bug is documented [here](#bugs "goto-bugs").
 
     * Start game (computer round):
         * Clicked the start button. 
@@ -207,7 +209,8 @@ On Desktop, even higher scores were acheived:
     
     * Players turn (play round):
         * 'Listen & watch' is replaced with 'your go' & taps left info, as expected. 
-        * Tiles are clickable with coloured tiles on hover, as expected.
+        * Tiles are clickable with a CSS transform property is apllied on hover, as expected.
+            On touchscreen devices, the hover effects on tiles was found to be sticky. This bug is documented [here](#bugs "goto-bugs").
 
     * Remaining taps calculation: 
         * Clicked on the correct tile, the taps remaining (displayed on the screen) decreases by one. 
@@ -217,9 +220,9 @@ On Desktop, even higher scores were acheived:
          * The last remaining round is 0, this is replayed by 'Memory Game' once the game is complete. 
 
     * Round successful:
-        * clicked on the correct order of tiles
+        * Clicked on the correct order of tiles.
         * Start button section is replaced with a 'keep going message' as expected. 
-        * StartRound function runs as expected
+        * StartRound function runs as expected.
 
     * Round unsuccessful: 
         * Pressed the wrong tile in a round. The gameOver function ran as expected, displaying an alert box with a 'Whoops' message.
@@ -227,26 +230,33 @@ On Desktop, even higher scores were acheived:
     * Game completed:
         * Played 15 rounds to test gameOver function. As expected an alert box with a 'success' message is displayed and the game is restarted.
 
-### Bugs (Solved)
-* Navlinks in game.html not working:
+### Bugs 
+
+#### Solved
+* <strong>Navlinks in game.html not working:</strong>
 The js hash code was interfering with the functionality of the nav link to game.html. While researching, I found a similar issue on [Stack Overflow](https://stackoverflow.com/questions/59706410/link-with-anchor-to-different-page-href). 
 After reading this, I created a data attribute for the anchor links on index.html and targeted these only in the js hash code. The navigation then worked without any issues.
 
-* Carousel image cut off in mobile:
+* <strong>Carousel image cut off in mobile:</strong>
 On smaller device sizes, the top half of the carousel items were cut off due to their position behind the fixed navbar. To fix this, a top margin was added to the carousel items; which pushed the image down. 
 After adding this code, the carousel appeared as expected. 
 
-* Navbar Collapse not closing in index.html:
+* <strong>Navbar Collapse not closing in index.html:</strong>
 The collapsed navbar was not closing when one of the anchor links was clicked in index.html.  
 To fix this, a javascript function that added & removed a show class to the navbar on click was added to general.js. This resolved the issue.
 
-* Fixed navbar disappears on scroll: 
+* <strong>Fixed navbar disappears on scroll: </strong>
 The userScrolled function was causing the navbar to disappear for a few seconds once it reached the top of the page. 
 Because of this, the carousel's margin was exposed. [Codepen](https://codepen.io/fbmiranda/pen/edqgxm) 
 provided a solution to this, making sure that the user scrolls past the navbar before it disappears. After modifying the code, the bug was solved. 
 
-* Memory Game - Tiles pressed (sound and activation colour):
+* <strong>Memory Game - Tiles pressed (sound and activation class):</strong>
 When iterating through each tile in a round, the longer audio files were overlapping. To fix, a timeout was set to the itertateThrough(storedRoundTiles) function. 
 When tested again, the issue was fixed. 
 
+#### Unsolved
+* <strong>Memory Game - Sticky hover on touchscreen devices:</strong>
+When playing the memory game on touchscreen devices, the tiles hover effect appears to stick. This is evident in both the 'computer round' & 'player's round'. 
+After researching, I found that this bug is a common issue. Several work-arounds were tried including a solution provided by [CSS-Tricks](https://css-tricks.com/solving-sticky-hover-states-with-media-hover-hover/). 
+Unfortunately, no solution tried resolved this issue completely. 
 ----------------------------

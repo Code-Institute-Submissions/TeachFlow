@@ -1,5 +1,5 @@
 function sendMail(contactForm) {
-    emailjs.send("googles", "teachflow", {
+    emailjs.send("google", "teachflow", {
         "from_fname": contactForm.firstname.value,
         "from_lname": contactForm.lastname.value,
         "from_email": contactForm.emailaddress.value,
