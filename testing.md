@@ -209,8 +209,8 @@ On Desktop, even higher scores were acheived:
     
     * Players turn (play round):
         * 'Listen & watch' is replaced with 'your go' & taps left info, as expected. 
-        * Tiles are clickable with a CSS transform property is apllied on hover, as expected.
-            On touchscreen devices, the hover effects on tiles was found to be sticky. This bug is documented [here](#bugs "goto-bugs").
+        * Tiles are clickable with a CSS transform property is applied on hover, as expected.
+            On touchscreen devices, the hover effects on tiles was sticky. This bug is documented [here](#bugs "goto-bugs").
 
     * Remaining taps calculation: 
         * Clicked on the correct tile, the taps remaining (displayed on the screen) decreases by one. 
@@ -257,6 +257,6 @@ When tested again, the issue was fixed.
 #### Unsolved
 * <strong>Memory Game - Sticky hover on touchscreen devices:</strong>
 When playing the memory game on touchscreen devices, the tiles hover effect appears to stick. This is evident in both the 'computer round' & 'player's round'. 
-After researching, I found that this bug is a common issue. Several work-arounds were tried including a solution provided by [CSS-Tricks](https://css-tricks.com/solving-sticky-hover-states-with-media-hover-hover/). 
-Unfortunately, no solution tried resolved this issue completely. 
+After researching, I found that this bug is a common issue. Several workarounds were tried including a solution provided by [CSS-Tricks](https://css-tricks.com/solving-sticky-hover-states-with-media-hover-hover/). 
+Unfortunately, no solution I tried was able to resolve this issue completely. 
 ----------------------------
