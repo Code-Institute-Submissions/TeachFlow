@@ -7,7 +7,7 @@
     * [Code Validation & Testing](#code-validation-&-testing "goto code validation & testing")
     * [Bugs](#bugs "goto bugs")
 
-Follow this link to go back to [README.md]("https://github.com/emmahartedev/ms2-teachflow/blob/master/README.md"). 
+Follow this link to go back to [README.md](https://github.com/emmahartedev/ms2-teachflow/blob/master/README.md). 
 
 ### User Story Testing
 In this section, the user stories defined in the UX section of [README.md](https://github.com/emmahartedev/ms2-teachflow/blob/master/README.md) are re-evaluated.
@@ -35,7 +35,7 @@ As a potential ESL teacher:
     * An entire class lesson is provided in game.html which gives the user a clear idea of what a typical class lesson looks like.
     * The class lesson includes flashcards, a song, and a memory game.
     * the entire class lesson is approx. 1 hour in length. 
-    * The screenshot below shows an introduction to 'Classtime' which states the learning outcomes and summaries the material on the page.  
+    * The screenshot below shows an introduction to 'Classtime' which states the learning outcomes and summarizes the material on the page.  
 
     ![Classtime](assets/images/readme_files/classtime.png) 
 
@@ -49,9 +49,9 @@ As a potential ESL teacher:
     ![Contact us](assets/images/readme_files/contact.png)
 
 * I would like to see the requirements for becoming an ESL teacher; the salary and benefits.
-    * Requirements, salary and additional information is featured in the country maps information section.
+    * Requirements, salary and additional information are featured in the country maps information section.
     * This information is displayed when a country is selected.
-    * The screenshot below shows are info section where this information is displayed.
+    * The screenshot below shows the info section where this information is displayed.
 
     ![Maps information](assets/images/readme_files/mapinfo.png)
 
@@ -62,7 +62,7 @@ As a current ESL Teacher:
     * General country information is included in the map info section. 
     * 3 Markers have been placed on each map, showing popular cities to teach in. 
     * A pop-up is included with each marker which shoes the city name.
-    * The screenshot below the map, marker, and info section for South Korea.
+    * The screenshot below shows the map, marker, and info section for South Korea.
 
     ![Maps information](assets/images/readme_files/marker.png)
 
@@ -71,7 +71,7 @@ As a current ESL Teacher:
     * Due to time limitation & project scope, a weather API was not integrated into this release. 
     * Country info however can be seen in the country maps information section.
         As this is not an API, this information would need to be updated manually. 
-    * The screenshot below shows all information that is available on click of a country. 
+    * The screenshot below shows all information that is available on the click of a country. 
 
     ![Maps information](assets/images/readme_files/mapinfo.png)
 
@@ -79,7 +79,7 @@ As a current ESL Teacher:
 * I would like any class material featured to be focused on learning English words and improving students speaking skills. 
     * Multiple content is featured including flashcards, a song lesson, and a memory game.
     * A 'Farmyard Animal' theme is used to create a realistic class lesson. 
-    * The class lesson is focused on improving vocabulary, pronunciation & grammar.. 
+    * The class lesson is focused on improving vocabulary, pronunciation & grammar.
     * Each section of the lesson includes duration recommendations. 
     * The screenshot below shows the 'Flashcard' section of 'Classtime'.
 
@@ -103,7 +103,7 @@ As a current ESL Teacher:
 
 Also, internet explorer was tested. As expected issues with Javascript were encountered.
 In index.html, the contact form does not submit successfully. In game.html, all onclick button functions are not working. 
-With these findings, I recommend that this website is not used on IE. 
+With these findings, I recommend that this website is not used using IE. 
 
 
 ### Responsiveness
@@ -156,35 +156,37 @@ On Desktop, even higher scores were acheived:
 
 * Pre-loader
     * Loaded both index.html & game.html to test. 
-    * Adjusted the 'fade-in' & 'fade-out' parameters were to find a balance between a delay for the user & adequate load-time.
+    * Adjusted the 'fade-in' & 'fade-out' parameters to find a balance between a delay for the user & adequate load-time.
 
 * Navigation
     * Three anchor links (Home, About, Contact Us) are sections on index.html. 'Classtime' is a stand-alone page. Each link was clicked to test. 
-    * When the jumping anchor links were clicked in the collapsed navbar window, the navbar did not close. This is documented [here](#bugs "goto-bugs").
+    * When the jumping anchor links were clicked in the collapsed navbar window, the navbar did not close. 
+    This bug (titled: <strong>Navbar Collapse not closing in index.html:</strong>) is documented [here](#bugs "goto-bugs").
    
 * Smooth scrolling
     * Smooth scrolling is present when jumping anchor links are clicked (Home, About, Contact Us on index.html). Each link was clicked to test. 
     * No issues with smooth scrolling found in index.html.
     * In game.html, all navlinks however did not work due to the smooth scrolling code. 
-        This bug is documented [here](#bugs "goto-bugs").
+        This bug (titled <strong>Navlinks in game.html not working:</strong>) is documented [here](#bugs "goto-bugs").
 
 * Fixed navbar disappears on scroll
     * Scrolled in both directions to test. 
-    * Discovered that the navbar was not appearing quick enough at the top of the page, exposing the top margin added to the carousel items. The solution is listed [here](#bugs "goto-bugs").
+    * Discovered that the navbar was not appearing quick enough at the top of the page, exposing the top margin added to the carousel items. 
+    This bug (titled: <strong>Fixed navbar disappears on scroll: </strong>) is documented [here](#bugs "goto-bugs").
 
 #### index.html
 
 * Carousel
     * Carousel tested by both waiting for automatic cycling of items & by clicking on 'prev'/'next' buttons.
     * A bug was found on mobile devices. On smaller device sizes, half of the carousel items were cut off due to their position behind the fixed navbar.
-      This is documented [here](#bugs "goto-bugs")
+      This bug (titled: <strong>Carousel image cut off in mobile:</strong>)is documented [here](#bugs "goto-bugs").
     
 * Maps section (map and info content )
-    * Clicked all four 'country' buttons, map and info content appears as expected 
+    * Clicked all four 'Country' buttons, map and info content appears as expected 
     * Clicked on all markers in each country map, content appears as expected. 
 
 * Contact us section
-    * Tested successful form submission, section collapses as expected on successfully sending a message. 
+    * Tested successful form submission, section collapses as expected.
     * Tested failed form submission, a modal appears with an error message as expected. 
     * Tested each 'required' field, all confirmed to be needed. 
 
@@ -200,7 +202,7 @@ On Desktop, even higher scores were acheived:
 
     * Tiles pressed (sound and activation class):
        * Clicked each tile, the activation class is applied and the audio file plays as expected. 
-       * Sounds were found to be overlapping, this bug is documented [here](#bugs "goto-bugs").
+       * Sounds were found to be overlapping, this bug (titled: <strong>Tiles pressed (sound and activation class)</strong>) is documented [here](#bugs "goto-bugs").
 
     * Start game (computer round):
         * Clicked the start button. 
@@ -209,15 +211,15 @@ On Desktop, even higher scores were acheived:
     
     * Players turn (play round):
         * 'Listen & watch' is replaced with 'your go' & taps left info, as expected. 
-        * Tiles are clickable with a CSS transform property is applied on hover, as expected.
-            On touchscreen devices, the hover effects on tiles was sticky. This bug is documented [here](#bugs "goto-bugs").
+        * Tiles are clickable and a CSS transform property is applied on hover, as expected.
+            On touchscreen devices, the hover effects on tiles is sticky. This bug (titled: <strong>Sticky hover on touchscreen devices:</strong>)is documented [here](#bugs "goto-bugs").
 
     * Remaining taps calculation: 
         * Clicked on the correct tile, the taps remaining (displayed on the screen) decreases by one. 
     
     * Remaining round calculation:
          * Completed a round successfully, the remaining rounds (displayed on the screen) decreases by one.
-         * The last remaining round is 0, this is replayed by 'Memory Game' once the game is complete. 
+         * The last remaining round is 0, this is replayed by 'Memory Game' once the game is complete/resets. 
 
     * Round successful:
         * Clicked on the correct order of tiles.
@@ -243,19 +245,19 @@ After adding this code, the carousel appeared as expected.
 
 * <strong>Navbar Collapse not closing in index.html:</strong>
 The collapsed navbar was not closing when one of the anchor links was clicked in index.html.  
-To fix this, a javascript function that added & removed a show class to the navbar on click was added to general.js. This resolved the issue.
+To fix this, a function that added & removed a show class to the navbar (on click) was added to general.js. This resolved the issue.
 
 * <strong>Fixed navbar disappears on scroll: </strong>
 The userScrolled function was causing the navbar to disappear for a few seconds once it reached the top of the page. 
 Because of this, the carousel's margin was exposed. [Codepen](https://codepen.io/fbmiranda/pen/edqgxm) 
 provided a solution to this, making sure that the user scrolls past the navbar before it disappears. After modifying the code, the bug was solved. 
 
-* <strong>Memory Game - Tiles pressed (sound and activation class):</strong>
+* <strong>Tiles pressed (sound and activation class):</strong>
 When iterating through each tile in a round, the longer audio files were overlapping. To fix, a timeout was set to the itertateThrough(storedRoundTiles) function. 
 When tested again, the issue was fixed. 
 
 #### Unsolved
-* <strong>Memory Game - Sticky hover on touchscreen devices:</strong>
+* <strong>Sticky hover on touchscreen devices:</strong>
 When playing the memory game on touchscreen devices, the tiles hover effect appears to stick. This is evident in both the 'computer round' & 'player's round'. 
 After researching, I found that this bug is a common issue. Several workarounds were tried including a solution provided by [CSS-Tricks](https://css-tricks.com/solving-sticky-hover-states-with-media-hover-hover/). 
 Unfortunately, no solution I tried was able to resolve this issue completely. 
