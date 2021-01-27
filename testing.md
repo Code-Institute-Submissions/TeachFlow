@@ -58,7 +58,7 @@ As a potential ESL teacher:
 #### Current ESL Teacher Goals
 As a current ESL Teacher:
 
-* I would like to see information on regions in countries as I am familiar with the countries do not give me in-depth information.
+* I would like to see information on regions or cities as well as general country information. 
     * General country information is included in the map info section. 
     * 3 Markers have been placed on each map, showing popular cities to teach in. 
     * A pop-up is included with each marker which shoes the city name.

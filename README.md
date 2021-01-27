@@ -8,22 +8,21 @@
 
 ![Generated from Am I Responsive](assets/images/readme_files/amiresponsive.jpg)
 
-Teachflow is a fictitious company, providing support, information and materials to two groups of poeple.
-a) Those considering ESL teaching in Asia &
+Teachflow is a fictitious company, providing support, information and materials to two groups of poeple.\
+a) Those considering ESL teaching in Asia &\
 b) Those who are already working in as ESL teachers.
 
 The purpose of this project to create a one-stop-shop of information for ESL teachers. 
 The website focuses on providing information on 4 destination countries. Additional countries may be added in future releases.
-Teaching materials are also featured on the website and can be accessed by entering a link. This leads to the classroom portal.
+Teaching materials are also featured on the website and can be accessed by clicking on a link. This leads to the classroom portal.
 Class material includes flashcards, a song lesson and a memory game. 
 
-Important information and features to the company include: 
+Important information and features that the company would like to include: 
 
 * Providing information on 4 Asian countries
-* Providing a class lesson (game and flashcards)
 * Providing information on ESL teaching
-* Including a contact form, a long term goal is to build up a network of ESL teachers who may use the 'Classtime' portal. 
-
+* Including a contact form. A long term goal is to build up a network of ESL teachers who may use the 'Classtime' portal. 
+* Providing a full class lesson (game and flashcards)
 ----------------------------
 
 ## Contents
@@ -75,7 +74,7 @@ As a potential ESL teacher:
 #### Current ESL Teacher Goals
 As a current ESL Teacher:
 
-* I would like to see information on regions in countries as I am familiar the countries do not give me indepth information. 
+* I would like to see information on regions or cities as well as general country information. 
 * I would like to see some interactive information about the countries, such as the current weather or statistics so that I am receiving live, updated information. 
 * I would like any class material featured to be focused on learning English words and improving students speaking skills. 
 * I would like to be able to sign up to a newsletter. 
@@ -83,18 +82,19 @@ As a current ESL Teacher:
 ### Project Scope
 Based on the above user stories, the following are features that will be included in this release:
 
-* A newsletter signup.
 * A maps API which will show 4 countries in Asia.
 * A contact us form, for users who would like to learn more about ESL teaching.
+* A newsletter signup.
 * A Map & Interactive Information on ESL countries which is created using an API.
-* A simple memory game focused on speaking English words.
 * Flashcard / a song focused on learning vocabulary.
+* A simple memory game focused on speaking English words.
+
 
 The following is a list of features that will not be included in this release: 
 
-* More than one lesson plan.
 * Functionality to enter a zip code on maps.
 * Custom designed maps with colours or detailed markers. 
+* More than one lesson plan.
 * Coronavirus adapted ESL content.
 * A save high score function on the memory game.
 
@@ -123,24 +123,25 @@ In this project, the following shades were used:
 
 #### Imagery
 * A carousel banner is used in index.html. This contains 3 striking images that focus on ESL teaching.
-* A Hero Image is used in game.html. This focuses on ESL teaching; the classroom. 
+* A Hero Image is used in game.html. This focuses on ESL teaching; a fun and engaging lesson. 
 * In game.html, multiple animal images are used and re-used throughout the class lesson. 
     This is done intentionally, as reusing material to reinforce learning is common practice in teaching. 
 
 #### Design justifications
-* 'Home', 'About' & 'Contact us' are all sections on index.html. In doing this, a strong index.html is strengthened. The pathway shows company information, ESL teaching information, and finally a contact form.   
-* Classtime is created as a stand-alone page (game.html). This is done, as 'Classtime' is a separate experience and the page is heavy with content.  
+* 'Home', 'About' & 'Contact us' are all sections on index.html. In doing this, a strong user pathway is created. The pathway shows company information, ESL teaching information, and finally a contact form.   
+* 'Classtime' is created as a stand-alone page (game.html).
+This is deliberately done for two reasons. First, the page includes a large volume of content. Second, 'Classtime' is a section which may be further developed in future releases. 
+A call to action is included on index.html to connect the two pages.  
 
 ### Wireframes
 All wireframes were created using the software [Balsamiq](https://balsamiq.com/). 
-Layouts were created following research on the five planes of UX, and before coding.
-
+Layouts were created following research on the five planes of UX, and before coding.\
+\
 <strong>
 Please note, the final website layout contains slight variations to the original wireframes.
 Each of the following files contain wireframes for desktop, tablet, and mobile devices.
 </strong>
-
-
+ 
 * [Home Page](assets/wireframes/home.png)
 * [About](assets/wireframes/about.png)
 * [Contact us](assets/wireframes/contact.png)
@@ -178,7 +179,7 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
     * [Javascript](https://www.w3schools.com/js/DEFAULT.asp) was used to create the onclick playsound function. 
 
 * **Song lesson**
-    * A youtube video (iframe) and content block create the song lesson. 
+    * A YouTube video (iframe) and content block create the song lesson. 
     * Duration for the lesson is listed at 20 - 30 minutes.
     * The iframe size decreases with smaller device sizes.
 
@@ -301,12 +302,12 @@ The following material is not my own. Sources have been listed alongside a descr
 ### Content
 * Map information 
     * Capital city, salary, requirements & benefits.
-    * Source: [Go Overseas](https://www.gooverseas.com/teach-abroad)
+    * <strong>Source: </strong>[Go Overseas](https://www.gooverseas.com/teach-abroad)
 
 ### Audio
 * Animal names (mp3) used in game.html 
     * these mp3 files are used in the flashcard and memory game section.
-    * Source: [Voice Maker](https://voicemaker.in/) (Joanna, Female) used to create all files. 
+    * <strong>Source: </strong>[Voice Maker](https://voicemaker.in/) (Joanna, Female) used to create all files. 
 
 ### Code
 The following websites were used for inspiration and assistance:
@@ -322,15 +323,15 @@ The following code has been directly used in this project:
 
 * Switch div display
     * Used to switch the 3 'game-container' divs in game.html for mobile view.
-    * Source: [code](https://stackoverflow.com/questions/17115995/what-is-the-best-way-to-move-an-element-thats-on-the-top-to-the-bottom-in-respo)
+    * <strong>Source: </strong>[Code](https://stackoverflow.com/questions/17115995/what-is-the-best-way-to-move-an-element-thats-on-the-top-to-the-bottom-in-respo)
 
 * Smooth scrolling
     * Used to create a smooth-scrolling effect on index.html.
-    * Source: [code](https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll)
+    * <strong>Source: </strong>[Code](https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll)
 
 * Full page Tabs
     * Idea used to display the map and info contents on button click.
-    * Source: [code](https://www.w3schools.com/howto/howto_js_full_page_tabs.asp)
+    * <strong>Source: </strong>[Code](https://www.w3schools.com/howto/howto_js_full_page_tabs.asp)
 
 ###  Media
 The images used on this website were obtained from the following sources:
@@ -354,4 +355,4 @@ In game.html:
 * Finger Family Farm Animals Song: [Source](https://www.youtube.com/watch?v=MaHWFODvtfU&feature=emb_logo)
 
 ### Acknowledgments
-* 
+* Thank you to Gerry McBride for the the coding support throughout this project.
