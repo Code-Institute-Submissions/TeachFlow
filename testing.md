@@ -179,7 +179,7 @@ On Desktop, even higher scores were acheived:
 * Carousel
     * Carousel tested by both waiting for automatic cycling of items & by clicking on 'prev'/'next' buttons.
     * A bug was found on mobile devices. On smaller device sizes, half of the carousel items were cut off due to their position behind the fixed navbar.
-      This bug (titled: <strong>Carousel image cut off in mobile</strong>)is documented [here](#bugs "goto-bugs").
+      This bug (titled: <strong>Carousel image cut off in mobile</strong>) is documented [here](#bugs "goto-bugs").
     
 * Maps section (map and info content )
     * Clicked all four 'Country' buttons, map and info content appears as expected 
@@ -212,7 +212,7 @@ On Desktop, even higher scores were acheived:
     * Players turn (play round):
         * 'Listen & watch' is replaced with 'your go' & taps left info, as expected. 
         * Tiles are clickable and a CSS transform property is applied on hover, as expected.
-            On touchscreen devices, the hover effects on tiles is sticky. This bug (titled: <strong>Sticky hover on touchscreen devices</strong>)is documented [here](#bugs "goto-bugs").
+            On touchscreen devices, the hover effects on tiles is sticky. This bug (titled: <strong>Sticky hover on touchscreen devices</strong>) is documented [here](#bugs "goto-bugs").
 
     * Remaining taps calculation: 
         * Clicked on the correct tile, the taps remaining (displayed on the screen) decreases by one. 
