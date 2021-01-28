@@ -33,7 +33,6 @@ body {
 }
 
 /*------------------------- general typography */
-
 .text-center{
     text-align: center;
     padding: 1% 7%;
@@ -294,7 +293,6 @@ nav {
     padding-top:30px;
 }
 
-
 /*destinations container */
 .destinations-container {
     padding:30px;
@@ -303,8 +301,6 @@ nav {
 }
 
 /*-----------------------------------  map */
-
-
 .dest-button-row{
     text-align:center;
 }
@@ -654,7 +650,6 @@ iframe { /* video */
     -webkit-order: 1;
     order: 1;
   }
-  
     .game-container .play-game-wrapper { /* game button @ position 3*/
     -webkit-box-ordinal-group: 3;
     -moz-box-ordinal-group: 3;
