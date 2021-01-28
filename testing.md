@@ -237,7 +237,7 @@ On Desktop, even higher scores were acheived:
 ### Bugs 
 
 #### Solved
-1. <strong>Navbar Collapse not closing in index.html:</strong>
+1. <strong>Navbar collapse not closing in index.html:</strong>
 The collapsed navbar was not closing when one of the anchor links was clicked in index.html.  
 To fix this, a function that added & removed a show class to the navbar (on click) was added to general.js. This resolved the issue.
 
