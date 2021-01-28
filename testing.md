@@ -4,7 +4,8 @@
     * [User Story Testing](#user-story-testing " goto user story testing")
     * [Browser Compatibility](#browser-compatibility "goto browser compatibility")
     * [Responsiveness](#responsiveness "goto responsiveness")
-    * [Code Validation & Testing](#code-validation-&-testing "goto code validation & testing")
+    * [Code Validation](#code-validation "goto code validation")
+    * [Javascript Manual Testing](#javascript-manual-testing "goto javascript manual testing")
     * [Bugs](#bugs "goto bugs")
 
 Follow this link to go back to [README.md](https://github.com/emmahartedev/ms2-teachflow/blob/master/README.md). 
@@ -132,6 +133,7 @@ It has been noted however that this rating fluctuates in every report. Going for
 ![Lighthouse Mobile Report ](assets/images/readme_files/lighthouse-after.png)
 
 On Desktop, even higher scores were acheived:
+
 ![Lighthouse Mobile Report ](assets/images/readme_files/lhdesb.png)
 
 ### Code Validation
@@ -161,25 +163,25 @@ On Desktop, even higher scores were acheived:
 * Navigation
     * Three anchor links (Home, About, Contact Us) are sections on index.html. 'Classtime' is a stand-alone page. Each link was clicked to test. 
     * When the jumping anchor links were clicked in the collapsed navbar window, the navbar did not close. 
-    This bug (titled: <strong>Navbar Collapse not closing in index.html</strong>) is documented [here](#bugs "goto-bugs").
+    This bug (<strong>solved - no.1</strong>) is documented [here](#bugs "goto-bugs").
    
 * Smooth scrolling
     * Smooth scrolling is present when jumping anchor links are clicked (Home, About, Contact Us on index.html). Each link was clicked to test. 
     * No issues with smooth scrolling found in index.html.
     * In game.html, all navlinks however did not work due to the smooth scrolling code. 
-        This bug (titled: <strong>Navlinks in game.html not working</strong>) is documented [here](#bugs "goto-bugs").
+        This bug (<strong>no.2</strong>) is documented [here](#bugs "goto-bugs").
 
 * Fixed navbar disappears on scroll
     * Scrolled in both directions to test. 
     * Discovered that the navbar was not appearing quick enough at the top of the page, exposing the top margin added to the carousel items. 
-    This bug (titled: <strong>Fixed navbar disappears on scroll</strong>) is documented [here](#bugs "goto-bugs").
+    This bug (<strong>no.3</strong>) is documented [here](#bugs "goto-bugs").
 
 #### index.html
 
 * Carousel
     * Carousel tested by both waiting for automatic cycling of items & by clicking on 'prev'/'next' buttons.
     * A bug was found on mobile devices. On smaller device sizes, half of the carousel items were cut off due to their position behind the fixed navbar.
-      This bug (titled: <strong>Carousel image cut off in mobile</strong>) is documented [here](#bugs "goto-bugs").
+      This bug (<strong>no.4</strong>) is documented [here](#bugs "goto-bugs").
     
 * Maps section (map and info content )
     * Clicked all four 'Country' buttons, map and info content appears as expected 
@@ -202,7 +204,7 @@ On Desktop, even higher scores were acheived:
 
     * Tiles pressed (sound and activation class):
        * Clicked each tile, the activation class is applied and the audio file plays as expected. 
-       * Sounds were found to be overlapping, this bug (titled: <strong>Tiles pressed (sound and activation class)</strong>) is documented [here](#bugs "goto-bugs").
+       * Sounds were found to be overlapping, this bug (<strong>no.5</strong>) is documented [here](#bugs "goto-bugs").
 
     * Start game (computer round):
         * Clicked the start button. 
@@ -212,7 +214,7 @@ On Desktop, even higher scores were acheived:
     * Players turn (play round):
         * 'Listen & watch' is replaced with 'your go' & taps left info, as expected. 
         * Tiles are clickable and a CSS transform property is applied on hover, as expected.
-            On touchscreen devices, the hover effects on tiles is sticky. This bug (titled: <strong>Sticky hover on touchscreen devices</strong>) is documented [here](#bugs "goto-bugs").
+            On touchscreen devices, the hover effects on tiles is sticky. This bug (<strong>unsolved - no.1</strong>) is documented [here](#bugs "goto-bugs").
 
     * Remaining taps calculation: 
         * Clicked on the correct tile, the taps remaining (displayed on the screen) decreases by one. 
@@ -235,29 +237,29 @@ On Desktop, even higher scores were acheived:
 ### Bugs 
 
 #### Solved
-* <strong>Navlinks in game.html not working:</strong>
-The js hash code was interfering with the functionality of the nav link to game.html. While researching, I found a similar issue on [Stack Overflow](https://stackoverflow.com/questions/59706410/link-with-anchor-to-different-page-href). 
-After reading this, I created a data attribute for the anchor links on index.html and targeted these only in the js hash code. The navigation then worked without any issues.
-
-* <strong>Carousel image cut off in mobile:</strong>
-On smaller device sizes, the top half of the carousel items were cut off due to their position behind the fixed navbar. To fix this, a top margin was added to the carousel items; which pushed the image down. 
-After adding this code, the carousel appeared as expected. 
-
-* <strong>Navbar Collapse not closing in index.html:</strong>
+1. <strong>Navbar Collapse not closing in index.html:</strong>
 The collapsed navbar was not closing when one of the anchor links was clicked in index.html.  
 To fix this, a function that added & removed a show class to the navbar (on click) was added to general.js. This resolved the issue.
 
-* <strong>Fixed navbar disappears on scroll: </strong>
+2. <strong>Navlinks in game.html not working:</strong> 
+The js hash code was interfering with the functionality of the nav link to game.html. While researching, I found a similar issue on [Stack Overflow](https://stackoverflow.com/questions/59706410/link-with-anchor-to-different-page-href). 
+After reading this, I created a data attribute for the anchor links on index.html and targeted these only in the js hash code. The navigation then worked without any issues.
+
+3. <strong>Fixed navbar disappears on scroll: </strong>
 The userScrolled function was causing the navbar to disappear for a few seconds once it reached the top of the page. 
 Because of this, the carousel's margin was exposed. [Codepen](https://codepen.io/fbmiranda/pen/edqgxm) 
 provided a solution to this, making sure that the user scrolls past the navbar before it disappears. After modifying the code, the bug was solved. 
 
-* <strong>Tiles pressed (sound and activation class):</strong>
+4. <strong>Carousel image cut off in mobile:</strong>
+On smaller device sizes, the top half of the carousel items were cut off due to their position behind the fixed navbar. To fix this, a top margin was added to the carousel items; which pushed the image down. 
+After adding this code, the carousel appeared as expected. 
+
+5. <strong>Tiles pressed (sound and activation class overlapping):</strong>
 When iterating through each tile in a round, the longer audio files were overlapping. To fix, a timeout was set to the itertateThrough(storedRoundTiles) function. 
 When tested again, the issue was fixed. 
 
 #### Unsolved
-* <strong>Sticky hover on touchscreen devices:</strong>
+1. <strong>Sticky hover on touchscreen devices:</strong>
 When playing the memory game on touchscreen devices, the tiles hover effect appears to stick. This is evident in both the 'computer round' & 'player's round'. 
 After researching, I found that this bug is a common issue. Several workarounds were tried including a solution provided by [CSS-Tricks](https://css-tricks.com/solving-sticky-hover-states-with-media-hover-hover/). 
 Unfortunately, no solution I tried was able to resolve this issue completely. 
