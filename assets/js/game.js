@@ -7,7 +7,6 @@ function playSound(animal) {
 }
 
 
-
 //------------------------------------ memory game ------------------------------------ //
 
 // ------------------------------------ instructions button ------------------------------------
@@ -61,7 +60,7 @@ function tilePressed(animal) {
     tile.classList.add('activated');
     sound.play();
 
-    setTimeout(() => {
+    setTimeout(function() {
         tile.classList.remove('activated');
     }, 150);
 }
@@ -69,7 +68,7 @@ function tilePressed(animal) {
 // iterate through the tiles in each round, to play sound and change pic for every tile.
 function itertateThrough(storedRoundTiles) { 
     storedRoundTiles.forEach((animal, index) => { //iterate through all tiles (index = index in array)
-        setTimeout(() => {
+        setTimeout(function() {
             tilePressed(animal); // initiate the tilePressed function
         }, (index + 1) * 1000); // allow time between tiles 
     });
@@ -97,7 +96,7 @@ function startRound() {
     
     orderOfTiles = [... storedRoundTiles]; //reverse it back
     //console.log(orderOfTiles); used to log tiles to console for testing
-    setTimeout(() => {
+    setTimeout(function() {
         playersTurn(round); // initiate the playersturn
     }, round * 700 + 1000); // add a delay to stop text changing immediately
 }
@@ -123,7 +122,7 @@ function responseToClick(tile) {
         } 
         orderByPlayer = [];  
         gameText.textContent = "Correct! Keep going!"; 
-        setTimeout(() => {
+        setTimeout(function () {
             startRound();
         }, 1000); //delay to allow users to see the success message
         return;
