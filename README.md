@@ -44,7 +44,7 @@ Important information and features that the company would like to include:
 5. [Deployment](#deployment "goto deployment")
 
 6. [Credits](#credits "goto credits")
-    * [Contents](#code "goto code")
+    * [Content](#content "goto Content")
     * [Code](#code "goto code")
     * [Media](#media "goto media")
     * [Acknowledgments](#acknowledgments "goto acknowledgments")
@@ -270,7 +270,7 @@ The website was hosted on Github Pages. It was deployed by carrying out the foll
 4. In 'Github Pages' choose 'Master Branch' as Source and save.
 
 The Live site deployed can be viewed on the following link: 
-[TeachFlow](https://emmahartedev.github.io/ms2-teachflow/)
+[TeachFlow](https://emmahartedev.github.io/TeachFlow/)
 
 ### Local
 To clone this project locally; a Chrome browser and Github account are required. 
@@ -278,13 +278,13 @@ To clone this project locally; a Chrome browser and Github account are required.
 The following steps can then be followed:
 1. Install the [Gitpod Browser Chrome Extention](https://chrome.google.com/webstore/detail/gitpod-dev-environments-i/dodmmooeoklaejobgleioelladacbeki), restarting the browser after installation.
 2. Log into [Gitpod](https://gitpod.io/).
-3. Click on the following link to go to the [project repository](https://github.com/emmahartedev/living-landscapes).
+3. Click on the following link to go to the [project repository](https://github.com/emmahartedev/TeachFlow).
 4. Click on the green 'Gitpod' button (which is located to the right of the repository) to launch a new workspace.
 5. The code can be worked on in this newly launched workspace. 
 
 To clone code within an IDE of your choice:
 
-1. Click on the following link to go to the [project repository](https://github.com/emmahartedev/ms2-teachflow).
+1. Click on the following link to go to the [project repository](https://github.com/emmahartedev/TeachFlow).
 2. Click 'Code' and in the Clone with HTTPs, copy the provided repository URL. 
 3. Open a terminal in your IDE.
 4. Change the current working directory to the location you wish to generate the cloned directory.
@@ -336,13 +336,16 @@ The following code has been directly used in this project:
 ###  Media
 The images used on this website were obtained from the following sources:
 <strong>
-(the image alt attribute is used to describe each image)
+* The image alt attribute is used to describe each image below
 </strong>
+
+In README.md:
+* Colour palette: [Source](https://digitalsynopsis.com/design/color-schemes-palettes/)
 
 In index.html: 
 * Students in a classroom: [Source](https://www.pexels.com/photo/three-toddler-eating-on-white-table-1001914/)
 * Teacher writing on blackboard: [Source](https://www.pexels.com/photo/woman-in-red-long-sleeve-writing-on-chalk-board-3769714/)
-* Student outside looking to sky: [Source](pexels-artem-beliaikin-1565521)
+* Student outside looking to sky: [Source](https://www.pexels.com/photo/boy-holding-sparkler-1565521/)
 * Woman walking up a temple path: [Source](https://www.pexels.com/photo/woman-in-blue-dress-walking-on-concrete-staircase-leading-to-buildings-929168/)
 * Child in Classroom:  Owned by me
 
