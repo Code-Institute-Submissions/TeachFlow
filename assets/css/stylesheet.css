@@ -538,7 +538,11 @@ iframe { /* video */
     }
     .nav-link{
         width:60%;
- }
+    }
+ .list-group-item {
+    font-size: 15px;
+    line-height: 10px;
+    }
 }
 
 /*MOBILE IPhone 6/7/8*/
@@ -586,6 +590,10 @@ iframe { /* video */
         width:60%;
         margin: 0 auto;
  }
+  .list-group-item {
+    font-size: 16px;
+    line-height: 11px;
+    }
 }
 
 /* IPad */
